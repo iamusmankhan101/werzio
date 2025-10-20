@@ -5,6 +5,7 @@ import luxeScreenshot from '../images/luxe/Screenshot 2025-10-19 213550.png';
 import hawkScreenshot from '../images/hawk/Screenshot 2025-10-19 214555.png';
 import rakScreenshot from '../images/rak/Screenshot 2025-10-19 221016.png';
 import visionScreenshot from '../images/vision/Screenshot 2025-10-19 221920.png';
+import blackScreenshot from '../images/black/Screenshot 2025-10-20 114845.png';
 
 const WorkShowcase = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -85,6 +86,15 @@ const WorkShowcase = () => {
       description: "Comprehensive Eye Care Solutions",
       bgColor: "bg-teal-50",
       accentColor: "bg-teal-600"
+    },
+    {
+      id: 7,
+      title: "Black n White",
+      categories: ["Fashion", "E-commerce"],
+      url: "blackenwhiteofficial.com",
+      description: "Sophisticated Fashion E-commerce Platform",
+      bgColor: "bg-gray-50",
+      accentColor: "bg-black"
     }
   ];
 
@@ -136,6 +146,9 @@ const WorkShowcase = () => {
                 } else if (project.id === 6) {
                   // Navigate to Vision Care case study
                   window.location.hash = 'vision-care-case-study';
+                } else if (project.id === 7) {
+                  // Navigate to Black n White case study
+                  window.location.hash = 'black-n-white-case-study';
                 } else {
                   // For other projects, show a coming soon message
                   alert(`Case study for ${project.title} coming soon!`);
@@ -243,6 +256,21 @@ const WorkShowcase = () => {
                           <img 
                             src={visionScreenshot}
                             alt="Vision Care Website"
+                            className="w-full h-full object-cover object-top"
+                            style={{
+                              minHeight: '200px',
+                              maxHeight: '300px'
+                            }}
+                          />
+                          {/* Overlay for better text visibility if needed */}
+                          <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+                        </div>
+                      )}
+                      {project.id === 7 && (
+                        <div className="w-full h-full relative">
+                          <img 
+                            src={blackScreenshot}
+                            alt="Black n White Website"
                             className="w-full h-full object-cover object-top"
                             style={{
                               minHeight: '200px',
