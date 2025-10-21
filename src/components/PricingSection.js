@@ -29,7 +29,7 @@ const PricingSection = () => {
 
   const services = {
     Design: {
-      price: "40$",
+      price: "30$",
       pricePrefix: "",
       features: [
         "Online communication",
@@ -47,7 +47,7 @@ const PricingSection = () => {
       }
     },
     Branding: {
-      price: "6.500€",
+      price: "200$",
       pricePrefix: "from ",
       features: [
         "One-off fee or milestone billing",
@@ -58,9 +58,9 @@ const PricingSection = () => {
         "Workshops & reviews"
       ],
       testimonial: {
-        text: "I'm very happy with the work Deniz did on my website. He was creative, professional, and paid great attention to detail. I can highly recommend his services.",
-        author: "Hassan Kirio",
-        company: "KS Abbruch",
+        text: "I'm very happy with the work Werzio did on my website. They are creative, professional, and paid great attention to detail. I can highly recommend their services.",
+        author: "Usman Tahir",
+        company: "Vision Care",
         avatar: "HK"
       }
     }
