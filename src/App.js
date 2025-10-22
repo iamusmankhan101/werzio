@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import WorkShowcase from './components/WorkShowcase';
-import StackingCardsSection from './components/StackingCardsSection';
 import ServicesSection from './components/ServicesSection';
 import ProcessSection from './components/ProcessSection';
 import PricingSection from './components/PricingSection';
@@ -90,7 +89,6 @@ function App() {
       <Header />
       <HeroSection />
       <WorkShowcase />
-      <StackingCardsSection />
       <ServicesSection />
       <ProcessSection />
       <PricingSection />
