@@ -95,8 +95,8 @@ const StackingCardsSection = () => {
       const windowHeight = window.innerHeight;
       const containerHeight = container.offsetHeight;
       
-      // Calculate progress based on how much of the container has been scrolled through
-      const viewportTop = -rect.top;
+      // Start animation when container top reaches 70% of viewport
+      const triggerPoint = windowHeight * 0.7;
       const viewportBottom = viewportTop + windowHeight;
       
       // Start animation when container enters viewport
@@ -132,42 +132,46 @@ const StackingCardsSection = () => {
         </div>
 
         {/* Stacking Cards Container */}
-        <div className="relative max-w-5xl mx-auto" style={{ height: `${workProjects.length * 80}vh` }}>
+        <div className="relative max-w-5xl mx-auto" style={{ height: `${workProjects.length * 100}vh` }}>
           {workProjects.map((project, index) => {
-            // Calculate when this card should be active
-            const cardProgress = Math.max(0, Math.min(1, scrollProgress * workProjects.length - index));
+            // Calculate progress for this specific card
+            const cardStart = index / workProjects.length;
+            const cardEnd = (index + 1) / workProjects.length;
+            const cardProgress = Math.max(0, Math.min(1, (scrollProgress - cardStart) / (cardEnd - cardStart)));
             
-            // Calculate when the next card starts pushing this one up
-            const nextCardProgress = Math.max(0, Math.min(1, scrollProgress * workProjects.length - (index + 1)));
+            // Calculate when the next card starts appearing
+            const nextCardStart = (index + 1) / workProjects.length;
+            const nextCardProgress = Math.max(0, Math.min(1, (scrollProgress - nextCardStart) / (cardEnd - cardStart)));
             
-            // Initial position and scale for stacking effect
             let translateY = 0;
             let scale = 1;
             let opacity = 1;
+            let rotate = 0;
             
+            // Card entrance animation - slides up from below
             if (cardProgress < 1) {
-              // Card is coming into view
-              translateY = (1 - cardProgress) * 100; // Start from below
-              scale = 0.8 + (cardProgress * 0.2); // Scale from 80% to 100%
-              opacity = Math.max(0.1, cardProgress);
+              translateY = (1 - cardProgress) * 120; // Start 120px below
+              scale = 0.85 + (cardProgress * 0.15); // Scale from 85% to 100%
+              opacity = Math.max(0.2, cardProgress);
+              rotate = (1 - cardProgress) * 3; // Slight rotation effect
             }
             
-            if (nextCardProgress > 0) {
-              // Next card is pushing this one up
-              translateY = translateY - (nextCardProgress * 100); // Push up
-              scale = scale * (1 - nextCardProgress * 0.1); // Slightly shrink
-              opacity = opacity * (1 - nextCardProgress * 0.7); // Fade out
+            // Card exit animation - gets pushed up by next card
+            if (nextCardProgress > 0 && index < workProjects.length - 1) {
+              translateY = translateY - (nextCardProgress * 120); // Push up
+              scale = scale * (1 - nextCardProgress * 0.15); // Shrink slightly
+              opacity = opacity * (1 - nextCardProgress * 0.8); // Fade out
+              rotate = rotate - (nextCardProgress * 5); // Rotate as it exits
             }
 
             return (
               <div
                 key={project.id}
-                className="sticky top-16"
+                className="sticky top-20"
                 style={{
-                  transform: `translateY(${translateY}px) scale(${scale})`,
+                  transform: `translateY(${translateY}px) scale(${scale}) rotate(${rotate}deg)`,
                   opacity: opacity,
-                  zIndex: workProjects.length - index,
-                  marginBottom: index === workProjects.length - 1 ? '0' : '20px',
+                  zIndex: index + 1, // Higher index = higher z-index (newer cards on top)
                 }}
               >
                 <div 
