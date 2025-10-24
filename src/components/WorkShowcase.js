@@ -99,7 +99,7 @@ const ProjectCard = ({ project, index, scrollProgress }) => {
   return (
     <div
       ref={cardRef}
-      className="group relative bg-white rounded-3xl p-8 shadow-sm hover:shadow-md cursor-pointer"
+      className="group relative rounded-3xl p-8 cursor-pointer backdrop-blur-md bg-white/10 border border-white/20 shadow-lg hover:bg-white/20 hover:shadow-xl transition-all duration-300"
       style={{
         transform: `translateY(${translateY}px) rotate(${rotate}deg) scale(${scale})`,
         opacity: opacity,
@@ -110,13 +110,6 @@ const ProjectCard = ({ project, index, scrollProgress }) => {
     >
       {/* Desktop Mockup */}
       <div className="relative mb-8">
-        {/* Monitor Stand */}
-        <div className="flex justify-center mb-4">
-          <div className="w-24 h-6 bg-gray-300 rounded-b-lg relative">
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gray-400 rounded-b"></div>
-          </div>
-        </div>
-
         {/* Monitor Screen */}
         <div className="bg-black rounded-lg p-2 shadow-xl">
           <div className={`${project.bgColor} rounded-md aspect-[16/10] relative overflow-hidden`}>
