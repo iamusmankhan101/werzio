@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
-import WorkShowcase from './components/WorkShowcase';
 import ServicesSection from './components/ServicesSection';
+import WorkShowcase from './components/WorkShowcase';
 import ProcessSection from './components/ProcessSection';
 import PricingSection from './components/PricingSection';
 import Footer from './components/Footer';
@@ -88,8 +88,8 @@ function App() {
     <div className="App min-h-screen">
       <Header />
       <HeroSection />
-      <WorkShowcase />
       <ServicesSection />
+      <WorkShowcase />
       <ProcessSection />
       <PricingSection />
       <Footer />

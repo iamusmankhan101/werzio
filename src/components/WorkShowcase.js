@@ -108,46 +108,65 @@ const ProjectCard = ({ project, index, scrollProgress }) => {
       }}
       onClick={handleClick}
     >
-      {/* Desktop Mockup */}
-      <div className="relative mb-8">
-        {/* Monitor Screen */}
-        <div className="bg-black rounded-lg p-2 shadow-xl">
-          <div className={`${project.bgColor} rounded-md aspect-[16/10] relative overflow-hidden`}>
-            {/* Browser Chrome */}
-            <div className="absolute top-2 left-2 flex gap-1">
-              <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-              <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-            </div>
-
-            {/* Website Content */}
-            <div className="p-0 h-full relative overflow-hidden">
-              <div className="w-full h-full relative">
+      {/* 3D Laptop Mockup */}
+      <div className="relative mb-8 bg-black rounded-2xl p-8 overflow-hidden">
+        {/* Diagonal pattern background */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="w-full h-full" style={{
+            backgroundImage: `repeating-linear-gradient(
+              45deg,
+              transparent,
+              transparent 2px,
+              rgba(255,255,255,0.1) 2px,
+              rgba(255,255,255,0.1) 4px
+            )`
+          }}></div>
+        </div>
+        
+        {/* 3D Laptop */}
+        <div className="relative z-10 mx-auto max-w-sm">
+          <div className="transform mx-auto" style={{
+            transform: 'perspective(1000px) rotateX(15deg) rotateY(-15deg)',
+            transformStyle: 'preserve-3d'
+          }}>
+            {/* Laptop Screen */}
+            <div className="bg-gray-800 rounded-t-lg p-2 shadow-2xl transform-gpu">
+              <div className="bg-white rounded-md aspect-[16/10] relative overflow-hidden">
                 <img
                   src={getScreenshot()}
                   alt={`${project.title} Website`}
                   className="w-full h-full object-cover object-top"
-                  style={{
-                    minHeight: '200px',
-                    maxHeight: '300px'
-                  }}
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-10"></div>
               </div>
             </div>
+            
+            {/* Laptop Base */}
+            <div className="bg-gray-700 rounded-b-lg h-4 shadow-lg transform translate-y-1"></div>
+            
+            {/* Laptop Shadow */}
+            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-3/4 h-8 bg-black opacity-20 rounded-full blur-lg"></div>
           </div>
         </div>
       </div>
 
       {/* Project Info */}
       <div className="text-left">
-        <h3 className="text-xl font-bold text-black mb-2">{project.title}</h3>
-        <div className="flex gap-2">
-          {project.categories.map((category, idx) => (
-            <span key={idx} className="text-sm text-gray-500">
-              {category}{idx < project.categories.length - 1 && <span className="ml-2">•</span>}
-            </span>
-          ))}
+        <h3 className="text-xl font-bold text-black mb-2">Next gen digital</h3>
+        <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+          Pioneering the future with cutting-edge digital solutions for transformative business growth and innovation.
+        </p>
+        
+        {/* Service Tags */}
+        <div className="flex gap-2 flex-wrap">
+          <span className="bg-gray-200 text-gray-700 px-3 py-1 rounded text-xs font-medium uppercase tracking-wide">
+            RESEARCH
+          </span>
+          <span className="bg-gray-200 text-gray-700 px-3 py-1 rounded text-xs font-medium uppercase tracking-wide">
+            WEB DESIGN
+          </span>
+          <span className="bg-gray-200 text-gray-700 px-3 py-1 rounded text-xs font-medium uppercase tracking-wide">
+            DEVELOPMENT
+          </span>
         </div>
       </div>
 
