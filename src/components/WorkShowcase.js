@@ -151,22 +151,18 @@ const ProjectCard = ({ project, index, scrollProgress }) => {
 
       {/* Project Info */}
       <div className="text-left">
-        <h3 className="text-xl font-bold text-black mb-2">Next gen digital</h3>
+        <h3 className="text-xl font-bold text-black mb-2">{project.title}</h3>
         <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-          Pioneering the future with cutting-edge digital solutions for transformative business growth and innovation.
+          {project.description}
         </p>
         
         {/* Service Tags */}
         <div className="flex gap-2 flex-wrap">
-          <span className="bg-gray-200 text-gray-700 px-3 py-1 rounded text-xs font-medium uppercase tracking-wide">
-            RESEARCH
-          </span>
-          <span className="bg-gray-200 text-gray-700 px-3 py-1 rounded text-xs font-medium uppercase tracking-wide">
-            WEB DESIGN
-          </span>
-          <span className="bg-gray-200 text-gray-700 px-3 py-1 rounded text-xs font-medium uppercase tracking-wide">
-            DEVELOPMENT
-          </span>
+          {project.services.map((service, idx) => (
+            <span key={idx} className="bg-gray-200 text-gray-700 px-3 py-1 rounded text-xs font-medium uppercase tracking-wide">
+              {service}
+            </span>
+          ))}
         </div>
       </div>
 
@@ -247,63 +243,70 @@ const WorkShowcase = () => {
       title: "Optimus Properties",
       categories: ["Real Estate", "Property"],
       url: "optimus-properties.com",
-      description: "Premium Real Estate Solutions",
+      description: "Premium real estate solutions connecting buyers with their dream properties through innovative digital experiences.",
       bgColor: "bg-blue-50",
-      accentColor: "bg-blue-600"
+      accentColor: "bg-blue-600",
+      services: ["RESEARCH", "WEB DESIGN", "DEVELOPMENT"]
     },
     {
       id: 2,
       title: "Greenfuture Properties",
       categories: ["Sustainable Real Estate", "Green Properties"],
       url: "greenfuture-properties.com",
-      description: "Sustainable Real Estate Platform",
+      description: "Sustainable real estate platform promoting eco-friendly properties and green living solutions for the future.",
       bgColor: "bg-green-50",
-      accentColor: "bg-green-600"
+      accentColor: "bg-green-600",
+      services: ["RESEARCH", "UI/UX DESIGN", "DEVELOPMENT"]
     },
     {
       id: 3,
       title: "Optimus Luxe",
       categories: ["Luxury Real Estate", "Premium Properties"],
       url: "optimusluxe.com",
-      description: "Luxury Living, Redefined",
+      description: "Luxury real estate platform showcasing premium properties with sophisticated design and exclusive experiences.",
       bgColor: "bg-amber-50",
-      accentColor: "bg-amber-600"
+      accentColor: "bg-amber-600",
+      services: ["BRANDING", "WEB DESIGN", "DEVELOPMENT"]
     },
     {
       id: 4,
       title: "Hawk Dispatch",
       categories: ["Logistics", "Dispatch Services"],
       url: "hawkdispatchinc.com",
-      description: "Dispatch Excellence for Industry Leaders",
+      description: "Professional dispatch services platform streamlining logistics operations for transportation industry leaders.",
       bgColor: "bg-blue-50",
-      accentColor: "bg-blue-600"
+      accentColor: "bg-blue-600",
+      services: ["RESEARCH", "WEB DESIGN", "SYSTEM INTEGRATION"]
     },
     {
       id: 5,
       title: "Optimus RAK",
       categories: ["Real Estate", "Ras Al Khaimah"],
       url: "optimusrak.com",
-      description: "Your Trusted Real Estate Partner in Ras Al Khaimah",
+      description: "Specialized real estate platform for Ras Al Khaimah market, connecting investors with prime property opportunities.",
       bgColor: "bg-red-50",
-      accentColor: "bg-red-600"
+      accentColor: "bg-red-600",
+      services: ["MARKET RESEARCH", "WEB DESIGN", "DEVELOPMENT"]
     },
     {
       id: 6,
       title: "Vision Care",
       categories: ["Healthcare", "Vision Care"],
       url: "visioncare-clinic.com",
-      description: "Comprehensive Eye Care Solutions",
+      description: "Comprehensive eye care clinic platform providing advanced vision solutions and patient management systems.",
       bgColor: "bg-teal-50",
-      accentColor: "bg-teal-600"
+      accentColor: "bg-teal-600",
+      services: ["RESEARCH", "UI/UX DESIGN", "DEVELOPMENT"]
     },
     {
       id: 7,
       title: "Black n White",
       categories: ["Fashion", "E-commerce"],
       url: "blackenwhiteofficial.com",
-      description: "Sophisticated Fashion E-commerce Platform",
+      description: "Sophisticated fashion e-commerce platform featuring curated collections with modern shopping experiences.",
       bgColor: "bg-gray-50",
-      accentColor: "bg-black"
+      accentColor: "bg-black",
+      services: ["BRANDING", "E-COMMERCE", "DEVELOPMENT"]
     }
   ];
 
