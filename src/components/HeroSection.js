@@ -26,8 +26,7 @@ const HeroSection = () => {
           <div className="text-left">
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-8 text-white" style={{ letterSpacing: '-0.02em' }}>
-              CREATIVITY<br />
-              EXISTS OUTSIDE<br />
+              CREATIVITY EXISTS OUTSIDE
               THE BOX
             </h1>
 
