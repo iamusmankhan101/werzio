@@ -3,11 +3,52 @@ import React from 'react';
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
-      {/* Gradient Background */}
+      {/* Animated Gradient Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-orange-500 via-pink-500 to-purple-600 opacity-60 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-red-600 via-pink-600 to-transparent opacity-40 blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-orange-500 via-pink-500 to-purple-600 opacity-60 blur-3xl animate-gradient-move"></div>
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-red-600 via-pink-600 to-transparent opacity-40 blur-3xl animate-gradient-move-reverse"></div>
       </div>
+      
+      {/* Add keyframes for gradient animation */}
+      <style jsx>{`
+        @keyframes gradient-move {
+          0%, 100% {
+            transform: translate(0, 0) scale(1);
+          }
+          25% {
+            transform: translate(10%, -10%) scale(1.1);
+          }
+          50% {
+            transform: translate(-5%, 10%) scale(1.05);
+          }
+          75% {
+            transform: translate(5%, 5%) scale(1.15);
+          }
+        }
+        
+        @keyframes gradient-move-reverse {
+          0%, 100% {
+            transform: translate(0, 0) scale(1);
+          }
+          25% {
+            transform: translate(-10%, 10%) scale(1.1);
+          }
+          50% {
+            transform: translate(5%, -10%) scale(1.05);
+          }
+          75% {
+            transform: translate(-5%, -5%) scale(1.15);
+          }
+        }
+        
+        .animate-gradient-move {
+          animation: gradient-move 20s ease-in-out infinite;
+        }
+        
+        .animate-gradient-move-reverse {
+          animation: gradient-move-reverse 25s ease-in-out infinite;
+        }
+      `}</style>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
