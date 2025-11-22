@@ -45,6 +45,7 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center gap-3 shadow-xl"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
               BOOK A CALL
               <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
