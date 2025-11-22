@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
+import BottomNav from './components/BottomNav';
 import HeroSection from './components/HeroSection';
 import ServicesSection from './components/ServicesSection';
 import WorkShowcase from './components/WorkShowcase';
@@ -85,7 +86,7 @@ function App() {
   }
 
   return (
-    <div className="App min-h-screen">
+    <div className="App min-h-screen pb-20">
       <Header />
       <HeroSection />
       <ServicesSection />
@@ -93,6 +94,7 @@ function App() {
       <ProcessSection />
       <PricingSection />
       <Footer />
+      <BottomNav />
     </div>
   );
 }
