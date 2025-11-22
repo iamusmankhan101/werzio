@@ -25,13 +25,13 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="text-left">
             {/* Main Heading */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-8 text-white" style={{ letterSpacing: '-0.02em' }}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-8 text-white" style={{ letterSpacing: '-0.02em', fontFamily: 'Montserrat, sans-serif' }}>
               CREATIVITY EXISTS OUTSIDE
               THE BOX
             </h1>
 
             {/* Subtitle */}
-            <p className="text-white text-lg sm:text-xl md:text-2xl font-light mb-8 max-w-md uppercase" style={{ letterSpacing: '0.05em' }}>
+            <p className="text-white text-lg sm:text-xl md:text-2xl font-light mb-8 max-w-md uppercase" style={{ letterSpacing: '0.05em', fontFamily: 'Montserrat, sans-serif' }}>
               CREATIVE SOLUTION FOR<br />
               BUSINESSES LOOKING TO<br />
               STAND OUT.
