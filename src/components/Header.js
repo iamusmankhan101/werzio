@@ -25,8 +25,8 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent pb-4">
-      <div className="w-3/5 mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="fixed top-0 left-1/2 transform -translate-x-1/2 z-50 bg-transparent pb-4 w-3/5">
+      <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <div className="flex items-center">
@@ -46,12 +46,12 @@ const Header = () => {
           </div>
 
           {/* Navigation */}
-          <nav className={`hidden md:flex items-center space-x-4 px-6 py-3 rounded-full transition-all duration-300 ${isScrolled
+          <nav className={`hidden md:flex items-center space-x-4 px-6 py-3 transition-all duration-300 ${isScrolled
             ? isDarkBackground
               ? 'backdrop-blur-md bg-black/10 border border-black/20 shadow-lg'
               : 'backdrop-blur-md bg-white/10 border border-white/20 shadow-lg'
             : 'bg-transparent'
-            }`}>
+            }`} style={{ borderRadius: '15px' }}>
             <a href="#" className={`px-4 py-2 rounded-full transition-all duration-300 ${isDarkBackground
               ? 'text-white hover:text-gray-200 hover:backdrop-blur-md hover:bg-black/20 hover:border hover:border-black/30 hover:shadow-md'
               : isScrolled
