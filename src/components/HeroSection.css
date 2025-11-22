@@ -165,12 +165,12 @@
 
 .cta-button {
   display: flex;
-  margin-top: 80px;
+  margin-top: 180px;
   align-items: center;
   gap: 0.75rem;
   background-color: #ffffff;
   color: #000000;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   border-radius: 9999px;
   font-weight: 500;
   font-size: 1rem;
