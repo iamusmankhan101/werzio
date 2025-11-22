@@ -5,17 +5,31 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
       {/* Animated Gradient Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden">
         <div 
-          className="absolute top-0 right-0 w-1/2 h-full opacity-70 blur-3xl gradient-blob-1"
+          className="gradient-blob-1"
           style={{
-            background: 'linear-gradient(135deg, #fc007e 0%, #f2851f 50%, #000000 100%)'
+            position: 'absolute',
+            top: '-10%',
+            right: '-10%',
+            width: '60%',
+            height: '120%',
+            background: 'radial-gradient(circle, #fc007e 0%, #f2851f 40%, #000000 100%)',
+            filter: 'blur(80px)',
+            opacity: 0.8
           }}
         ></div>
         <div 
-          className="absolute bottom-0 left-0 w-1/2 h-1/2 opacity-50 blur-3xl gradient-blob-2"
+          className="gradient-blob-2"
           style={{
-            background: 'linear-gradient(225deg, #f2851f 0%, #fc007e 50%, #000000 100%)'
+            position: 'absolute',
+            bottom: '-20%',
+            left: '-10%',
+            width: '60%',
+            height: '80%',
+            background: 'radial-gradient(circle, #f2851f 0%, #fc007e 40%, #000000 100%)',
+            filter: 'blur(80px)',
+            opacity: 0.6
           }}
         ></div>
       </div>
@@ -25,15 +39,10 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="text-left">
             {/* Main Heading */}
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight mb-8" style={{ letterSpacing: '-0.02em' }}>
-              <span className="text-white">CREATI</span>
-              <span className="bg-gradient-to-r from-pink-300 via-pink-400 to-orange-400 bg-clip-text text-transparent">VI</span>
-              <span className="text-white">TY</span>
-              <br />
-              <span className="text-white">EXISTS </span>
-              <span className="bg-gradient-to-r from-pink-300 via-orange-300 to-yellow-400 bg-clip-text text-transparent">OUTSIDE</span>
-              <br />
-              <span className="text-white">THE BOX</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-8 text-white" style={{ letterSpacing: '-0.02em' }}>
+              CREATIVITY<br />
+              EXISTS OUTSIDE<br />
+              THE BOX
             </h1>
 
             {/* Subtitle */}
