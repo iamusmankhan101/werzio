@@ -1,0 +1,37 @@
+@keyframes gradient-move {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(10%, -10%) scale(1.1);
+  }
+  50% {
+    transform: translate(-5%, 10%) scale(1.05);
+  }
+  75% {
+    transform: translate(5%, 5%) scale(1.15);
+  }
+}
+
+@keyframes gradient-move-reverse {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(-10%, 10%) scale(1.1);
+  }
+  50% {
+    transform: translate(5%, -10%) scale(1.05);
+  }
+  75% {
+    transform: translate(-5%, -5%) scale(1.15);
+  }
+}
+
+.gradient-blob-1 {
+  animation: gradient-move 20s ease-in-out infinite;
+}
+
+.gradient-blob-2 {
+  animation: gradient-move-reverse 25s ease-in-out infinite;
+}
