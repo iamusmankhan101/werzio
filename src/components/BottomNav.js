@@ -15,8 +15,8 @@ const BottomNav = () => {
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 bg-white border border-gray-200 shadow-lg w-3/5 mb-2.5" style={{ borderRadius: '15px' }}>
+      <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">

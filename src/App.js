@@ -87,7 +87,6 @@ function App() {
 
   return (
     <div className="App min-h-screen pb-20">
-      <Header />
       <HeroSection />
       <ServicesSection />
       <WorkShowcase />
