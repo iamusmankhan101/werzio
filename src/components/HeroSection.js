@@ -1,10 +1,25 @@
 import React from 'react';
 import './HeroSection.css';
+import heroVideo from '../images/7898649-hd_1920_1080_15fps.mp4';
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
-      {/* Animated Gradient Background */}
+      {/* Video Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ opacity: 0.4 }}
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+      </div>
+
+      {/* Animated Gradient Overlay */}
       <div className="absolute inset-0 overflow-hidden">
         <div 
           className="gradient-blob-1"
@@ -16,7 +31,7 @@ const HeroSection = () => {
             height: '120%',
             background: 'radial-gradient(circle, #fc007e 0%, #f2851f 40%, #000000 100%)',
             filter: 'blur(80px)',
-            opacity: 0.8
+            opacity: 0.5
           }}
         ></div>
         <div 
@@ -29,7 +44,7 @@ const HeroSection = () => {
             height: '80%',
             background: 'radial-gradient(circle, #f2851f 0%, #fc007e 40%, #000000 100%)',
             filter: 'blur(80px)',
-            opacity: 0.6
+            opacity: 0.4
           }}
         ></div>
       </div>
