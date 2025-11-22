@@ -1,0 +1,153 @@
+.partners-section {
+  background-color: #f5f5f0;
+  padding: 6rem 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.partners-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.partners-label {
+  margin-bottom: 2rem;
+}
+
+.partners-label span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #000000;
+  letter-spacing: 0.1em;
+}
+
+.partners-heading {
+  font-family: 'Montserrat';
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #000000;
+  margin-bottom: 4rem;
+  max-width: 900px;
+}
+
+@media (min-width: 768px) {
+  .partners-heading {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .partners-heading {
+    font-size: 2.25rem;
+  }
+}
+
+/* Carousel Container */
+.partners-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Fade effect on left side */
+.partners-carousel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(to right, #f5f5f0 0%, transparent 100%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Fade effect on right side */
+.partners-carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(to left, #f5f5f0 0%, transparent 100%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Carousel Track */
+.partners-track {
+  display: flex;
+  gap: 2rem;
+  animation: scroll 30s linear infinite;
+}
+
+.partners-track:hover {
+  animation-play-state: paused;
+}
+
+/* Carousel Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.partner-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 280px;
+  flex-shrink: 0;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.partner-logo {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.partner-info {
+  text-align: center;
+}
+
+.partner-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.partner-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.5;
+}
