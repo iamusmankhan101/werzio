@@ -1,6 +1,6 @@
 import React from 'react';
 import './HeroSection.css';
-import heroVideo from '../images/7898649-hd_1920_1080_15fps.mp4';
+import heroVideo from '../images/7234993-uhd_3840_2160_30fps.mp4';
 
 const HeroSection = () => {
   return (
