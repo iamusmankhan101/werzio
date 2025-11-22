@@ -13,40 +13,11 @@ const HeroSection = () => {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ opacity: 0.4 }}
         >
           <source src={heroVideo} type="video/mp4" />
         </video>
-      </div>
-
-      {/* Animated Gradient Overlay */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div 
-          className="gradient-blob-1"
-          style={{
-            position: 'absolute',
-            top: '-10%',
-            right: '-10%',
-            width: '60%',
-            height: '120%',
-            background: 'radial-gradient(circle, #fc007e 0%, #f2851f 40%, #000000 100%)',
-            filter: 'blur(80px)',
-            opacity: 0.5
-          }}
-        ></div>
-        <div 
-          className="gradient-blob-2"
-          style={{
-            position: 'absolute',
-            bottom: '-20%',
-            left: '-10%',
-            width: '60%',
-            height: '80%',
-            background: 'radial-gradient(circle, #f2851f 0%, #fc007e 40%, #000000 100%)',
-            filter: 'blur(80px)',
-            opacity: 0.4
-          }}
-        ></div>
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
