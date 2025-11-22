@@ -15,17 +15,19 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="text-left">
             {/* Main Heading */}
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight mb-8">
-              <span className="text-white">CREATIVITY</span>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight mb-8" style={{ letterSpacing: '-0.02em' }}>
+              <span className="text-white">CREATI</span>
+              <span className="bg-gradient-to-r from-pink-300 via-pink-400 to-orange-400 bg-clip-text text-transparent">VI</span>
+              <span className="text-white">TY</span>
               <br />
               <span className="text-white">EXISTS </span>
-              <span className="bg-gradient-to-r from-pink-400 to-orange-400 bg-clip-text text-transparent">OUTSIDE</span>
+              <span className="bg-gradient-to-r from-pink-300 via-orange-300 to-yellow-400 bg-clip-text text-transparent">OUTSIDE</span>
               <br />
               <span className="text-white">THE BOX</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-white text-lg sm:text-xl md:text-2xl font-light mb-8 max-w-md uppercase tracking-wide">
+            <p className="text-white text-lg sm:text-xl md:text-2xl font-light mb-8 max-w-md uppercase" style={{ letterSpacing: '0.05em' }}>
               CREATIVE SOLUTION FOR<br />
               BUSINESSES LOOKING TO<br />
               STAND OUT.
