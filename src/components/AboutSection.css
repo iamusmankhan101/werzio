@@ -1,0 +1,137 @@
+.about-section {
+  position: relative;
+  background-color: #000000;
+  overflow: visible;
+  width: 100%;
+}
+
+.about-sticky-container {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../images/7234993-uhd_3840_2160_30fps.mp4');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: none;
+  will-change: transform, border-radius;
+}
+
+/* Dark overlay */
+.about-sticky-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.7) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+}
+
+.about-container {
+  position: absolute;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+/* Left Content */
+.about-left {
+  color: #ffffff;
+}
+
+.about-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .about-heading {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-heading {
+    font-size: 5rem;
+  }
+}
+
+.about-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #ffffff;
+  max-width: 600px;
+}
+
+@media (min-width: 768px) {
+  .about-description {
+    font-size: 1.125rem;
+  }
+}
+
+/* Right Content */
+.about-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@media (min-width: 1024px) {
+  .about-right {
+    justify-content: flex-end;
+  }
+}
+
+.about-tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #ffffff;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .about-tagline {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-tagline {
+    font-size: 6rem;
+    text-align: right;
+  }
+}
+
+/* Orange overlay that appears on scroll */
+.about-orange-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #ff9500 0%, #ff6b00 100%);
+  z-index: 3;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}

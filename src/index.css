@@ -18,6 +18,16 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
+  
+  /* Ensure sticky positioning works */
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  #root, .App {
+    overflow-x: hidden;
+    position: relative;
+  }
 }
 
 @layer components {

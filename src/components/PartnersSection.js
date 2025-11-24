@@ -1,7 +1,9 @@
 import React from 'react';
 import './PartnersSection.css';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const PartnersSection = () => {
+  const sectionRef = useScrollAnimation();
   const partners = [
     { name: 'Loreipsum', description: 'Lorem ipsum dolor sit amet, consectetur.' },
     { name: 'Loreipsum', description: 'Lorem ipsum dolor sit amet, consectetur.' },
@@ -15,7 +17,7 @@ const PartnersSection = () => {
   const duplicatedPartners = [...partners, ...partners];
 
   return (
-    <section className="partners-section">
+    <section className="partners-section" ref={sectionRef}>
       <div className="partners-container">
         {/* Section Label */}
         <div className="partners-label">

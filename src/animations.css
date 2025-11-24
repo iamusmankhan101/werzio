@@ -1,0 +1,65 @@
+/* Fade-in animation for sections */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to all major sections */
+.partners-section,
+.work-section,
+.about-us-section,
+.services-stack-section,
+.approach-section {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+/* CTA section without fade to keep solid black background */
+.cta-section {
+  opacity: 1 !important;
+}
+
+/* Footer without fade animation to keep background solid */
+.footer-new {
+  background-color: #000000 !important;
+}
+
+/* Fallback for browsers that don't support animation-timeline */
+@supports not (animation-timeline: view()) {
+  .partners-section,
+  .work-section,
+  .about-us-section,
+  .services-stack-section,
+  .approach-section,
+  .footer-new {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  }
+  
+  .partners-section {
+    animation-delay: 0.2s;
+  }
+  
+  .work-section {
+    animation-delay: 0.3s;
+  }
+  
+  .about-us-section {
+    animation-delay: 0.4s;
+  }
+  
+  .services-stack-section {
+    animation-delay: 0.5s;
+  }
+  
+  .approach-section {
+    animation-delay: 0.6s;
+  }
+}

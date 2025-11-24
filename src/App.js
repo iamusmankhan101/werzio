@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import './animations.css';
 import Header from './components/Header';
 import BottomNav from './components/BottomNav';
 import HeroSection from './components/HeroSection';
 import PartnersSection from './components/PartnersSection';
+import WorkSection from './components/WorkSection';
+import AboutUsSection from './components/AboutUsSection';
+import ServicesStackSection from './components/ServicesStackSection';
+import ApproachSection from './components/ApproachSection';
+import CTASection from './components/CTASection';
+import AboutSection from './components/AboutSection';
 import WorkShowcase from './components/WorkShowcase';
 import ProcessSection from './components/ProcessSection';
 import PricingSection from './components/PricingSection';
 import Footer from './components/Footer';
+import FooterNew from './components/FooterNew';
 import OptimusCaseStudy from './components/OptimusCaseStudy';
 import GreenfutureCaseStudy from './components/GreenfutureCaseStudy';
 import OptimusLuxeCaseStudy from './components/OptimusLuxeCaseStudy';
@@ -58,42 +66,79 @@ function App() {
   }, []);
 
   if (currentPage === 'optimus-case-study') {
-    return <OptimusCaseStudy />;
+    return (
+      <>
+        <OptimusCaseStudy />
+        <FooterNew />
+      </>
+    );
   }
 
   if (currentPage === 'greenfuture-case-study') {
-    return <GreenfutureCaseStudy />;
+    return (
+      <>
+        <GreenfutureCaseStudy />
+        <FooterNew />
+      </>
+    );
   }
 
   if (currentPage === 'optimus-luxe-case-study') {
-    return <OptimusLuxeCaseStudy />;
+    return (
+      <>
+        <OptimusLuxeCaseStudy />
+        <FooterNew />
+      </>
+    );
   }
 
   if (currentPage === 'hawk-dispatch-case-study') {
-    return <HawkDispatchCaseStudy />;
+    return (
+      <>
+        <HawkDispatchCaseStudy />
+        <FooterNew />
+      </>
+    );
   }
 
   if (currentPage === 'optimus-rak-case-study') {
-    return <OptimusRAKCaseStudy />;
+    return (
+      <>
+        <OptimusRAKCaseStudy />
+        <FooterNew />
+      </>
+    );
   }
 
   if (currentPage === 'vision-care-case-study') {
-    return <VisionCareCaseStudy />;
+    return (
+      <>
+        <VisionCareCaseStudy />
+        <FooterNew />
+      </>
+    );
   }
 
   if (currentPage === 'black-n-white-case-study') {
-    return <BlackNWhiteCaseStudy />;
+    return (
+      <>
+        <BlackNWhiteCaseStudy />
+        <FooterNew />
+      </>
+    );
   }
 
   return (
-    <div className="App min-h-screen pb-20">
+    <div className="App min-h-screen">
+      <BottomNav />
       <HeroSection />
       <PartnersSection />
-      <WorkShowcase />
-      <ProcessSection />
-      <PricingSection />
-      <Footer />
-      <BottomNav />
+      <WorkSection />
+      <AboutUsSection />
+      <ServicesStackSection />
+      <ApproachSection />
+      <CTASection />
+      <FooterNew />
     </div>
   );
 }

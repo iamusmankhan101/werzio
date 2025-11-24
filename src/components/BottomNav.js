@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import werzioLogo from '../images/werzio png 4@300x.png';
+import werzioLogo from '../images/werzio icon 4@300x.png';
 
 const BottomNav = () => {
   const [activeMenu, setActiveMenu] = useState('');
@@ -13,18 +13,24 @@ const BottomNav = () => {
   ];
 
   return (
-    <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 bg-white border border-gray-200 shadow-lg w-3/5 mb-2.5" style={{ borderRadius: '50px' }}>
+    <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 w-3/5 mb-2.5" style={{
+      borderRadius: '50px',
+      backdropFilter: 'blur(10px)',
+      WebkitBackdropFilter: 'blur(10px)',
+      backgroundColor: 'rgba(255, 255, 255, 0.7)',
+      border: '1px solid rgba(255, 255, 255, 0.3)',
+      boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)'
+    }}>
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-md">
-              <img 
-                src={werzioLogo} 
-                alt="Werzio" 
-                className="w-8 h-8 object-contain"
-              />
-            </div>
+            <img
+              src={werzioLogo}
+              alt="Werzio"
+              className="w-auto object-contain"
+              style={{ height: '68px', filter: 'brightness(0)' }}
+            />
           </div>
 
           {/* Navigation Menu */}
@@ -34,11 +40,10 @@ const BottomNav = () => {
                 key={item.label}
                 href={item.href}
                 onClick={() => setActiveMenu(item.label)}
-                className={`text-sm font-medium transition-colors duration-200 ${
-                  activeMenu === item.label
-                    ? 'text-black'
-                    : 'text-gray-600 hover:text-black'
-                }`}
+                className={`text-sm font-medium transition-colors duration-200 ${activeMenu === item.label
+                  ? 'text-black'
+                  : 'text-gray-600 hover:text-black'
+                  }`}
               >
                 {item.label}
               </a>
@@ -63,7 +68,7 @@ const BottomNav = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className="md:hidden border-t border-gray-200 bg-white">
+      <div className="md:hidden border-t border-white/30">
         <div className="px-4 py-3 overflow-x-auto">
           <div className="flex space-x-6">
             {menuItems.map((item) => (
@@ -71,11 +76,10 @@ const BottomNav = () => {
                 key={item.label}
                 href={item.href}
                 onClick={() => setActiveMenu(item.label)}
-                className={`text-xs font-medium whitespace-nowrap transition-colors duration-200 ${
-                  activeMenu === item.label
-                    ? 'text-black'
-                    : 'text-gray-600'
-                }`}
+                className={`text-xs font-medium whitespace-nowrap transition-colors duration-200 ${activeMenu === item.label
+                  ? 'text-black'
+                  : 'text-gray-600'
+                  }`}
               >
                 {item.label}
               </a>
