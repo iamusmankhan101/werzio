@@ -55,17 +55,43 @@
   background-color: #000000;
 }
 
-.moving-gradient {
+.hero-background {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100vh;
-  background: #abbaab;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #ffffff, #abbaab);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #ffffff, #abbaab);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow: hidden;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
+  margin-left: -20px;
+}
+
+.hero-logo-image {
+  height: 50px;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .hero-logo {
+    top: 3rem;
+    left: 3rem;
+  }
+
+  .hero-logo-image {
+    height: 60px;
+  }
 }
 
 .hero-content {
@@ -98,8 +124,9 @@
   font-weight: 600;
   line-height: 1.2;
   width: 100%;
+  margin-top: 150px;
   margin-bottom: 2rem;
-  color: #000000;
+  color: #ffffff;
   letter-spacing: -0.02em;
   font-family: 'Montserrat', sans-serif;
 }
@@ -123,7 +150,7 @@
 }
 
 .hero-subtitle {
-  color: #000000;
+  color: #ffffff;
   font-size: 0.75rem;
   font-weight: 300;
   margin-bottom: 2rem;

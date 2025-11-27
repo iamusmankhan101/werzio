@@ -1,11 +1,20 @@
 import React from 'react';
 import './HeroSection.css';
+import heroImage from '../images/soul speaks 1st video thumbnail (1).png';
+import werzioLogo from '../images/werzio png 4@300x.png';
 
 const HeroSection = () => {
   return (
     <section className="hero-section">
-      {/* Moving Gradient Background */}
-      <div className="moving-gradient"></div>
+      {/* Background Image */}
+      <div className="hero-background">
+        <img src={heroImage} alt="Hero background" className="hero-bg-image" />
+      </div>
+
+      {/* Logo in top left */}
+      <div className="hero-logo">
+        <img src={werzioLogo} alt="Werzio Logo" className="hero-logo-image" />
+      </div>
 
       <div className="hero-content">
         <div className="hero-grid">
