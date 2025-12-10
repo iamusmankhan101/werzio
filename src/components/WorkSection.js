@@ -100,9 +100,7 @@ const WorkSection = () => {
           <div className="work-center">
             <h3 className="work-label">PROJECTS</h3>
             <p className="work-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in elementum tristique.
-              Duis cursus, mi quis viverra ornare.
+              Showcasing the diverse range of our capabilities and expertise. These projects highlight successful collaborations and impactful outcomes across various industries and creative challenges.
             </p>
           </div>
 

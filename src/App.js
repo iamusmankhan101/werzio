@@ -131,13 +131,23 @@ function App() {
   return (
     <div className="App min-h-screen">
       <BottomNav />
-      <HeroSection />
+      <div id="home">
+        <HeroSection />
+      </div>
       <PartnersSection />
-      <WorkSection />
-      <AboutUsSection />
-      <ServicesStackSection />
+      <div id="work">
+        <WorkSection />
+      </div>
+      <div id="about">
+        <AboutUsSection />
+      </div>
+      <div id="services">
+        <ServicesStackSection />
+      </div>
       <ApproachSection />
-      <CTASection />
+      <div id="contact">
+        <CTASection />
+      </div>
       <FooterNew />
     </div>
   );

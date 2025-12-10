@@ -75,7 +75,6 @@ const ServicesStackSection = () => {
                       <div className="service-image-placeholder"></div>
                     )}
                   </div>
-                  <p className="service-description">{service.description}</p>
                 </div>
               </div>
             </div>

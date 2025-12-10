@@ -1,16 +1,30 @@
 import React, { useState } from 'react';
 import werzioLogo from '../images/werzio icon 4@300x.png';
+import ContactModal from './ContactModal';
 
 const BottomNav = () => {
   const [activeMenu, setActiveMenu] = useState('');
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const menuItems = [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
     { label: 'Work', href: '#work' },
-    { label: 'Process', href: '#process' },
-    { label: 'Pricing', href: '#pricing' }
+    { label: 'Services', href: '#services' },
+    { label: 'Contact', href: '#contact' }
   ];
+
+  const handleClick = (e, href, label) => {
+    e.preventDefault();
+    if (label === 'Contact') {
+      setIsContactModalOpen(true);
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  };
 
   return (
     <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 w-3/5 mb-2.5" style={{
@@ -39,7 +53,10 @@ const BottomNav = () => {
               <a
                 key={item.label}
                 href={item.href}
-                onClick={() => setActiveMenu(item.label)}
+                onClick={(e) => {
+                  handleClick(e, item.href, item.label);
+                  setActiveMenu(item.label);
+                }}
                 className={`text-sm font-medium transition-colors duration-200 ${activeMenu === item.label
                   ? 'text-black'
                   : 'text-gray-600 hover:text-black'
@@ -75,7 +92,10 @@ const BottomNav = () => {
               <a
                 key={item.label}
                 href={item.href}
-                onClick={() => setActiveMenu(item.label)}
+                onClick={(e) => {
+                  handleClick(e, item.href, item.label);
+                  setActiveMenu(item.label);
+                }}
                 className={`text-xs font-medium whitespace-nowrap transition-colors duration-200 ${activeMenu === item.label
                   ? 'text-black'
                   : 'text-gray-600'
@@ -87,6 +107,11 @@ const BottomNav = () => {
           </div>
         </div>
       </div>
+
+      <ContactModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
     </div>
   );
 };

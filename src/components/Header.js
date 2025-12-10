@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu } from 'lucide-react';
-import werzioLogo from '../images/werzio icon 4@300x.png';
+import werzioLogo from '../images/werzio png 4@300x.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,11 +30,9 @@ const Header = () => {
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <div className="flex items-center">
-            <img
-              src={werzioLogo}
-              alt="Werzio Digital"
-              className="h-12 w-auto transition-all duration-300"
-            />
+            <span className="text-white font-bold text-xl tracking-wide">
+              WERZIO
+            </span>
           </div>
 
           {/* Navigation */}

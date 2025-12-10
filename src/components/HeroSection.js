@@ -1,14 +1,21 @@
 import React from 'react';
 import './HeroSection.css';
-import heroImage from '../images/soul speaks 1st video thumbnail (1).png';
+import heroVideo from '../images/hero-background-video.mp4';
 import werzioLogo from '../images/werzio png 4@300x.png';
 
 const HeroSection = () => {
   return (
     <section className="hero-section">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="hero-background">
-        <img src={heroImage} alt="Hero background" className="hero-bg-image" />
+        <video 
+          src={heroVideo} 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          className="hero-bg-video"
+        />
       </div>
 
       {/* Logo in top left */}
