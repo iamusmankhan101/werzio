@@ -1,0 +1,268 @@
+.work-detail-page {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+.work-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(245, 245, 245, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.back-button,
+.menu-button {
+  background: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #000000;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.back-button:hover,
+.menu-button:hover {
+  opacity: 0.7;
+}
+
+/* Main Content */
+.work-main {
+  padding-top: 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+/* Project Info */
+.project-info {
+  padding-top: 2rem;
+}
+
+.project-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 3rem 0;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.project-details {
+  margin-bottom: 3rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.detail-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.detail-value {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #000000;
+  text-align: right;
+}
+
+.project-description {
+  line-height: 1.6;
+  color: #333333;
+}
+
+.project-description p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Project Images */
+.project-images {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.image-container {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.image-container.hero {
+  aspect-ratio: 16/10;
+}
+
+.image-container.square {
+  aspect-ratio: 1/1;
+}
+
+.image-container.wide {
+  aspect-ratio: 16/9;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Background Classes */
+.bg-blue {
+  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+}
+
+.bg-gray {
+  background: linear-gradient(135deg, #E8E8E8 0%, #D0D0D0 100%);
+}
+
+.bg-light {
+  background: linear-gradient(135deg, #F8F8F8 0%, #EEEEEE 100%);
+}
+
+.bg-white {
+  background: #FFFFFF;
+}
+
+.bg-mint {
+  background: linear-gradient(135deg, #A8E6CF 0%, #88D8A3 100%);
+}
+
+.bg-purple {
+  background: linear-gradient(135deg, #B19CD9 0%, #9B59B6 100%);
+}
+
+.bg-orange {
+  background: linear-gradient(135deg, #F39C12 0%, #E67E22 100%);
+}
+
+.bg-pink {
+  background: linear-gradient(135deg, #FF6B9D 0%, #E91E63 100%);
+}
+
+/* Project Footer */
+.project-footer {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 6rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.1);
+  margin: 0 0 1rem 0;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.footer-description {
+  font-size: 1.125rem;
+  color: #666666;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.view-project-btn {
+  background: #000000;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.view-project-btn:hover {
+  background: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .project-title {
+    font-size: 3rem;
+  }
+
+  .footer-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .header-content {
+    padding: 0 1rem;
+  }
+
+  .project-title {
+    font-size: 2.5rem;
+  }
+
+  .footer-title {
+    font-size: 3rem;
+  }
+
+  .image-container {
+    aspect-ratio: 3/2;
+  }
+}

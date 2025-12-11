@@ -23,6 +23,7 @@ import OptimusRAKCaseStudy from './components/OptimusRAKCaseStudy';
 import VisionCareCaseStudy from './components/VisionCareCaseStudy';
 import BlackNWhiteCaseStudy from './components/BlackNWhiteCaseStudy';
 import TrackerCaseStudy from './components/TrackerCaseStudy';
+import DynamicProjectPage from './components/DynamicProjectPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -47,6 +48,10 @@ function App() {
         setCurrentPage('black-n-white-case-study');
       } else if (hash === 'tracker-case-study') {
         setCurrentPage('tracker-case-study');
+      } else if (hash === 'spatial-case-study') {
+        setCurrentPage('spatial-case-study');
+      } else if (hash === 'nexus-case-study') {
+        setCurrentPage('nexus-case-study');
       } else {
         setCurrentPage('home');
       }
@@ -134,7 +139,25 @@ function App() {
   if (currentPage === 'tracker-case-study') {
     return (
       <>
-        <TrackerCaseStudy />
+        <DynamicProjectPage projectId="tracker" />
+        <FooterNew />
+      </>
+    );
+  }
+
+  if (currentPage === 'spatial-case-study') {
+    return (
+      <>
+        <DynamicProjectPage projectId="spatial" />
+        <FooterNew />
+      </>
+    );
+  }
+
+  if (currentPage === 'nexus-case-study') {
+    return (
+      <>
+        <DynamicProjectPage projectId="nexus" />
         <FooterNew />
       </>
     );
