@@ -51,35 +51,35 @@ const WorkSection = () => {
       title: 'Optimus Properties',
       image: optimusImage,
       bgColor: '#1a5f7a',
-      link: '#optimus-case-study'
+      link: '#optimus-detail'
     },
     {
       id: 2,
       title: 'Greenfuture',
       image: greenfutureImage,
       bgColor: '#2d7a4f',
-      link: '#greenfuture-case-study'
+      link: '#greenfuture-detail'
     },
     {
       id: 3,
       title: 'Optimus Luxe',
       image: luxeImage,
       bgColor: '#d97706',
-      link: '#optimus-luxe-case-study'
+      link: '#optimus-luxe-detail'
     },
     {
       id: 4,
       title: 'Hawk Dispatch',
       image: hawkImage,
       bgColor: '#1e40af',
-      link: '#hawk-dispatch-case-study'
+      link: '#hawk-dispatch-detail'
     },
     {
       id: 5,
       title: 'Black n White',
       image: blackImage,
       bgColor: '#000000',
-      link: '#black-n-white-case-study'
+      link: '#black-n-white-detail'
     }
   ];
 

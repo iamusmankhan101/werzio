@@ -65,19 +65,19 @@ const ProjectCard = ({ project, index, scrollProgress }) => {
 
   const handleClick = () => {
     if (project.id === 1) {
-      window.location.hash = 'optimus-case-study';
+      window.location.hash = 'optimus-detail';
     } else if (project.id === 2) {
-      window.location.hash = 'greenfuture-case-study';
+      window.location.hash = 'greenfuture-detail';
     } else if (project.id === 3) {
-      window.location.hash = 'optimus-luxe-case-study';
+      window.location.hash = 'optimus-luxe-detail';
     } else if (project.id === 4) {
-      window.location.hash = 'hawk-dispatch-case-study';
+      window.location.hash = 'hawk-dispatch-detail';
     } else if (project.id === 5) {
-      window.location.hash = 'optimus-rak-case-study';
+      window.location.hash = 'optimus-rak-case-study'; // Keep existing since no optimus-rak-detail created
     } else if (project.id === 6) {
-      window.location.hash = 'vision-care-case-study';
+      window.location.hash = 'vision-care-detail';
     } else if (project.id === 7) {
-      window.location.hash = 'black-n-white-case-study';
+      window.location.hash = 'black-n-white-detail';
     } else {
       alert(`Case study for ${project.title} coming soon!`);
     }
