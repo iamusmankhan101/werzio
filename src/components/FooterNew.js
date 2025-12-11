@@ -42,8 +42,8 @@ const FooterNew = () => {
             <div className="footer-column">
               <h4 className="footer-column-title">Contact info</h4>
               <ul className="footer-links-list">
-                <li><a href="tel:+15588458889">+(558) 845 889</a></li>
-                <li><a href="mailto:example@gmail.com">example@gmail.com</a></li>
+                <li><a href="tel:+923144133096">+92 314 4133096</a></li>
+                <li><a href="mailto:hello@werzio.com">hello@werzio.com</a></li>
                 <li className="footer-address">Lahore, Pakistan</li>
               </ul>
             </div>
