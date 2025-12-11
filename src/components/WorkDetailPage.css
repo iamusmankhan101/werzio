@@ -2,6 +2,7 @@
   min-height: 100vh;
   background-color: #f5f5f5;
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -49,6 +50,7 @@
   margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;
+  position: relative;
 }
 
 .content-grid {
@@ -56,16 +58,18 @@
   gap: 4rem;
   margin-bottom: 6rem;
   align-items: flex-start;
+  position: relative;
 }
 
 /* Project Info */
 .project-info {
-  flex: 1;
+  flex: 0 0 400px;
   padding: 2rem;
+  position: -webkit-sticky;
   position: sticky;
-  top: 20px;
+  top: 100px;
   height: fit-content;
-  max-height: calc(100vh - 40px);
+  max-height: calc(100vh - 120px);
   overflow-y: auto;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
@@ -74,7 +78,6 @@
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   z-index: 10;
-  align-self: flex-start;
 }
 
 .project-title {
@@ -125,11 +128,12 @@
 
 /* Project Images */
 .project-images {
-  flex: 2;
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  min-height: 150vh;
+  min-height: 200vh;
+  padding-bottom: 4rem;
 }
 
 .image-container {
