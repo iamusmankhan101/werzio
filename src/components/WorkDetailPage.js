@@ -71,17 +71,23 @@ const WorkDetailPage = ({ projectData }) => {
 
           {/* Right Column - Images */}
           <div className="project-images">
-            {images.map((image, index) => (
-              <div key={index} className={`image-container ${image.size || ''}`}>
-                {image.type === 'image' ? (
-                  <img src={image.src} alt={image.alt} className="project-image" />
-                ) : (
-                  <div className={`image-placeholder ${image.bgClass}`}>
-                    {image.component && <image.component />}
-                  </div>
-                )}
+            {images && images.length > 0 ? (
+              images.map((image, index) => (
+                <div key={index} className={`image-container ${image.size || ''}`}>
+                  {image.type === 'image' ? (
+                    <img src={image.src} alt={image.alt} className="project-image" />
+                  ) : (
+                    <div className={`image-placeholder ${image.bgClass}`}>
+                      {image.component && React.createElement(image.component)}
+                    </div>
+                  )}
+                </div>
+              ))
+            ) : (
+              <div className="no-images">
+                <p>No images available for this project.</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
 

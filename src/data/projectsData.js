@@ -41,6 +41,48 @@ const SpatialDesign = () => (
   </div>
 );
 
+// Import project images
+import optimusImg1 from '../images/optimus/Screenshot 2025-10-19 202742.png';
+import optimusImg2 from '../images/optimus/Screenshot 2025-10-19 202754.png';
+import optimusImg3 from '../images/optimus/Screenshot 2025-10-19 202816.png';
+import optimusImg4 from '../images/optimus/Screenshot 2025-10-19 202828.png';
+import optimusImg5 from '../images/optimus/Screenshot 2025-10-19 202841.png';
+import optimusImg6 from '../images/optimus/Screenshot 2025-10-19 202856.png';
+
+import gfImg1 from '../images/GF/Screenshot 2025-10-19 210004.png';
+import gfImg2 from '../images/GF/Screenshot 2025-10-19 210013.png';
+import gfImg3 from '../images/GF/Screenshot 2025-10-19 210021.png';
+import gfImg4 from '../images/GF/Screenshot 2025-10-19 210032.png';
+import gfImg5 from '../images/GF/Screenshot 2025-10-19 210047.png';
+import gfImg6 from '../images/GF/Screenshot 2025-10-19 210106.png';
+
+import hawkImg1 from '../images/hawk/Screenshot 2025-10-19 214555.png';
+import hawkImg2 from '../images/hawk/Screenshot 2025-10-19 214604.png';
+import hawkImg3 from '../images/hawk/Screenshot 2025-10-19 214611.png';
+import hawkImg4 from '../images/hawk/Screenshot 2025-10-19 214620.png';
+import hawkImg5 from '../images/hawk/Screenshot 2025-10-19 214636.png';
+import hawkImg6 from '../images/hawk/Screenshot 2025-10-19 214644.png';
+
+import luxeImg1 from '../images/luxe/Screenshot 2025-10-19 213550.png';
+import luxeImg2 from '../images/luxe/Screenshot 2025-10-19 213600.png';
+import luxeImg3 from '../images/luxe/Screenshot 2025-10-19 213608.png';
+import luxeImg4 from '../images/luxe/Screenshot 2025-10-19 213620.png';
+import luxeImg5 from '../images/luxe/Screenshot 2025-10-19 213933.png';
+
+import blackImg1 from '../images/black/Screenshot 2025-10-20 114845.png';
+import blackImg2 from '../images/black/Screenshot 2025-10-20 114932.png';
+import blackImg3 from '../images/black/Screenshot 2025-10-20 114955.png';
+import blackImg4 from '../images/black/Screenshot 2025-10-20 115009.png';
+import blackImg5 from '../images/black/Screenshot 2025-10-20 115025.png';
+import blackImg6 from '../images/black/Screenshot 2025-10-20 115049.png';
+
+import visionImg1 from '../images/vision/Screenshot 2025-10-19 221920.png';
+import visionImg2 from '../images/vision/Screenshot 2025-10-19 221929.png';
+import visionImg3 from '../images/vision/Screenshot 2025-10-19 221945.png';
+import visionImg4 from '../images/vision/Screenshot 2025-10-19 221954.png';
+import visionImg5 from '../images/vision/Screenshot 2025-10-19 222001.png';
+import visionImg6 from '../images/vision/Screenshot 2025-10-19 222015.png';
+
 export const projectsData = {
   'optimus': {
     title: 'OPTIMUS',
@@ -54,31 +96,41 @@ export const projectsData = {
     ],
     images: [
       {
-        type: 'placeholder',
-        bgClass: 'bg-blue',
-        component: ProductCollection,
+        type: 'image',
+        src: optimusImg1,
+        alt: 'Optimus Homepage Design',
         size: 'hero'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-gray',
-        component: TrackerDevice
+        type: 'image',
+        src: optimusImg2,
+        alt: 'Optimus Property Listings'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-mint',
-        component: SpatialDesign
+        type: 'image',
+        src: optimusImg3,
+        alt: 'Optimus Property Details'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-white',
-        component: VRHeadset
+        type: 'image',
+        src: optimusImg4,
+        alt: 'Optimus Search Interface'
+      },
+      {
+        type: 'image',
+        src: optimusImg5,
+        alt: 'Optimus Mobile Design'
+      },
+      {
+        type: 'image',
+        src: optimusImg6,
+        alt: 'Optimus Contact Page'
       }
     ],
     nextProject: {
       title: 'GREENFUTURE',
       description: 'Sustainable solutions for a better tomorrow.',
-      link: 'greenfuture-case-study'
+      link: 'greenfuture-detail'
     }
   },
 
@@ -94,31 +146,41 @@ export const projectsData = {
     ],
     images: [
       {
-        type: 'placeholder',
-        bgClass: 'bg-mint',
-        component: SpatialDesign,
+        type: 'image',
+        src: gfImg1,
+        alt: 'Greenfuture Homepage',
         size: 'hero'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-light',
-        component: ProductCollection
+        type: 'image',
+        src: gfImg2,
+        alt: 'Greenfuture Properties'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-blue',
-        component: CameraDevice
+        type: 'image',
+        src: gfImg3,
+        alt: 'Greenfuture Sustainability Features'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-white',
-        component: TrackerDevice
+        type: 'image',
+        src: gfImg4,
+        alt: 'Greenfuture Project Gallery'
+      },
+      {
+        type: 'image',
+        src: gfImg5,
+        alt: 'Greenfuture Contact Interface'
+      },
+      {
+        type: 'image',
+        src: gfImg6,
+        alt: 'Greenfuture Mobile Experience'
       }
     ],
     nextProject: {
       title: 'HAWK DISPATCH',
       description: 'Streamlined logistics and delivery solutions.',
-      link: 'hawk-dispatch-case-study'
+      link: 'hawk-dispatch-detail'
     }
   },
 
@@ -134,31 +196,41 @@ export const projectsData = {
     ],
     images: [
       {
-        type: 'placeholder',
-        bgClass: 'bg-orange',
-        component: TrackerDevice,
+        type: 'image',
+        src: hawkImg1,
+        alt: 'Hawk Dispatch Homepage',
         size: 'hero'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-gray',
-        component: ProductCollection
+        type: 'image',
+        src: hawkImg2,
+        alt: 'Hawk Dispatch Services'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-blue',
-        component: VRHeadset
+        type: 'image',
+        src: hawkImg3,
+        alt: 'Hawk Dispatch Dashboard'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-mint',
-        component: CameraDevice
+        type: 'image',
+        src: hawkImg4,
+        alt: 'Hawk Dispatch Tracking'
+      },
+      {
+        type: 'image',
+        src: hawkImg5,
+        alt: 'Hawk Dispatch Mobile App'
+      },
+      {
+        type: 'image',
+        src: hawkImg6,
+        alt: 'Hawk Dispatch Contact'
       }
     ],
     nextProject: {
       title: 'BLACK N WHITE',
       description: 'Minimalist design philosophy in action.',
-      link: 'black-n-white-case-study'
+      link: 'black-n-white-detail'
     }
   },
 
@@ -174,31 +246,41 @@ export const projectsData = {
     ],
     images: [
       {
-        type: 'placeholder',
-        bgClass: 'bg-gray',
-        component: SpatialDesign,
+        type: 'image',
+        src: blackImg1,
+        alt: 'Black N White Homepage',
         size: 'hero'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-white',
-        component: ProductCollection
+        type: 'image',
+        src: blackImg2,
+        alt: 'Black N White Portfolio'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-light',
-        component: TrackerDevice
+        type: 'image',
+        src: blackImg3,
+        alt: 'Black N White Product Gallery'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-mint',
-        component: VRHeadset
+        type: 'image',
+        src: blackImg4,
+        alt: 'Black N White Collections'
+      },
+      {
+        type: 'image',
+        src: blackImg5,
+        alt: 'Black N White About Page'
+      },
+      {
+        type: 'image',
+        src: blackImg6,
+        alt: 'Black N White Contact'
       }
     ],
     nextProject: {
       title: 'VISION CARE',
       description: 'Healthcare solutions with a human touch.',
-      link: 'vision-care-case-study'
+      link: 'vision-care-detail'
     }
   },
 
@@ -214,31 +296,41 @@ export const projectsData = {
     ],
     images: [
       {
-        type: 'placeholder',
-        bgClass: 'bg-blue',
-        component: VRHeadset,
+        type: 'image',
+        src: visionImg1,
+        alt: 'Vision Care Homepage',
         size: 'hero'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-mint',
-        component: CameraDevice
+        type: 'image',
+        src: visionImg2,
+        alt: 'Vision Care Services'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-white',
-        component: SpatialDesign
+        type: 'image',
+        src: visionImg3,
+        alt: 'Vision Care Appointment Booking'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-light',
-        component: ProductCollection
+        type: 'image',
+        src: visionImg4,
+        alt: 'Vision Care Patient Portal'
+      },
+      {
+        type: 'image',
+        src: visionImg5,
+        alt: 'Vision Care Treatment Plans'
+      },
+      {
+        type: 'image',
+        src: visionImg6,
+        alt: 'Vision Care Contact Information'
       }
     ],
     nextProject: {
       title: 'OPTIMUS LUXE',
       description: 'Luxury redefined through digital excellence.',
-      link: 'optimus-luxe-case-study'
+      link: 'optimus-luxe-detail'
     }
   },
 
@@ -254,25 +346,30 @@ export const projectsData = {
     ],
     images: [
       {
-        type: 'placeholder',
-        bgClass: 'bg-purple',
-        component: ProductCollection,
+        type: 'image',
+        src: luxeImg1,
+        alt: 'Optimus Luxe Homepage',
         size: 'hero'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-orange',
-        component: SpatialDesign
+        type: 'image',
+        src: luxeImg2,
+        alt: 'Optimus Luxe Property Showcase'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-blue',
-        component: TrackerDevice
+        type: 'image',
+        src: luxeImg3,
+        alt: 'Optimus Luxe Premium Listings'
       },
       {
-        type: 'placeholder',
-        bgClass: 'bg-mint',
-        component: VRHeadset
+        type: 'image',
+        src: luxeImg4,
+        alt: 'Optimus Luxe Property Details'
+      },
+      {
+        type: 'image',
+        src: luxeImg5,
+        alt: 'Optimus Luxe Contact Page'
       }
     ],
     nextProject: {
