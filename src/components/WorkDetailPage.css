@@ -56,20 +56,24 @@
   grid-template-columns: 1fr 2fr;
   gap: 4rem;
   margin-bottom: 6rem;
+  align-items: start;
 }
 
 /* Project Info */
 .project-info {
   padding: 2rem;
   position: sticky;
-  top: 0;
+  top: 20px;
   height: fit-content;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 .project-title {
