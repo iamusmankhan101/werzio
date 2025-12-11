@@ -69,8 +69,6 @@
   position: sticky;
   top: 100px;
   height: fit-content;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -98,6 +96,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 0;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .detail-label {
