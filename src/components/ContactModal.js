@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ContactModal.css';
 
 const ContactModal = ({ isOpen, onClose }) => {
@@ -10,6 +10,19 @@ const ContactModal = ({ isOpen, onClose }) => {
     message: '',
     newsletter: false
   });
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('modal-open');
+    } else {
+      document.body.classList.remove('modal-open');
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove('modal-open');
+    };
+  }, [isOpen]);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;

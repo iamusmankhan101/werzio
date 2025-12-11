@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import './CTASection.css';
+import ContactModal from './ContactModal';
 import img1 from '../images/pin/6b7d6434e4d611fc770ce1516b7ccf39.jpg';
 import img2 from '../images/pin/17ab8d7fbf67aec9fbeff31585fb7b6a.jpg';
 import img3 from '../images/pin/670273ffdc269b0f1e9f2f76b3893f66.jpg';
@@ -14,6 +15,7 @@ const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
 const CTASection = () => {
   const [visibleImages, setVisibleImages] = useState([]);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const sectionRef = useRef(null);
   const mousePos = useRef({ x: 0, y: 0 });
   const imageCount = useRef(0);
@@ -106,11 +108,19 @@ const CTASection = () => {
           Start your project<br />
           with Werzio<sup>®</sup>
         </h2>
-        <a href="#contact" className="cta-button">
+        <button 
+          onClick={() => setIsContactModalOpen(true)}
+          className="cta-button"
+        >
           Get in touch
           <span className="cta-arrow">→</span>
-        </a>
+        </button>
       </div>
+
+      <ContactModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
     </section>
   );
 };

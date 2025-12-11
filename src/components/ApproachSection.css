@@ -1,11 +1,16 @@
 .approach-section {
   background-color: #f5f5f0;
-  padding: 6rem 2rem;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
-.approach-container {
-  max-width: 1400px;
-  margin: 0 auto;
+.approach-sticky-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  overflow: hidden;
 }
 
 /* Header */
@@ -13,9 +18,10 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
   gap: 2rem;
+  z-index: 10;
 }
 
 .approach-header-left {
@@ -81,72 +87,111 @@
   font-size: 1.25rem;
 }
 
-/* Steps Grid */
-.approach-steps {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+/* Horizontal Cards Viewport */
+.approach-cards-viewport {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
 }
 
-@media (min-width: 768px) {
-  .approach-steps {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .approach-steps {
-    grid-template-columns: repeat(4, 1fr);
-  }
+/* Cards Container */
+.approach-cards-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  position: relative;
+  width: 100%;
 }
 
 .approach-step-card {
-  background-color: #ceec52;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 1.5rem;
-  padding: 2.5rem 2rem;
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  min-height: 280px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  min-height: 350px;
+  width: 300px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+  color: #000000;
+  position: absolute;
+}
+
+/* Initial stacked positioning - all centered */
+.approach-step-card:nth-child(1) {
+  z-index: 4;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.approach-step-card:nth-child(2) {
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, calc(-50% + 20px));
+}
+
+.approach-step-card:nth-child(3) {
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, calc(-50% + 40px));
+}
+
+.approach-step-card:nth-child(4) {
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, calc(-50% + 60px));
 }
 
 .approach-step-card:hover {
+  background: rgba(255, 255, 255, 0.15);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(206, 236, 82, 0.4);
-  background-color: #d4f05e;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+.horizontal-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .step-number {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #000000;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .step-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  color: #000000;
   margin: 0;
 }
 
 @media (min-width: 768px) {
   .step-title {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 }
 
 .step-description {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #000000;
   margin: 0;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 /* Mobile Adjustments */

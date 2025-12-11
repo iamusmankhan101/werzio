@@ -1,6 +1,16 @@
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './ApproachSection.css';
 
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
 const ApproachSection = () => {
+  const sectionRef = useRef(null);
+  const cardsContainerRef = useRef(null);
+  const triggerRef = useRef(null);
+
   const steps = [
     {
       id: 1,
@@ -28,35 +38,89 @@ const ApproachSection = () => {
     }
   ];
 
-  return (
-    <section className="approach-section">
-      <div className="approach-container">
-        {/* Header */}
-        <div className="approach-header">
-          <div className="approach-header-left">
-            <span className="approach-label">● Process</span>
-            <h2 className="approach-title">Approach</h2>
-          </div>
-          <div className="approach-header-right">
-            <a href="#work" className="approach-button">
-              View All Work
-              <span className="approach-button-arrow">→</span>
-            </a>
-          </div>
-        </div>
+  useEffect(() => {
+    const section = sectionRef.current;
+    const cardsContainer = cardsContainerRef.current;
+    const trigger = triggerRef.current;
 
-        {/* Steps Grid */}
-        <div className="approach-steps">
-          {steps.map((step) => (
-            <div key={step.id} className="approach-step-card">
-              <span className="step-number">{step.number}</span>
-              <h3 className="step-title">{step.title}</h3>
-              <p className="step-description">{step.description}</p>
+    if (!section || !cardsContainer || !trigger) return;
+
+    // Get all card elements
+    const cards = cardsContainer.children;
+    
+    // Calculate scroll distance
+    const scrollDistance = 200; // 200vh for the animation
+
+    // Create GSAP timeline for stacked to 4-column grid animation
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: trigger,
+        start: "top top",
+        end: () => `+=${scrollDistance}vh`,
+        scrub: 1,
+        pin: section,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+      }
+    });
+
+    // Define 4-column grid positions with even spacing
+    const gridPositions = [
+      { x: "12.5%", y: "50%" },   // Card 1: Left (12.5% from edge)
+      { x: "37.5%", y: "50%" },   // Card 2: Center-left 
+      { x: "62.5%", y: "50%" },   // Card 3: Center-right
+      { x: "87.5%", y: "50%" }    // Card 4: Right (12.5% from edge)
+    ];
+
+    // Animate each card from stacked center to grid position
+    Array.from(cards).forEach((card, index) => {
+      const position = gridPositions[index];
+      
+      tl.to(card, {
+        left: position.x,
+        top: position.y,
+        transform: "translate(-50%, -50%)",
+        ease: "power2.out",
+        duration: 1
+      }, 0); // Start all animations at the same time
+    });
+
+    // Cleanup function
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, [steps.length]);
+
+  return (
+    <div ref={triggerRef}>
+      <section className="approach-section" ref={sectionRef}>
+        <div className="approach-sticky-container">
+          {/* Header */}
+          <div className="approach-header">
+            <div className="approach-header-left">
+              <span className="approach-label">● Process</span>
+              <h2 className="approach-title">Approach</h2>
             </div>
-          ))}
+          </div>
+
+          {/* Horizontal Scrolling Cards */}
+          <div className="approach-cards-viewport">
+            <div className="approach-cards-container" ref={cardsContainerRef}>
+              {steps.map((step, index) => (
+                <div 
+                  key={step.id} 
+                  className="approach-step-card horizontal-card"
+                >
+                  <span className="step-number">{step.number}</span>
+                  <h3 className="step-title">{step.title}</h3>
+                  <p className="step-description">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

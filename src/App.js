@@ -22,6 +22,7 @@ import HawkDispatchCaseStudy from './components/HawkDispatchCaseStudy';
 import OptimusRAKCaseStudy from './components/OptimusRAKCaseStudy';
 import VisionCareCaseStudy from './components/VisionCareCaseStudy';
 import BlackNWhiteCaseStudy from './components/BlackNWhiteCaseStudy';
+import TrackerCaseStudy from './components/TrackerCaseStudy';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -44,6 +45,8 @@ function App() {
         setCurrentPage('vision-care-case-study');
       } else if (hash === 'black-n-white-case-study') {
         setCurrentPage('black-n-white-case-study');
+      } else if (hash === 'tracker-case-study') {
+        setCurrentPage('tracker-case-study');
       } else {
         setCurrentPage('home');
       }
@@ -123,6 +126,15 @@ function App() {
     return (
       <>
         <BlackNWhiteCaseStudy />
+        <FooterNew />
+      </>
+    );
+  }
+
+  if (currentPage === 'tracker-case-study') {
+    return (
+      <>
+        <TrackerCaseStudy />
         <FooterNew />
       </>
     );

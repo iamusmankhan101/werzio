@@ -84,6 +84,20 @@
   filter: invert(1);
 }
 
+.hero-book-button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .hero-book-button {
+    top: 3rem;
+    right: 3rem;
+  }
+}
+
 @media (min-width: 768px) {
   .hero-logo {
     top: 3rem;
