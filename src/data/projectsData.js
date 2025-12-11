@@ -1,3 +1,45 @@
+// Import project images
+import optimusImg1 from '../images/optimus/Screenshot 2025-10-19 202742.png';
+import optimusImg2 from '../images/optimus/Screenshot 2025-10-19 202754.png';
+import optimusImg3 from '../images/optimus/Screenshot 2025-10-19 202816.png';
+import optimusImg4 from '../images/optimus/Screenshot 2025-10-19 202828.png';
+import optimusImg5 from '../images/optimus/Screenshot 2025-10-19 202841.png';
+import optimusImg6 from '../images/optimus/Screenshot 2025-10-19 202856.png';
+
+import gfImg1 from '../images/GF/Screenshot 2025-10-19 210004.png';
+import gfImg2 from '../images/GF/Screenshot 2025-10-19 210013.png';
+import gfImg3 from '../images/GF/Screenshot 2025-10-19 210021.png';
+import gfImg4 from '../images/GF/Screenshot 2025-10-19 210032.png';
+import gfImg5 from '../images/GF/Screenshot 2025-10-19 210047.png';
+import gfImg6 from '../images/GF/Screenshot 2025-10-19 210106.png';
+
+import hawkImg1 from '../images/hawk/Screenshot 2025-10-19 214555.png';
+import hawkImg2 from '../images/hawk/Screenshot 2025-10-19 214604.png';
+import hawkImg3 from '../images/hawk/Screenshot 2025-10-19 214611.png';
+import hawkImg4 from '../images/hawk/Screenshot 2025-10-19 214620.png';
+import hawkImg5 from '../images/hawk/Screenshot 2025-10-19 214636.png';
+import hawkImg6 from '../images/hawk/Screenshot 2025-10-19 214644.png';
+
+import luxeImg1 from '../images/luxe/Screenshot 2025-10-19 213550.png';
+import luxeImg2 from '../images/luxe/Screenshot 2025-10-19 213600.png';
+import luxeImg3 from '../images/luxe/Screenshot 2025-10-19 213608.png';
+import luxeImg4 from '../images/luxe/Screenshot 2025-10-19 213620.png';
+import luxeImg5 from '../images/luxe/Screenshot 2025-10-19 213933.png';
+
+import blackImg1 from '../images/black/Screenshot 2025-10-20 114845.png';
+import blackImg2 from '../images/black/Screenshot 2025-10-20 114932.png';
+import blackImg3 from '../images/black/Screenshot 2025-10-20 114955.png';
+import blackImg4 from '../images/black/Screenshot 2025-10-20 115009.png';
+import blackImg5 from '../images/black/Screenshot 2025-10-20 115025.png';
+import blackImg6 from '../images/black/Screenshot 2025-10-20 115049.png';
+
+import visionImg1 from '../images/vision/Screenshot 2025-10-19 221920.png';
+import visionImg2 from '../images/vision/Screenshot 2025-10-19 221929.png';
+import visionImg3 from '../images/vision/Screenshot 2025-10-19 221945.png';
+import visionImg4 from '../images/vision/Screenshot 2025-10-19 221954.png';
+import visionImg5 from '../images/vision/Screenshot 2025-10-19 222001.png';
+import visionImg6 from '../images/vision/Screenshot 2025-10-19 222015.png';
+
 // Device Components for illustrations
 const TrackerDevice = () => (
   <div className="tracker-device">
@@ -40,48 +82,6 @@ const SpatialDesign = () => (
     </div>
   </div>
 );
-
-// Import project images
-import optimusImg1 from '../images/optimus/Screenshot 2025-10-19 202742.png';
-import optimusImg2 from '../images/optimus/Screenshot 2025-10-19 202754.png';
-import optimusImg3 from '../images/optimus/Screenshot 2025-10-19 202816.png';
-import optimusImg4 from '../images/optimus/Screenshot 2025-10-19 202828.png';
-import optimusImg5 from '../images/optimus/Screenshot 2025-10-19 202841.png';
-import optimusImg6 from '../images/optimus/Screenshot 2025-10-19 202856.png';
-
-import gfImg1 from '../images/GF/Screenshot 2025-10-19 210004.png';
-import gfImg2 from '../images/GF/Screenshot 2025-10-19 210013.png';
-import gfImg3 from '../images/GF/Screenshot 2025-10-19 210021.png';
-import gfImg4 from '../images/GF/Screenshot 2025-10-19 210032.png';
-import gfImg5 from '../images/GF/Screenshot 2025-10-19 210047.png';
-import gfImg6 from '../images/GF/Screenshot 2025-10-19 210106.png';
-
-import hawkImg1 from '../images/hawk/Screenshot 2025-10-19 214555.png';
-import hawkImg2 from '../images/hawk/Screenshot 2025-10-19 214604.png';
-import hawkImg3 from '../images/hawk/Screenshot 2025-10-19 214611.png';
-import hawkImg4 from '../images/hawk/Screenshot 2025-10-19 214620.png';
-import hawkImg5 from '../images/hawk/Screenshot 2025-10-19 214636.png';
-import hawkImg6 from '../images/hawk/Screenshot 2025-10-19 214644.png';
-
-import luxeImg1 from '../images/luxe/Screenshot 2025-10-19 213550.png';
-import luxeImg2 from '../images/luxe/Screenshot 2025-10-19 213600.png';
-import luxeImg3 from '../images/luxe/Screenshot 2025-10-19 213608.png';
-import luxeImg4 from '../images/luxe/Screenshot 2025-10-19 213620.png';
-import luxeImg5 from '../images/luxe/Screenshot 2025-10-19 213933.png';
-
-import blackImg1 from '../images/black/Screenshot 2025-10-20 114845.png';
-import blackImg2 from '../images/black/Screenshot 2025-10-20 114932.png';
-import blackImg3 from '../images/black/Screenshot 2025-10-20 114955.png';
-import blackImg4 from '../images/black/Screenshot 2025-10-20 115009.png';
-import blackImg5 from '../images/black/Screenshot 2025-10-20 115025.png';
-import blackImg6 from '../images/black/Screenshot 2025-10-20 115049.png';
-
-import visionImg1 from '../images/vision/Screenshot 2025-10-19 221920.png';
-import visionImg2 from '../images/vision/Screenshot 2025-10-19 221929.png';
-import visionImg3 from '../images/vision/Screenshot 2025-10-19 221945.png';
-import visionImg4 from '../images/vision/Screenshot 2025-10-19 221954.png';
-import visionImg5 from '../images/vision/Screenshot 2025-10-19 222001.png';
-import visionImg6 from '../images/vision/Screenshot 2025-10-19 222015.png';
 
 export const projectsData = {
   'optimus': {
