@@ -62,7 +62,7 @@
 .project-info {
   padding: 2rem;
   position: sticky;
-  top: 120px;
+  top: 0;
   height: fit-content;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
