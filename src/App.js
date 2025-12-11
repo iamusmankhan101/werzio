@@ -52,6 +52,18 @@ function App() {
         setCurrentPage('spatial-case-study');
       } else if (hash === 'nexus-case-study') {
         setCurrentPage('nexus-case-study');
+      } else if (hash === 'optimus-detail') {
+        setCurrentPage('optimus-detail');
+      } else if (hash === 'greenfuture-detail') {
+        setCurrentPage('greenfuture-detail');
+      } else if (hash === 'hawk-dispatch-detail') {
+        setCurrentPage('hawk-dispatch-detail');
+      } else if (hash === 'black-n-white-detail') {
+        setCurrentPage('black-n-white-detail');
+      } else if (hash === 'vision-care-detail') {
+        setCurrentPage('vision-care-detail');
+      } else if (hash === 'optimus-luxe-detail') {
+        setCurrentPage('optimus-luxe-detail');
       } else {
         setCurrentPage('home');
       }
@@ -158,6 +170,60 @@ function App() {
     return (
       <>
         <DynamicProjectPage projectId="nexus" />
+        <FooterNew />
+      </>
+    );
+  }
+
+  if (currentPage === 'optimus-detail') {
+    return (
+      <>
+        <DynamicProjectPage projectId="optimus" />
+        <FooterNew />
+      </>
+    );
+  }
+
+  if (currentPage === 'greenfuture-detail') {
+    return (
+      <>
+        <DynamicProjectPage projectId="greenfuture" />
+        <FooterNew />
+      </>
+    );
+  }
+
+  if (currentPage === 'hawk-dispatch-detail') {
+    return (
+      <>
+        <DynamicProjectPage projectId="hawk-dispatch" />
+        <FooterNew />
+      </>
+    );
+  }
+
+  if (currentPage === 'black-n-white-detail') {
+    return (
+      <>
+        <DynamicProjectPage projectId="black-n-white" />
+        <FooterNew />
+      </>
+    );
+  }
+
+  if (currentPage === 'vision-care-detail') {
+    return (
+      <>
+        <DynamicProjectPage projectId="vision-care" />
+        <FooterNew />
+      </>
+    );
+  }
+
+  if (currentPage === 'optimus-luxe-detail') {
+    return (
+      <>
+        <DynamicProjectPage projectId="optimus-luxe" />
         <FooterNew />
       </>
     );
