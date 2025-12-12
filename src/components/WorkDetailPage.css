@@ -131,7 +131,7 @@
 }
 
 .image-container {
-  width: 85%;
+  width: 95%;
   border-radius: 12px;
   overflow: hidden;
   position: relative;
@@ -141,6 +141,7 @@
 
 .image-container.hero {
   aspect-ratio: 16/9;
+  height: 90%;
 }
 
 .image-container.square {
