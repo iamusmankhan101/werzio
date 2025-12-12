@@ -141,27 +141,24 @@
 
 .image-container.hero {
   aspect-ratio: auto;
- 
 }
 
 .image-container.square {
-  aspect-ratio: 1/1;
+  aspect-ratio: auto;
 }
 
 .image-container.wide {
-  aspect-ratio: 16/9;
+  aspect-ratio: auto;
 }
 
-/* Default container for regular images - optimized for website screenshots */
+/* Default container for regular images */
 .image-container:not(.hero):not(.square):not(.wide) {
-  aspect-ratio: 16/10;
+  aspect-ratio: auto;
 }
 
 .project-image {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center top;
+  height: auto;
   display: block;
   border: none;
   outline: none;
