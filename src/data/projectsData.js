@@ -91,8 +91,9 @@ export const projectsData = {
     services: 'Brand Identity, Web Design, Digital Strategy',
     role: 'Creative Director',
     description: [
-      'A comprehensive rebranding project for Optimus Technologies, focusing on modernizing their digital presence while maintaining their core values of innovation and reliability.',
-      'We developed a cohesive brand system that spans across all digital touchpoints, creating a unified experience that resonates with their target audience.'
+      'We executed a comprehensive rebranding and digital modernization project for Optimus Properties.',
+      'Our Solution: We developed a new, cohesive brand system and designed a cutting-edge digital platform (website) that perfectly balances their core values of innovation and reliability with a modern, unified user experience, ensuring strong audience resonance.',
+      'Outcome: A reliable, future-ready digital foundation for Optimus Properties.'
     ],
     images: [
       {

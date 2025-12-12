@@ -56,10 +56,7 @@ const WorkDetailPage = ({ projectData }) => {
                 <span className="detail-value">{services}</span>
               </div>
               
-              <div className="detail-item">
-                <span className="detail-label">ROLE</span>
-                <span className="detail-value">{role}</span>
-              </div>
+            
             </div>
 
             <div className="project-description">
