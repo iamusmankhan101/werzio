@@ -40,6 +40,13 @@ import visionImg4 from '../images/vision/Screenshot 2025-10-19 221954.png';
 import visionImg5 from '../images/vision/Screenshot 2025-10-19 222001.png';
 import visionImg6 from '../images/vision/Screenshot 2025-10-19 222015.png';
 
+// Import project logos
+import optimusLogo from '../images/optimus.png';
+import gfLogo from '../images/gf.png';
+import hawkLogo from '../images/hawk.png';
+import luxeLogo from '../images/optimus luxe.png';
+import blackLogo from '../images/black n white.png';
+
 // Device Components for illustrations
 const TrackerDevice = () => (
   <div className="tracker-device">
@@ -90,6 +97,7 @@ export const projectsData = {
     client: 'Optimus Technologies',
     services: 'Brand Identity, Web Design, Digital Strategy',
     role: 'Creative Director',
+    logo: optimusLogo,
     description: [
       'We executed a comprehensive rebranding and digital modernization project for Optimus Properties.',
       'Our Solution: We developed a new, cohesive brand system and designed a cutting-edge digital platform (website) that perfectly balances their core values of innovation and reliability with a modern, unified user experience, ensuring strong audience resonance.',
@@ -141,6 +149,7 @@ export const projectsData = {
     client: 'Green Future Partnership',
     services: 'Environmental Design, Sustainability Consulting, Digital Platform',
     role: 'Lead Designer',
+    logo: gfLogo,
     description: [
       'Green Future Partnership needed a digital platform to showcase their environmental initiatives and connect with eco-conscious communities worldwide.',
       'Our solution emphasized clean, nature-inspired design elements while ensuring accessibility and user engagement across all demographics.'
@@ -191,6 +200,7 @@ export const projectsData = {
     client: 'Hawk Dispatch Services',
     services: 'App Design, UX Strategy, Logistics Platform',
     role: 'Senior UX Designer',
+    logo: hawkLogo,
     description: [
       'Hawk Dispatch required a comprehensive logistics platform that could handle complex delivery operations while maintaining simplicity for end users.',
       'We created an intuitive interface that streamlines the entire dispatch process, from order placement to delivery confirmation, resulting in improved efficiency and customer satisfaction.'
@@ -241,6 +251,7 @@ export const projectsData = {
     client: 'Black N White Studio',
     services: 'Brand Identity, Portfolio Design, Art Direction',
     role: 'Art Director',
+    logo: blackLogo,
     description: [
       'Black N White Studio approached us to create a portfolio platform that would showcase their minimalist design philosophy while maintaining maximum visual impact.',
       'The result is a clean, sophisticated platform that lets their work speak for itself, with carefully considered typography and spacing that enhances the viewing experience.'
@@ -341,6 +352,7 @@ export const projectsData = {
     client: 'Optimus Luxe Collection',
     services: 'Luxury Brand Design, E-commerce Platform, Premium UX',
     role: 'Creative Director',
+    logo: luxeLogo,
     description: [
       'Optimus Luxe Collection required a sophisticated e-commerce platform that would reflect their premium brand positioning while delivering exceptional user experience.',
       'We crafted an elegant digital experience that mirrors the luxury of their physical products, with attention to every detail from micro-interactions to premium typography.'

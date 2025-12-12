@@ -14,7 +14,8 @@ const WorkDetailPage = ({ projectData }) => {
     role,
     description,
     images,
-    nextProject
+    nextProject,
+    logo
   } = projectData;
 
   return (
@@ -38,6 +39,11 @@ const WorkDetailPage = ({ projectData }) => {
         <div className="content-grid">
           {/* Left Column - Project Info */}
           <div className="project-info">
+            {logo && (
+              <div className="project-logo">
+                <img src={logo} alt={`${title} Logo`} className="logo-image" />
+              </div>
+            )}
             <h1 className="project-title">{title}</h1>
             
             <div className="project-details">
