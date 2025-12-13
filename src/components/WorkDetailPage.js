@@ -96,7 +96,7 @@ const WorkDetailPage = ({ projectData }) => {
 
         {/* Bottom Section */}
         {nextProject && (
-          <div className="project-footer" style={{backgroundImage: nextProject.backgroundImage ? `url(${nextProject.backgroundImage})` : 'none'}}>
+          <div className="project-footer">
             <div className="footer-overlay"></div>
             
             {/* Floating Images */}

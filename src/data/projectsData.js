@@ -47,12 +47,6 @@ import hawkLogo from '../images/hawk.png';
 import luxeLogo from '../images/optimus luxe.png';
 import blackLogo from '../images/black n white.png';
 
-// Import background images for footer sections
-import bgImage1 from '../images/2e84491cd2eafe758670cb655c6d3bbf.jpg';
-import bgImage2 from '../images/762c07a232f6e04cca83f525efcb87d6.jpg';
-import bgImage3 from '../images/9e0e2a8be395cbebe80fe4296dcb4a0e.jpg';
-import bgImage4 from '../images/beef37d748f4afae2efaa1e75b41815e.jpg';
-
 // Device Components for illustrations
 const TrackerDevice = () => (
   <div className="tracker-device">
@@ -146,7 +140,6 @@ export const projectsData = {
       title: 'GREENFUTURE',
       description: 'Sustainable solutions for a better tomorrow.',
       link: 'greenfuture-detail',
-      backgroundImage: bgImage1,
       floatingImages: [
         { src: gfImg1, alt: 'GreenFuture Preview 1' },
         { src: gfImg2, alt: 'GreenFuture Preview 2' },
@@ -203,7 +196,6 @@ export const projectsData = {
       title: 'HAWK DISPATCH',
       description: 'Streamlined logistics and delivery solutions.',
       link: 'hawk-dispatch-detail',
-      backgroundImage: bgImage2,
       floatingImages: [
         { src: hawkImg1, alt: 'Hawk Dispatch Preview 1' },
         { src: hawkImg2, alt: 'Hawk Dispatch Preview 2' },
@@ -260,7 +252,6 @@ export const projectsData = {
       title: 'BLACK N WHITE',
       description: 'Minimalist design philosophy in action.',
       link: 'black-n-white-detail',
-      backgroundImage: bgImage3,
       floatingImages: [
         { src: blackImg1, alt: 'Black N White Preview 1' },
         { src: blackImg2, alt: 'Black N White Preview 2' },
@@ -367,7 +358,6 @@ export const projectsData = {
       title: 'OPTIMUS LUXE',
       description: 'Luxury redefined through digital excellence.',
       link: 'optimus-luxe-detail',
-      backgroundImage: bgImage4,
       floatingImages: [
         { src: luxeImg1, alt: 'Optimus Luxe Preview 1' },
         { src: luxeImg2, alt: 'Optimus Luxe Preview 2' },
