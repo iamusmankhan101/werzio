@@ -96,7 +96,18 @@ const WorkDetailPage = ({ projectData }) => {
 
         {/* Bottom Section */}
         {nextProject && (
-          <div className="project-footer">
+          <div className="project-footer" style={{backgroundImage: nextProject.backgroundImage ? `url(${nextProject.backgroundImage})` : 'none'}}>
+            <div className="footer-overlay"></div>
+            
+            {/* Floating Images */}
+            <div className="floating-images">
+              {nextProject.floatingImages && nextProject.floatingImages.map((img, index) => (
+                <div key={index} className={`floating-image floating-image-${index + 1}`}>
+                  <img src={img.src} alt={img.alt} />
+                </div>
+              ))}
+            </div>
+            
             <div className="footer-content">
               <h2 className="footer-title">{nextProject.title}</h2>
               <p className="footer-description">{nextProject.description}</p>

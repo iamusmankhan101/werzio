@@ -139,7 +139,13 @@ export const projectsData = {
     nextProject: {
       title: 'GREENFUTURE',
       description: 'Sustainable solutions for a better tomorrow.',
-      link: 'greenfuture-detail'
+      link: 'greenfuture-detail',
+      backgroundImage: bgImage1,
+      floatingImages: [
+        { src: gfImg1, alt: 'GreenFuture Preview 1' },
+        { src: gfImg2, alt: 'GreenFuture Preview 2' },
+        { src: gfImg3, alt: 'GreenFuture Preview 3' }
+      ]
     }
   },
 
@@ -190,7 +196,13 @@ export const projectsData = {
     nextProject: {
       title: 'HAWK DISPATCH',
       description: 'Streamlined logistics and delivery solutions.',
-      link: 'hawk-dispatch-detail'
+      link: 'hawk-dispatch-detail',
+      backgroundImage: bgImage2,
+      floatingImages: [
+        { src: hawkImg1, alt: 'Hawk Dispatch Preview 1' },
+        { src: hawkImg2, alt: 'Hawk Dispatch Preview 2' },
+        { src: hawkImg3, alt: 'Hawk Dispatch Preview 3' }
+      ]
     }
   },
 
@@ -241,7 +253,13 @@ export const projectsData = {
     nextProject: {
       title: 'BLACK N WHITE',
       description: 'Minimalist design philosophy in action.',
-      link: 'black-n-white-detail'
+      link: 'black-n-white-detail',
+      backgroundImage: bgImage3,
+      floatingImages: [
+        { src: blackImg1, alt: 'Black N White Preview 1' },
+        { src: blackImg2, alt: 'Black N White Preview 2' },
+        { src: blackImg3, alt: 'Black N White Preview 3' }
+      ]
     }
   },
 
@@ -342,7 +360,13 @@ export const projectsData = {
     nextProject: {
       title: 'OPTIMUS LUXE',
       description: 'Luxury redefined through digital excellence.',
-      link: 'optimus-luxe-detail'
+      link: 'optimus-luxe-detail',
+      backgroundImage: bgImage4,
+      floatingImages: [
+        { src: luxeImg1, alt: 'Optimus Luxe Preview 1' },
+        { src: luxeImg2, alt: 'Optimus Luxe Preview 2' },
+        { src: luxeImg3, alt: 'Optimus Luxe Preview 3' }
+      ]
     }
   },
 

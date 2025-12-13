@@ -278,6 +278,81 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* Floating Images */
+.floating-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.floating-image {
+  position: absolute;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  transform-origin: center;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.floating-image-1 {
+  width: 200px;
+  height: 150px;
+  top: 15%;
+  left: 10%;
+  transform: rotate(-8deg);
+  animation-delay: 0s;
+}
+
+.floating-image-2 {
+  width: 180px;
+  height: 120px;
+  top: 25%;
+  right: 15%;
+  transform: rotate(12deg);
+  animation-delay: 2s;
+}
+
+.floating-image-3 {
+  width: 160px;
+  height: 200px;
+  bottom: 20%;
+  left: 15%;
+  transform: rotate(-5deg);
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--rotation, 0deg));
+  }
+  50% {
+    transform: translateY(-20px) rotate(var(--rotation, 0deg));
+  }
+}
+
+.floating-image-1 {
+  --rotation: -8deg;
+}
+
+.floating-image-2 {
+  --rotation: 12deg;
+}
+
+.floating-image-3 {
+  --rotation: -5deg;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .content-grid {
@@ -319,5 +394,26 @@
 
   .image-container {
     aspect-ratio: 3/2;
+  }
+
+  .floating-image-1 {
+    width: 150px;
+    height: 100px;
+    top: 10%;
+    left: 5%;
+  }
+
+  .floating-image-2 {
+    width: 130px;
+    height: 90px;
+    top: 20%;
+    right: 5%;
+  }
+
+  .floating-image-3 {
+    width: 120px;
+    height: 150px;
+    bottom: 15%;
+    left: 10%;
   }
 }
