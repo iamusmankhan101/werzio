@@ -53,6 +53,14 @@
   min-height: 300vh;
 }
 
+/* Project Title Section */
+.project-title-section {
+  position: relative;
+  text-align: center;
+  padding: 4rem 0;
+  margin-bottom: 4rem;
+}
+
 .content-grid {
   display: flex;
   gap: 4rem;
@@ -65,7 +73,7 @@
   flex-shrink: 0;
   padding: 2rem;
   position: sticky;
-  top: 20px;
+  top: 120px;
   height: fit-content;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
@@ -76,35 +84,41 @@
   z-index: 10;
 }
 
-.project-logo {
+.project-title-section .project-logo {
   position: absolute;
-  top: -60px;
-  right: -40px;
+  top: -20px;
+  right: 50%;
+  transform: translateX(200px) rotate(15deg);
   z-index: 5;
   opacity: 0.8;
-  transform: rotate(15deg);
   transition: all 0.3s ease;
 }
 
-.project-logo:hover {
+.project-title-section .project-logo:hover {
   opacity: 1;
-  transform: rotate(0deg) scale(1.1);
+  transform: translateX(200px) rotate(0deg) scale(1.1);
 }
 
-.logo-image {
+.project-title-section .logo-image {
   width: 80px;
   height: 80px;
   object-fit: contain;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
 }
 
-.project-title {
-  font-size: 4rem;
+.project-title-section .project-title {
+  font-size: 6rem;
   font-weight: 700;
   color: #000000;
-  margin: 0 0 3rem 0;
+  margin: 0;
   line-height: 1;
   letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+/* Remove old project title styles from project-info */
+.project-info .project-title {
+  display: none;
 }
 
 .project-details {
@@ -389,8 +403,16 @@
     top: auto;
   }
 
-  .project-title {
-    font-size: 3rem;
+  .project-title-section .project-title {
+    font-size: 4rem;
+  }
+
+  .project-title-section .project-logo {
+    transform: translateX(150px) rotate(15deg);
+  }
+
+  .project-title-section .project-logo:hover {
+    transform: translateX(150px) rotate(0deg) scale(1.1);
   }
 
   .footer-title {
@@ -408,8 +430,23 @@
     padding: 0 1rem;
   }
 
-  .project-title {
-    font-size: 2.5rem;
+  .project-title-section .project-title {
+    font-size: 3rem;
+  }
+
+  .project-title-section {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .project-title-section .project-logo {
+    position: static;
+    transform: none;
+    margin-bottom: 1rem;
+  }
+
+  .project-title-section .project-logo:hover {
+    transform: scale(1.1);
   }
 
   .footer-title {
