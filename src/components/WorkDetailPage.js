@@ -96,8 +96,7 @@ const WorkDetailPage = ({ projectData }) => {
 
         {/* Bottom Section */}
         {nextProject && (
-          <div className="project-footer" style={{backgroundImage: nextProject.backgroundImage ? `url(${nextProject.backgroundImage})` : 'none'}}>
-            <div className="footer-overlay"></div>
+          <div className="project-footer">
             <div className="footer-content">
               <h2 className="footer-title">{nextProject.title}</h2>
               <p className="footer-description">{nextProject.description}</p>
