@@ -94,14 +94,14 @@ export const projectsData = {
   'optimus': {
     title: 'OPTIMUS',
     year: '2024',
-    client: 'Optimus Technologies',
-    services: 'Brand Identity, Web Design, Digital Strategy',
-    role: 'Creative Director',
+    client: 'Optimus Properties',
+    services: 'Website Design & Development, Social Media Management, Content Creation, Performance Marketing',
+    role: 'Digital Solutions Lead',
     logo: optimusLogo,
     description: [
-      'We executed a comprehensive rebranding and digital modernization project for Optimus Properties.',
-      'Our Solution: We developed a new, cohesive brand system and designed a cutting-edge digital platform (website) that perfectly balances their core values of innovation and reliability with a modern, unified user experience, ensuring strong audience resonance.',
-      'Outcome: A reliable, future-ready digital foundation for Optimus Properties.'
+      'Optimus Properties, a leading real estate company in Dubai, partnered with us for a complete digital transformation including website design and development, featuring secondary and off-plan property listings.',
+      'We delivered a comprehensive digital ecosystem that includes a sophisticated property platform showcasing their secondary and off-plan developments, coupled with strategic social media management, engaging content creation, and performance marketing campaigns.',
+      'The result is a powerful digital presence that drives property inquiries, enhances brand visibility, and positions Optimus Properties as a premier choice in Dubai\'s competitive real estate market.'
     ],
     images: [
       {
@@ -138,7 +138,7 @@ export const projectsData = {
     ],
     nextProject: {
       title: 'GREENFUTURE',
-      description: 'Sustainable solutions for a better tomorrow.',
+      description: 'Comprehensive digital marketing for Dubai & Pakistan real estate.',
       link: 'greenfuture-detail',
       floatingImages: [
         { src: gfImg1, alt: 'GreenFuture Preview 1' },
@@ -151,13 +151,13 @@ export const projectsData = {
   'greenfuture': {
     title: 'GREENFUTURE',
     year: '2024',
-    client: 'Green Future Partnership',
-    services: 'Environmental Design, Sustainability Consulting, Digital Platform',
-    role: 'Lead Designer',
+    client: 'Green Future Properties',
+    services: 'Social Media Management, Website Management, Content Creation, Performance Marketing',
+    role: 'Digital Marketing Manager',
     logo: gfLogo,
     description: [
-      'Green Future Partnership needed a digital platform to showcase their environmental initiatives and connect with eco-conscious communities worldwide.',
-      'Our solution emphasized clean, nature-inspired design elements while ensuring accessibility and user engagement across all demographics.'
+      'Green Future Properties, a dynamic real estate company operating in Dubai and Pakistan, partnered with us for comprehensive digital marketing services including social media management, website oversight, and strategic content creation.',
+      'We developed and executed a multi-channel digital strategy that includes engaging social media campaigns, website optimization, compelling content creation, and performance marketing initiatives that significantly increased their property inquiries and brand visibility across both markets.'
     ],
     images: [
       {
@@ -194,7 +194,7 @@ export const projectsData = {
     ],
     nextProject: {
       title: 'HAWK DISPATCH',
-      description: 'Streamlined logistics and delivery solutions.',
+      description: 'Professional truck dispatch management platform.',
       link: 'hawk-dispatch-detail',
       floatingImages: [
         { src: hawkImg1, alt: 'Hawk Dispatch Preview 1' },
@@ -207,13 +207,13 @@ export const projectsData = {
   'hawk-dispatch': {
     title: 'HAWK DISPATCH',
     year: '2023',
-    client: 'Hawk Dispatch Services',
-    services: 'App Design, UX Strategy, Logistics Platform',
-    role: 'Senior UX Designer',
+    client: 'Hawk Dispatch Company',
+    services: 'Web Design, Web Development, Digital Platform',
+    role: 'Lead Developer',
     logo: hawkLogo,
     description: [
-      'Hawk Dispatch required a comprehensive logistics platform that could handle complex delivery operations while maintaining simplicity for end users.',
-      'We created an intuitive interface that streamlines the entire dispatch process, from order placement to delivery confirmation, resulting in improved efficiency and customer satisfaction.'
+      'Hawk Dispatch, a leading truck dispatch company, approached us to design and develop a comprehensive web platform that would streamline their trucking operations and improve communication between dispatchers and drivers.',
+      'We delivered a robust web solution that manages fleet operations, tracks shipments in real-time, and provides an intuitive dashboard for both dispatchers and truck drivers, significantly improving operational efficiency and client satisfaction.'
     ],
     images: [
       {
@@ -356,7 +356,7 @@ export const projectsData = {
     ],
     nextProject: {
       title: 'OPTIMUS LUXE',
-      description: 'Luxury redefined through digital excellence.',
+      description: 'Luxury real estate excellence in Dubai\'s premium market.',
       link: 'optimus-luxe-detail',
       floatingImages: [
         { src: luxeImg1, alt: 'Optimus Luxe Preview 1' },
@@ -369,13 +369,13 @@ export const projectsData = {
   'optimus-luxe': {
     title: 'OPTIMUS LUXE',
     year: '2024',
-    client: 'Optimus Luxe Collection',
-    services: 'Luxury Brand Design, E-commerce Platform, Premium UX',
-    role: 'Creative Director',
+    client: 'Optimus Luxe Real Estate',
+    services: 'Web Design, Property Portal Development, Luxury Branding',
+    role: 'Lead Designer',
     logo: luxeLogo,
     description: [
-      'Optimus Luxe Collection required a sophisticated e-commerce platform that would reflect their premium brand positioning while delivering exceptional user experience.',
-      'We crafted an elegant digital experience that mirrors the luxury of their physical products, with attention to every detail from micro-interactions to premium typography.'
+      'Optimus Luxe, a premier luxury real estate company in Dubai, approached us to build a sophisticated website featuring their exclusive property listings and premium real estate services.',
+      'We developed an elegant property portal that showcases Dubai\'s finest luxury properties with immersive galleries, detailed property information, and seamless search functionality, perfectly reflecting the prestige of Dubai\'s luxury real estate market.'
     ],
     images: [
       {
