@@ -250,7 +250,7 @@ export const projectsData = {
     ],
     nextProject: {
       title: 'BLACK N WHITE',
-      description: 'Minimalist design philosophy in action.',
+      description: 'Minimalist e-commerce excellence for modern fashion.',
       link: 'black-n-white-detail',
       floatingImages: [
         { src: blackImg1, alt: 'Black N White Preview 1' },
@@ -263,13 +263,13 @@ export const projectsData = {
   'black-n-white': {
     title: 'BLACK N WHITE',
     year: '2023',
-    client: 'Black N White Studio',
-    services: 'Brand Identity, Portfolio Design, Art Direction',
-    role: 'Art Director',
+    client: 'Black N White Clothing',
+    services: 'E-commerce Platform, Brand Identity, UX/UI Design',
+    role: 'Lead Designer',
     logo: blackLogo,
     description: [
-      'Black N White Studio approached us to create a portfolio platform that would showcase their minimalist design philosophy while maintaining maximum visual impact.',
-      'The result is a clean, sophisticated platform that lets their work speak for itself, with carefully considered typography and spacing that enhances the viewing experience.'
+      'Black N White Clothing approached us to create a sophisticated e-commerce platform that would embody their minimalist aesthetic while delivering exceptional user experience.',
+      'We developed a clean, modern online store that perfectly balances simplicity with functionality, featuring intuitive navigation, seamless checkout, and a design that lets their clothing collections take center stage.'
     ],
     images: [
       {
