@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './ReviewsSection.css';
 
 const ReviewsSection = () => {
+  const scrollTextRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scrollTextRef.current) {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        scrollTextRef.current.style.transform = `translateX(${rate}px)`;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const reviews = [
     {
       id: 1,
@@ -41,6 +56,10 @@ const ReviewsSection = () => {
     <section className="reviews-section">
       <div className="reviews-background-text">
         TESTIMONIALS
+      </div>
+      
+      <div className="scrolling-text" ref={scrollTextRef}>
+        <span>CLIENT TESTIMONIALS • REVIEWS • FEEDBACK • CLIENT TESTIMONIALS • REVIEWS • FEEDBACK • </span>
       </div>
       
       <div className="reviews-container">

@@ -20,6 +20,26 @@
   pointer-events: none;
 }
 
+.scrolling-text {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 200%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.scrolling-text span {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.05);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
 .reviews-container {
   position: relative;
   z-index: 2;
@@ -147,6 +167,10 @@
     font-size: 8rem;
   }
   
+  .scrolling-text span {
+    font-size: 1.5rem;
+  }
+  
   .reviews-section {
     padding: 6rem 2rem;
   }
@@ -162,6 +186,10 @@
     font-size: 6rem;
   }
   
+  .scrolling-text span {
+    font-size: 1.25rem;
+  }
+  
   .reviews-section {
     padding: 4rem 1rem;
   }
@@ -174,6 +202,10 @@
 @media (max-width: 480px) {
   .reviews-background-text {
     font-size: 4rem;
+  }
+  
+  .scrolling-text span {
+    font-size: 1rem;
   }
   
   .review-card {
