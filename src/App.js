@@ -24,6 +24,7 @@ import VisionCareCaseStudy from './components/VisionCareCaseStudy';
 import BlackNWhiteCaseStudy from './components/BlackNWhiteCaseStudy';
 import TrackerCaseStudy from './components/TrackerCaseStudy';
 import DynamicProjectPage from './components/DynamicProjectPage';
+import ReviewsSection from './components/ReviewsSection';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -246,6 +247,7 @@ function App() {
         <ServicesStackSection />
       </div>
       <ApproachSection />
+      <ReviewsSection />
       <div id="contact">
         <CTASection />
       </div>
