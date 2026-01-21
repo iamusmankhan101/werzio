@@ -1,21 +1,55 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './ReviewsSection.css';
 
 const ReviewsSection = () => {
   const scrollTextRef = useRef(null);
+  const sectionRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      {
+        threshold: 0.3,
+        rootMargin: '0px 0px -100px 0px'
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (scrollTextRef.current) {
+      if (scrollTextRef.current && isInView) {
         const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
-        scrollTextRef.current.style.transform = `translateX(${rate}px)`;
+        const sectionTop = sectionRef.current?.offsetTop || 0;
+        const sectionHeight = sectionRef.current?.offsetHeight || 0;
+        const sectionBottom = sectionTop + sectionHeight;
+        
+        if (scrolled >= sectionTop - window.innerHeight && scrolled <= sectionBottom) {
+          const relativeScroll = scrolled - (sectionTop - window.innerHeight);
+          const rate = relativeScroll * -0.8;
+          scrollTextRef.current.style.transform = `translateX(${rate}px)`;
+        }
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    if (isInView) {
+      window.addEventListener('scroll', handleScroll);
+    }
+
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isInView]);
 
   const reviews = [
     {
@@ -53,7 +87,7 @@ const ReviewsSection = () => {
   };
 
   return (
-    <section className="reviews-section">
+    <section className="reviews-section" ref={sectionRef}>
       <div className="reviews-background-text">
         TESTIMONIALS
       </div>
@@ -61,6 +95,8 @@ const ReviewsSection = () => {
       <div className="scrolling-text" ref={scrollTextRef}>
         <span>CLIENT TESTIMONIALS • REVIEWS • FEEDBACK • CLIENT TESTIMONIALS • REVIEWS • FEEDBACK • </span>
       </div>
+      
+
       
       <div className="reviews-container">
         <div className="reviews-grid">

@@ -1,8 +1,8 @@
 .reviews-section {
   position: relative;
   padding: 8rem 2rem;
-  background-color: #f8f8f8;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .reviews-background-text {
@@ -25,20 +25,22 @@
   top: 20%;
   left: 0;
   width: 200%;
-  z-index: 1;
+  z-index: 10;
   pointer-events: none;
   overflow: hidden;
 }
 
 .scrolling-text span {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.05);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   white-space: nowrap;
 }
+
+
 
 .reviews-container {
   position: relative;
@@ -168,12 +170,15 @@
   }
   
   .scrolling-text span {
-    font-size: 1.5rem;
+    font-size: 3rem;
   }
   
   .reviews-section {
     padding: 6rem 2rem;
+    min-height: 80vh;
   }
+  
+
 }
 
 @media (max-width: 768px) {
@@ -187,12 +192,15 @@
   }
   
   .scrolling-text span {
-    font-size: 1.25rem;
+    font-size: 2.5rem;
   }
   
   .reviews-section {
-    padding: 4rem 1rem;
+    padding: 5rem 1rem;
+    min-height: 70vh;
   }
+  
+
   
   .review-card {
     padding: 2rem;
@@ -205,7 +213,14 @@
   }
   
   .scrolling-text span {
-    font-size: 1rem;
+    font-size: 2rem;
+  }
+  
+
+  
+  .reviews-section {
+    padding: 4rem 1rem;
+    min-height: 60vh;
   }
   
   .review-card {
