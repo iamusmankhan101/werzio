@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8e1ccd31.css",
-    "main.js": "/static/js/main.1c29f8e2.js",
-    "static/media/7234993-uhd_3840_2160_30fps.mp4": "/static/media/7234993-uhd_3840_2160_30fps.1a77d5316053e5af2104.mp4",
+    "main.css": "/static/css/main.53c09440.css",
+    "main.js": "/static/js/main.0ba8ca82.js",
     "static/media/Screenshot 2025-10-19 202841.png": "/static/media/Screenshot 2025-10-19 202841.2d5f9688f993366fc142.png",
     "static/media/Screenshot 2025-10-19 202856.png": "/static/media/Screenshot 2025-10-19 202856.3d0a56bc49aac458bd18.png",
     "static/media/Screenshot 2025-10-19 202742.png": "/static/media/Screenshot 2025-10-19 202742.83ad66a2ee4c50839734.png",
@@ -85,11 +84,11 @@
     "static/media/logo_file_black_pngg_2.avif": "/static/media/logo_file_black_pngg_2.0c376159a83d1dd6f663.avif",
     "static/media/optimus-rak-white-logo-e1757322545339-1024x270.webp": "/static/media/optimus-rak-white-logo-e1757322545339-1024x270.8706440e206d31567d86.webp",
     "index.html": "/index.html",
-    "main.8e1ccd31.css.map": "/static/css/main.8e1ccd31.css.map",
-    "main.1c29f8e2.js.map": "/static/js/main.1c29f8e2.js.map"
+    "main.53c09440.css.map": "/static/css/main.53c09440.css.map",
+    "main.0ba8ca82.js.map": "/static/js/main.0ba8ca82.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e1ccd31.css",
-    "static/js/main.1c29f8e2.js"
+    "static/css/main.53c09440.css",
+    "static/js/main.0ba8ca82.js"
   ]
 }

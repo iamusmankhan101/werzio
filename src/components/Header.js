@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Menu } from 'lucide-react';
-import werzioLogo from '../images/werzio png 4@300x.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,30 +42,30 @@ const Header = () => {
                 : 'backdrop-blur-md bg-white/10 border border-white/20 shadow-lg'
               : 'bg-transparent'
               }`} style={{ borderRadius: '15px' }}>
-              <a href="#" className={`px-4 py-2 rounded-full transition-all duration-300 ${isDarkBackground
+              <button onClick={() => window.location.hash = '#home'} className={`px-4 py-2 rounded-full transition-all duration-300 ${isDarkBackground
                 ? 'text-white hover:text-gray-200 hover:backdrop-blur-md hover:bg-black/20 hover:border hover:border-black/30 hover:shadow-md'
                 : isScrolled
                   ? 'text-gray-700 hover:text-black hover:backdrop-blur-md hover:bg-white/20 hover:border hover:border-white/30 hover:shadow-md'
                   : 'text-gray-600 hover:text-black hover:backdrop-blur-md hover:bg-white/10 hover:border hover:border-white/20 hover:shadow-sm'
-                }`}>Home</a>
-              <a href="#" className={`px-4 py-2 rounded-full transition-all duration-300 ${isDarkBackground
+                }`}>Home</button>
+              <button onClick={() => window.location.hash = '#about'} className={`px-4 py-2 rounded-full transition-all duration-300 ${isDarkBackground
                 ? 'text-white hover:text-gray-200 hover:backdrop-blur-md hover:bg-black/20 hover:border hover:border-black/30 hover:shadow-md'
                 : isScrolled
                   ? 'text-gray-700 hover:text-black hover:backdrop-blur-md hover:bg-white/20 hover:border hover:border-white/30 hover:shadow-md'
                   : 'text-gray-600 hover:text-black hover:backdrop-blur-md hover:bg-white/10 hover:border hover:border-white/20 hover:shadow-sm'
-                }`}>About</a>
-              <a href="#" className={`px-4 py-2 rounded-full transition-all duration-300 ${isDarkBackground
+                }`}>About</button>
+              <button onClick={() => window.location.hash = '#work'} className={`px-4 py-2 rounded-full transition-all duration-300 ${isDarkBackground
                 ? 'text-white hover:text-gray-200 hover:backdrop-blur-md hover:bg-black/20 hover:border hover:border-black/30 hover:shadow-md'
                 : isScrolled
                   ? 'text-gray-700 hover:text-black hover:backdrop-blur-md hover:bg-white/20 hover:border hover:border-white/30 hover:shadow-md'
                   : 'text-gray-600 hover:text-black hover:backdrop-blur-md hover:bg-white/10 hover:border hover:border-white/20 hover:shadow-sm'
-                }`}>Portfolio</a>
-              <a href="#" className={`px-4 py-2 rounded-full transition-all duration-300 ${isDarkBackground
+                }`}>Portfolio</button>
+              <button onClick={() => window.location.hash = '#services'} className={`px-4 py-2 rounded-full transition-all duration-300 ${isDarkBackground
                 ? 'text-white hover:text-gray-200 hover:backdrop-blur-md hover:bg-black/20 hover:border hover:border-black/30 hover:shadow-md'
                 : isScrolled
                   ? 'text-gray-700 hover:text-black hover:backdrop-blur-md hover:bg-white/20 hover:border hover:border-white/30 hover:shadow-md'
                   : 'text-gray-600 hover:text-black hover:backdrop-blur-md hover:bg-white/10 hover:border hover:border-white/20 hover:shadow-sm'
-                }`}>Service</a>
+                }`}>Service</button>
             </nav>
 
             {/* Book a Call Button */}

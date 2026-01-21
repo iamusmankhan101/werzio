@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './animations.css';
-import Header from './components/Header';
 import BottomNav from './components/BottomNav';
 import HeroSection from './components/HeroSection';
 import PartnersSection from './components/PartnersSection';
@@ -9,11 +8,6 @@ import AboutUsSection from './components/AboutUsSection';
 import ServicesStackSection from './components/ServicesStackSection';
 import ApproachSection from './components/ApproachSection';
 import CTASection from './components/CTASection';
-import AboutSection from './components/AboutSection';
-import WorkShowcase from './components/WorkShowcase';
-import ProcessSection from './components/ProcessSection';
-import PricingSection from './components/PricingSection';
-import Footer from './components/Footer';
 import FooterNew from './components/FooterNew';
 import OptimusCaseStudy from './components/OptimusCaseStudy';
 import GreenfutureCaseStudy from './components/GreenfutureCaseStudy';
@@ -22,7 +16,6 @@ import HawkDispatchCaseStudy from './components/HawkDispatchCaseStudy';
 import OptimusRAKCaseStudy from './components/OptimusRAKCaseStudy';
 import VisionCareCaseStudy from './components/VisionCareCaseStudy';
 import BlackNWhiteCaseStudy from './components/BlackNWhiteCaseStudy';
-import TrackerCaseStudy from './components/TrackerCaseStudy';
 import DynamicProjectPage from './components/DynamicProjectPage';
 import ReviewsSection from './components/ReviewsSection';
 
