@@ -98,6 +98,7 @@ export const projectsData = {
     services: 'Website Design & Development, Social Media Management, Content Creation, Performance Marketing',
     role: 'Digital Solutions Lead',
     logo: optimusLogo,
+    heroImage: optimusImg1,
     description: [
       'Optimus Properties, a leading real estate company in Dubai, partnered with us for a complete digital transformation including website design and development, featuring secondary and off-plan property listings.',
       'We delivered a comprehensive digital ecosystem that includes a sophisticated property platform showcasing their secondary and off-plan developments, coupled with strategic social media management, engaging content creation, and performance marketing campaigns.',
@@ -155,6 +156,7 @@ export const projectsData = {
     services: 'Social Media Management, Website Management, Content Creation, Performance Marketing',
     role: 'Digital Marketing Manager',
     logo: gfLogo,
+    heroImage: gfImg1,
     description: [
       'Green Future Properties, a dynamic real estate company operating in Dubai and Pakistan, partnered with us for comprehensive digital marketing services including social media management, website oversight, and strategic content creation.',
       'We developed and executed a multi-channel digital strategy that includes engaging social media campaigns, website optimization, compelling content creation, and performance marketing initiatives that significantly increased their property inquiries and brand visibility across both markets.'
@@ -211,6 +213,7 @@ export const projectsData = {
     services: 'Web Design, Web Development, Digital Platform',
     role: 'Lead Developer',
     logo: hawkLogo,
+    heroImage: hawkImg1,
     description: [
       'Hawk Dispatch, a leading truck dispatch company, approached us to design and develop a comprehensive web platform that would streamline their trucking operations and improve communication between dispatchers and drivers.',
       'We delivered a robust web solution that manages fleet operations, tracks shipments in real-time, and provides an intuitive dashboard for both dispatchers and truck drivers, significantly improving operational efficiency and client satisfaction.'
@@ -267,6 +270,7 @@ export const projectsData = {
     services: 'E-commerce Platform, Brand Identity, UX/UI Design',
     role: 'Lead Designer',
     logo: blackLogo,
+    heroImage: blackImg1,
     description: [
       'Black N White Clothing approached us to create a sophisticated e-commerce platform that would embody their minimalist aesthetic while delivering exceptional user experience.',
       'We developed a clean, modern online store that perfectly balances simplicity with functionality, featuring intuitive navigation, seamless checkout, and a design that lets their clothing collections take center stage.'
@@ -317,6 +321,7 @@ export const projectsData = {
     client: 'Vision Care Medical',
     services: 'Healthcare UX, Patient Portal, Medical Interface Design',
     role: 'Healthcare UX Specialist',
+    heroImage: visionImg1,
     description: [
       'Vision Care Medical needed a patient-centered digital platform that would simplify appointment scheduling and medical record access while maintaining HIPAA compliance.',
       'We designed an empathetic user experience that reduces anxiety and confusion often associated with medical platforms, focusing on clarity and accessibility.'
@@ -373,6 +378,7 @@ export const projectsData = {
     services: 'Web Design, Property Portal Development, Luxury Branding',
     role: 'Lead Designer',
     logo: luxeLogo,
+    heroImage: luxeImg1,
     description: [
       'Optimus Luxe, a premier luxury real estate company in Dubai, approached us to build a sophisticated website featuring their exclusive property listings and premium real estate services.',
       'We developed an elegant property portal that showcases Dubai\'s finest luxury properties with immersive galleries, detailed property information, and seamless search functionality, perfectly reflecting the prestige of Dubai\'s luxury real estate market.'

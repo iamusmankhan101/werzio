@@ -30,7 +30,8 @@ const WorkDetailPage = ({ projectData }) => {
     description,
     images,
     nextProject,
-    logo
+    logo,
+    heroImage
   } = projectData;
 
   const handleBackClick = () => {
@@ -67,20 +68,46 @@ const WorkDetailPage = ({ projectData }) => {
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="work-main">
-        {/* Project Title Section */}
-        <div className="project-title-section">
-          <div className="title-container">
+      {/* Hero Section */}
+      <section className="project-hero">
+        <div className="hero-background">
+          {heroImage && (
+            <img src={heroImage} alt={`${title} Hero`} className="hero-image" />
+          )}
+          <div className="hero-overlay"></div>
+        </div>
+        <div className="hero-content">
+          <div className="hero-container">
             {logo && (
-              <div className="project-logo">
-                <img src={logo} alt={`${title} Logo`} className="logo-image" />
+              <div className="hero-logo">
+                <img src={logo} alt={`${title} Logo`} className="hero-logo-image" />
               </div>
             )}
-            <h1 className="project-title">{title}</h1>
-            <div className="title-subtitle">
+            <h1 className="hero-title">{title}</h1>
+            <div className="hero-subtitle">
               A deep dive into building a compelling brand experience
             </div>
+            <div className="hero-meta">
+              <span className="hero-year">{year}</span>
+              <span className="hero-separator">•</span>
+              <span className="hero-client">{client}</span>
+            </div>
+          </div>
+        </div>
+        <div className="hero-scroll-indicator">
+          <div className="scroll-arrow">↓</div>
+          <span className="scroll-text">Scroll to explore</span>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <main className="work-main">
+        {/* Project Title Section - Now simplified since we have hero */}
+        <div className="project-intro-section">
+          <div className="intro-container">
+            <p className="intro-text">
+              Discover how we transformed {client}'s digital presence through innovative design and strategic thinking.
+            </p>
           </div>
         </div>
 
