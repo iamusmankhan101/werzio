@@ -20,7 +20,6 @@ const WorkSection = () => {
 
         // Calculate progress: 0 when card is below viewport, 1 when fully in view
         const cardTop = rect.top;
-        const cardHeight = rect.height;
 
         // Start animation when card enters bottom of viewport
         const startPoint = windowHeight;

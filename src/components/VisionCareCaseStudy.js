@@ -113,13 +113,13 @@ const VisionCareCaseStudy = () => {
 
           {/* Project URL */}
           <div className="mb-12 animate-fade-in" style={{animationDelay: '0.4s'}}>
-            <a 
-              href="#" 
+            <button 
+              onClick={() => window.open('https://visioncare-clinic.com', '_blank')}
               className="inline-flex items-center gap-2 text-black hover:text-gray-700 transition-colors duration-300"
             >
               <ExternalLink className="w-4 h-4" />
               <span className="text-lg">visioncare-clinic.com</span>
-            </a>
+            </button>
           </div>
 
           {/* CTA Button */}
