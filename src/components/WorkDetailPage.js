@@ -29,7 +29,6 @@ const WorkDetailPage = ({ projectData }) => {
     role,
     description,
     images,
-    nextProject,
     logo,
     heroImage
   } = projectData;
@@ -182,35 +181,6 @@ const WorkDetailPage = ({ projectData }) => {
             )}
           </div>
         </div>
-
-        {/* Next Project Section */}
-        {nextProject && (
-          <div className="project-footer">
-            <div className="footer-overlay"></div>
-            
-            {/* Floating Images */}
-            <div className="floating-images">
-              {nextProject.floatingImages && nextProject.floatingImages.map((img, index) => (
-                <div key={index} className={`floating-image floating-image-${index + 1}`}>
-                  <img src={img.src} alt={img.alt} />
-                </div>
-              ))}
-            </div>
-            
-            <div className="footer-content">
-              <div className="footer-label">Next Project</div>
-              <h2 className="footer-title">{nextProject.title}</h2>
-              <p className="footer-description">{nextProject.description}</p>
-              <button 
-                className="view-project-btn"
-                onClick={() => window.location.hash = nextProject.link}
-              >
-                <span>VIEW PROJECT</span>
-                <span className="btn-arrow">→</span>
-              </button>
-            </div>
-          </div>
-        )}
 
         {/* CTA Section */}
         <div className="work-cta-section">
