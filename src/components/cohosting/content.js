@@ -25,12 +25,14 @@ export const HERO_PILLARS = [
   { tag: '04 · OPERATIONS', body: 'Cleaning, linen, restocking, maintenance and inspection after every stay.' }
 ];
 
+// `count` drives the stat-card roll-up; `value` is the plain string used
+// wherever the number is shown without animation.
 export const STATS = [
-  { value: '1,400+', label: 'listings managed' },
-  { value: '+31%', label: 'median revenue lift in 90 days' },
-  { value: '4.91', label: 'average guest rating' },
-  { value: '14 min', label: 'median guest reply time' },
-  { value: '31', label: 'cities, 9 countries' }
+  { value: '1,400+', label: 'listings managed', count: { to: 1400, suffix: '+' } },
+  { value: '+31%', label: 'median revenue lift in 90 days', count: { to: 31, prefix: '+', suffix: '%' } },
+  { value: '4.91', label: 'average guest rating', count: { to: 4.91, decimals: 2 } },
+  { value: '14 min', label: 'median guest reply time', count: { to: 14, suffix: ' min' } },
+  { value: '31', label: 'cities, 9 countries', count: { to: 31 } }
 ];
 
 export const FINDINGS = [

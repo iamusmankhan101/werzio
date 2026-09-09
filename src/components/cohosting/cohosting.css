@@ -45,6 +45,16 @@
 :where(.wz) a { text-decoration: none; color: inherit; }
 .wz button { font-family: inherit; }
 
+/* Scroll-triggered entrance. Elements start hidden and are revealed by
+   useInView; the reduced-motion block below collapses the transition. */
+.wz-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .75s cubic-bezier(.22, 1, .36, 1),
+              transform .75s cubic-bezier(.22, 1, .36, 1);
+}
+.wz-reveal.is-in { opacity: 1; transform: none; }
+
 @keyframes wz-rise {
   from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: none; }
@@ -385,7 +395,7 @@
   display: grid;
   grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
   gap: 56px;
-  align-items: start;
+  align-items: stretch;
   padding-bottom: 46px;
 }
 .wz-statement__side { min-width: 0; display: flex; flex-direction: column; gap: 18px; }
@@ -404,28 +414,49 @@
   border-radius: 16px;
   overflow: clip;
   border: 1px solid var(--line-soft);
+  flex: 1;
+  min-height: 330px;
 }
-.wz-figure img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 4 / 3; }
+/* Settles out of a slight push-in as the figure reveals. */
+.wz-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.07);
+  transition: transform 1.4s cubic-bezier(.22, 1, .36, 1);
+}
+.wz-figure.is-in img { transform: scale(1); }
 
+/* Sits against the bottom of its column so the cards line up with the
+   figure's lower edge. */
 .wz-statcards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 14px;
+  margin-top: auto;
 }
 .wz-statcard {
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 20px 20px 22px;
+  padding: 22px 20px 24px;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
+.wz-statcard:hover { border-color: rgba(15, 16, 18, .3); }
 .wz-statcard__n {
   font: 500 11px "IBM Plex Mono", ui-monospace, monospace;
-  color: var(--muted-soft);
+  color: var(--accent);
   letter-spacing: 0.04em;
 }
-.wz-statcard b { font-size: 30px; font-weight: 500; letter-spacing: -0.035em; line-height: 1; }
+.wz-statcard b {
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
 .wz-statcard span { font-size: 12.5px; line-height: 1.5; color: var(--muted); }
 
 /* --- audit panel ---------------------------------------------------------- */
@@ -458,11 +489,23 @@
 .wz-audit__flag { color: var(--amber); }
 
 .wz-audit__score { display: flex; align-items: baseline; gap: 10px; }
-.wz-audit__score b { font-size: 58px; font-weight: 500; letter-spacing: -0.045em; line-height: 1; color: var(--amber); }
+.wz-audit__score b {
+  font-size: 58px;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  color: var(--amber);
+  font-variant-numeric: tabular-nums;
+}
 .wz-audit__score span { font-size: 15px; color: var(--muted); }
 
 .wz-meter { height: 6px; border-radius: 99px; background: rgba(15, 16, 18, .08); }
-.wz-meter__fill { height: 6px; border-radius: 99px; background: var(--amber); }
+.wz-meter__fill {
+  height: 6px;
+  border-radius: 99px;
+  background: var(--amber);
+  transition: width 1.25s cubic-bezier(.22, 1, .36, 1);
+}
 
 .wz-audit__copy { margin: 0; font-size: 13.5px; line-height: 1.6; color: var(--muted); }
 .wz-audit__facts { margin-top: auto; padding-top: 16px; display: flex; flex-direction: column; gap: 9px; }
@@ -771,5 +814,8 @@
     animation-duration: .001ms !important;
     animation-delay: 0ms !important;
     transition-duration: .001ms !important;
+    transition-delay: 0ms !important;
   }
+  .wz-reveal { opacity: 1; transform: none; }
+  .wz-figure img { transform: none; }
 }
