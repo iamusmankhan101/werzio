@@ -34,8 +34,10 @@ const ContactModal = ({ isOpen, onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add your form submission logic here
+    const phone = '923058562523';
+    const text = `Hi Werzio! I would like to get in touch:\n\n• Name: ${formData.firstName} ${formData.lastName}\n• Email: ${formData.email}${formData.company ? `\n• Company: ${formData.company}` : ''}\n• Message: ${formData.message}`;
+    const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+    window.open(waUrl, '_blank');
     onClose();
   };
 

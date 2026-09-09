@@ -4,6 +4,9 @@
 export const BRAND = 'Werzio';
 export const EMAIL = 'hello@werzio.com';
 export const BOOKING_URL = 'https://werzio.youcanbook.me/';
+export const WHATSAPP_PHONE = '+92 305 8562523';
+export const WHATSAPP_NUMBER = '923058562523';
+export const WHATSAPP_URL = 'https://wa.me/923058562523';
 
 // Management fee on the headline plan, referenced in pricing, the ledger and the FAQ.
 export const FEE = 18;

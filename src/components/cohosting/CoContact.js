@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { EMAIL } from './content';
+import { EMAIL, WHATSAPP_PHONE, WHATSAPP_NUMBER, WHATSAPP_URL } from './content';
 
 const EMPTY = { name: '', email: '', location: '', listing: '' };
 
@@ -14,8 +14,9 @@ const CoContact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // No backend yet — same client-side handling as the rest of the site.
-    console.log('Forecast request:', form);
+    const text = `Hi Werzio! I would like to request a revenue forecast:\n\n• Name: ${form.name}\n• Email: ${form.email}\n• Location: ${form.location}${form.listing ? `\n• Listing: ${form.listing}` : ''}`;
+    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(waUrl, '_blank');
     setSent(true);
   };
 
@@ -30,19 +31,21 @@ const CoContact = () => {
           </p>
           <div className="wz-contact__meta">
             <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>
+              WhatsApp: {WHATSAPP_PHONE}
+            </a>
             <span>Onboarding 6 homes this month</span>
           </div>
         </div>
 
         <form className="wz-form" onSubmit={handleSubmit}>
-          <span className="wz-form__label">REQUEST A FORECAST</span>
+          <span className="wz-form__label">REQUEST A FORECAST VIA WHATSAPP</span>
 
           {sent ? (
             <div className="wz-form__done">
-              <b>Request received.</b>
+              <b>Opening WhatsApp...</b>
               <p>
-                We’ll come back within one business day with a forecast for your address. No sales
-                sequence.
+                We have generated your forecast request in WhatsApp. Click send in WhatsApp to connect with our team directly.
               </p>
               <button
                 type="button"
@@ -88,8 +91,12 @@ const CoContact = () => {
                 onChange={handleChange}
                 placeholder="Listing link (optional)"
               />
-              <button type="submit" className="wz-btn wz-btn--primary">Send request</button>
-              <span className="wz-form__fine">We reply within one business day. No sales sequence.</span>
+              <button type="submit" className="wz-btn wz-btn--primary">
+                Send request on WhatsApp
+              </button>
+              <span className="wz-form__fine">
+                Opens directly in WhatsApp ({WHATSAPP_PHONE}). Instant response!
+              </span>
             </>
           )}
         </form>

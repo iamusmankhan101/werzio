@@ -8,16 +8,18 @@
   --ink: #0F1012;
   --ink-deep: #0A0A0B;
   --paper: #FFFFFF;
-  --paper-alt: #F6F4F1;
-  --paper-card: #FBFAF8;
+  --paper-alt: #EEEAD7;
+  --paper-card: #EEEAD7;
+  --contrast: #EEEAD7;
 
   --accent: #6D0808;
   --accent-deep: #2D0000;
-  --accent-soft: rgba(109, 8, 8, 0.08);
+  --accent-soft: #EEEAD7;
 
   --green-deep: #2E7D51;
   --amber: #6D0808;
-  --amber-soft: rgba(109, 8, 8, 0.08);
+  --amber-soft: #EEEAD7;
+  --surface: #EEEAD7;
 
   --line: rgba(15, 16, 18, .12);
   --line-soft: rgba(15, 16, 18, .07);
@@ -994,7 +996,7 @@
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 18px 20px;
-  background: #f9fafb;
+  background: var(--contrast, #EEEAD7);
   display: flex;
   flex-direction: column;
   gap: 8px;
