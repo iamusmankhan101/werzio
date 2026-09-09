@@ -90,7 +90,7 @@ export const SERVICES = [
   {
     tag: '02 · PRICING',
     title: 'Dynamic rates',
-    body: 'Daily repricing against demand, events, lead time and your competitive set — with a floor you set.'
+    body: 'Daily repricing against demand, events, lead time and your competitive set with a floor you set.'
   },
   {
     tag: '03 · DISTRIBUTION',
@@ -101,16 +101,6 @@ export const SERVICES = [
     tag: '04 · GUESTS',
     title: '24/7 communication',
     body: 'Screening, check-in, in-stay issues and disputes handled without calling you.'
-  },
-  {
-    tag: '05 · TURNOVERS',
-    title: 'Cleaning & linen',
-    body: 'Hotel-standard turnover, restocking and a photo inspection report after every stay.'
-  },
-  {
-    tag: '06 · UPKEEP',
-    title: 'Maintenance',
-    body: 'Vetted trades, no markup, and approval requests above whatever threshold you choose.'
   },
   {
     tag: '07 · REVIEWS',
