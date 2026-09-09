@@ -2,15 +2,17 @@ import React, { useState } from 'react';
 import BrandMark from './BrandMark';
 import { BRAND, NAV } from './content';
 
-const CoHeader = ({ onDark = false }) => {
+const CoHeader = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className={`wz-header${onDark && !open ? ' wz-header--onDark' : ''}`}>
+    <header className="wz-header">
       <div className="wz-shell wz-header__inner">
         <a href="#top" className="wz-brand" onClick={() => setOpen(false)}>
           <BrandMark />
-          <span className="wz-brand__name">{BRAND}</span>
+          <span className="wz-brand__name">
+            {BRAND}<span className="wz-brand__tm">™</span>
+          </span>
         </a>
 
         <nav className="wz-nav">

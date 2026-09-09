@@ -2,7 +2,7 @@ import React from 'react';
 import { QUOTES } from './content';
 
 const CoQuotes = () => (
-  <section className="wz-section wz-section--alt" style={{ borderBottom: 'none' }}>
+  <section className="wz-section wz-section--alt">
     <div className="wz-shell">
       <div className="wz-quotes">
         {QUOTES.map((q) => (
