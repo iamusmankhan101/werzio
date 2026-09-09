@@ -261,35 +261,51 @@ export const QUOTES = [
 
 export const FAQS = [
   {
-    q: 'Do I lose control of my property?',
-    a: 'No. You set the nightly floor, house rules, and maintenance approval limits. You can block owner nights anytime.'
+    q: 'What's the difference between the three plans?',
+    a: 'Revenue Optimization ($49/mo) covers dynamic pricing and seasonal min-stay management. Listing & SEO ($89/mo) adds title rewrites, photo sequence testing, and platform SEO across Airbnb, VRBO, and Booking.com. Growth & Direct Booking ($129/mo) adds a custom direct booking website plus email/SMS retargeting campaigns and Google Local SEO — designed to reduce your platform commission costs over time.'
   },
   {
-    q: 'How do Airbnb Co-Host Services work?',
-    a: 'A co-host manages property and guest operations based on your preferences. You choose what to delegate—from 24/7 guest messaging with 1-minute response times to turnover scheduling and dynamic pricing—while maintaining listing ownership.'
+    q: 'Do you take a percentage of my revenue?',
+    a: 'No. Every plan is a simple flat monthly fee — $49, $89, or $129. You keep 100% of your guest booking payouts. There are no hidden commissions, setup fees, or performance cuts.'
+  },
+  {
+    q: 'Do I lose control of my property?',
+    a: 'Not at all. You set the nightly rate floor, house rules, and maintenance approval limits. You can block owner nights anytime and every expense above your threshold requires your sign-off before we proceed.'
+  },
+  {
+    q: 'How fast will I see results after signing up?',
+    a: 'Most hosts see measurable improvement within 2–4 weeks. The free audit identifies quick wins on day one, listing rebuilds go live by day 10, and our median client sees a +31% revenue lift within the first 90 days.'
+  },
+  {
+    q: 'What does the free audit include?',
+    a: 'We score your live listing out of 100, identifying gaps in pricing, photos, title keywords, response time, and amenity coverage. You receive a recoverable-revenue estimate and actionable findings — no commitment required.'
   },
   {
     q: 'Can I hire a Co-Host if I live in another country?',
-    a: 'Yes. Many hosts manage properties remotely. We handle 24/7 guest communications, listing optimization, pricing, and cleaner scheduling remotely, needing only local turnover staff on the ground.'
+    a: 'Yes. Many of our hosts manage properties remotely. We handle 24/7 guest communications, listing optimization, dynamic pricing, and cleaner scheduling remotely — we only need local turnover staff on the ground.'
   },
   {
     q: 'What happens to my existing reviews and ranking?',
-    a: 'They stay intact. We optimize your existing listing rather than creating a new one, preserving your hard-earned search history and review score.'
+    a: 'They stay completely intact. We optimize your existing listing rather than creating a new one, so your hard-earned search history, review score, and Superhost status carry over.'
   },
   {
-    q: `Why ${FEE}% and not a flat fee?`,
-    a: 'A flat fee pays us the same whether your calendar is full or empty. A share of revenue means our incentive is 100% aligned with making your property earn more.'
+    q: 'Who pays for cleaning, linen, and repairs?',
+    a: 'Cleaning and linen are billed per turnover at cost — no markup — and shown line-by-line on your monthly statement. Maintenance repairs are also at cost, and anything above your set approval threshold requires your sign-off first.'
   },
   {
-    q: 'Who pays for cleaning, linen and repairs?',
-    a: 'Cleaning and linen are billed per turnover at cost and shown on your statement. Maintenance repairs are at cost with zero markup, requiring your approval above your set limit.'
+    q: 'How long is the contract and can I cancel anytime?',
+    a: 'All plans are month-to-month with 30-day notice. There is no long-term lock-in and zero exit fees. If it's not working, you walk away — no questions asked.'
   },
   {
-    q: 'How long is the contract?',
-    a: "60 days' notice on full co-hosting, 30 days on optimization only. There is no long-term lock-in period and zero exit fees."
+    q: 'Can I upgrade or downgrade my plan later?',
+    a: 'Absolutely. You can switch between the $49, $89, and $129 plans at any time. Changes take effect at the start of your next billing cycle with no penalties or disruption to your listing.'
   },
   {
     q: 'What if short-let makes less than my long-term lease?',
-    a: 'We will disclose that on your revenue forecast call before you sign anything. If long-term lease is better suited for your building or market, we will tell you upfront.'
+    a: 'We'll tell you upfront. During the free audit and revenue forecast call, if long-term leasing is better suited for your building or market, we'll disclose that before you sign anything.'
+  },
+  {
+    q: 'What tools and platforms do you use?',
+    a: 'We use PriceLabs and Wheelhouse for dynamic pricing, sync calendars across Airbnb, VRBO, and Booking.com in real time, and leverage Google Local SEO and Business Profile tools on our Growth plan. All tools are included in your flat fee — no extra software costs.'
   }
 ];

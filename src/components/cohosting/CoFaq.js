@@ -5,14 +5,18 @@ import { FAQS, EMAIL } from './content';
 const FAQ_CATEGORIES = ['All', 'Pricing & Fees', 'Operations', 'Control', 'Contracts'];
 
 const CATEGORY_MAP = {
-  0: 'Control',
-  1: 'Operations',
-  2: 'Contracts',
-  3: 'Control',
-  4: 'Pricing & Fees',
+  0: 'Pricing & Fees',
+  1: 'Pricing & Fees',
+  2: 'Control',
+  3: 'Operations',
+  4: 'Operations',
   5: 'Operations',
-  6: 'Contracts',
-  7: 'Pricing & Fees'
+  6: 'Operations',
+  7: 'Pricing & Fees',
+  8: 'Contracts',
+  9: 'Pricing & Fees',
+  10: 'Control',
+  11: 'Operations'
 };
 
 const CoFaq = () => {
