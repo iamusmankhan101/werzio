@@ -1,7 +1,7 @@
 /* ==========================================================================
    Werzio co-hosting — design system
-   Warm, photo-led editorial layout: a rounded paper shell floating on a
-   blurred skyline ground, with an image hero and a dark services band.
+   Warm, photo-led editorial layout: a full-bleed image hero, contained text
+   columns, and a dark services band.
    ========================================================================== */
 
 .wz {
@@ -27,40 +27,18 @@
   --line-dark: rgba(255, 255, 255, .14);
   --muted-dark: rgba(255, 255, 255, .58);
 
-  --shell: 1180px;
-  --gutter: 34px;
-  --radius: 26px;
+  --shell: 1400px;
+  --gutter: 40px;
 
   font-family: "Instrument Sans", system-ui, -apple-system, sans-serif;
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
-  position: relative;
-  min-height: 100vh;
-  padding: 22px 22px 0;
-  isolation: isolate;
+  background: var(--paper);
 }
 
 .wz *,
 .wz *::before,
 .wz *::after { box-sizing: border-box; }
-
-/* The warm ground: the hero photograph, blurred back into an amber field. */
-.wz::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  background: var(--ground-image) center/cover no-repeat;
-  filter: blur(46px) saturate(1.5);
-  transform: scale(1.16);
-}
-.wz::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(180deg, rgba(150, 66, 18, .58), rgba(90, 40, 12, .72));
-}
 
 /* :where() keeps this at zero specificity so button and CTA classes below
    can still set their own colour on links. */
@@ -72,15 +50,7 @@
   to   { opacity: 1; transform: none; }
 }
 
-/* --- the paper shell ------------------------------------------------------ */
-
-.wz-paper {
-  max-width: 1420px;
-  margin: 0 auto;
-  background: var(--paper);
-  border-radius: var(--radius);
-  overflow: clip;
-}
+/* --- layout --------------------------------------------------------------- */
 
 .wz-shell {
   max-width: var(--shell);
@@ -180,13 +150,12 @@
 
 .wz-header {
   position: sticky;
-  top: 22px;
+  top: 0;
   z-index: 60;
   background: rgba(255, 255, 255, .9);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line-soft);
-  border-radius: var(--radius) var(--radius) 0 0;
   transition: background-color .3s ease, border-color .3s ease, color .3s ease;
 }
 .wz-header__inner {
@@ -265,11 +234,10 @@
 
 /* --- hero ----------------------------------------------------------------- */
 
-.wz-hero { padding: 0 14px 14px; scroll-margin-top: 90px; }
+.wz-hero { scroll-margin-top: 90px; }
 
 .wz-hero__frame {
   position: relative;
-  border-radius: 20px;
   overflow: clip;
   min-height: 640px;
   display: flex;
@@ -296,9 +264,16 @@
     linear-gradient(100deg, rgba(22, 10, 2, .62) 0%, rgba(22, 10, 2, .18) 42%, rgba(22, 10, 2, 0) 68%);
 }
 
+.wz-hero__inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
 .wz-hero__display {
   margin: 0;
-  padding: 40px 34px 0;
+  padding: 40px 0 0;
   color: #fff;
   font-size: clamp(46px, 10.6vw, 152px);
   line-height: .88;
@@ -309,7 +284,7 @@
 
 .wz-hero__foot {
   margin-top: auto;
-  padding: 34px;
+  padding: 34px 0;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -762,7 +737,7 @@
 }
 
 @media (max-width: 860px) {
-  .wz { --gutter: 24px; padding: 12px 12px 0; }
+  .wz { --gutter: 24px; }
   .wz-nav, .wz-header__cta { display: none; }
   .wz-burger { display: flex; margin-left: auto; }
   .wz-mobilenav.is-open { display: flex; }
@@ -773,15 +748,18 @@
 
 @media (max-width: 620px) {
   .wz { --gutter: 18px; }
-  .wz-hero { padding: 0 8px 8px; }
-  .wz-hero__display { padding: 26px 18px 0; }
-  .wz-hero__foot { padding: 22px 18px; gap: 20px; }
+  .wz-hero__display { padding-top: 26px; }
+  .wz-hero__foot { padding: 22px 0; gap: 20px; }
   .wz-recent { min-width: 0; width: 100%; }
   .wz-audit__side { padding: 22px 18px; }
   .wz-finding { padding: 14px 18px; }
   .wz-audit__cta { padding: 18px; }
   .wz-plan { padding: 26px 22px; }
   .wz-form { padding: 22px; }
+}
+
+@media (min-width: 1600px) {
+  .wz-hero__frame { min-height: 760px; }
 }
 
 /* --- motion preferences ------------------------------------------------------------ */

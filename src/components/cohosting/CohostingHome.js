@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import './cohosting.css';
-import groundImage from '../../images/wz-hero-interior.jpg';
 import CoHeader from './CoHeader';
 import CoHero from './CoHero';
 import CoTrust from './CoTrust';
@@ -36,24 +35,22 @@ const CohostingHome = () => {
   }, []);
 
   return (
-    <div className="wz" style={{ '--ground-image': `url(${groundImage})` }}>
-      <div className="wz-paper">
-        <CoHeader />
-        <main>
-          <CoHero />
-          <CoTrust />
-          <CoAudit />
-          <CoManage />
-          <CoOptimization />
-          <CoProcess />
-          <CoOwnerApp />
-          <CoPricing />
-          <CoQuotes />
-          <CoFaq />
-          <CoContact />
-        </main>
-        <CoFooter />
-      </div>
+    <div className="wz">
+      <CoHeader />
+      <main>
+        <CoHero />
+        <CoTrust />
+        <CoAudit />
+        <CoManage />
+        <CoOptimization />
+        <CoProcess />
+        <CoOwnerApp />
+        <CoPricing />
+        <CoQuotes />
+        <CoFaq />
+        <CoContact />
+      </main>
+      <CoFooter />
     </div>
   );
 };
