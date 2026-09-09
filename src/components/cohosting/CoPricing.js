@@ -115,7 +115,7 @@ const CoPricing = () => {
               <div className="wz-plan__cta">
                 <a
                   href={plan.href}
-                  className={`wz-btn ${plan.feature ? 'wz-btn--light' : 'wz-btn--ghost'} wz-btn--with-arrow`}
+                  className={`wz-btn ${plan.feature ? 'wz-btn--primary' : 'wz-btn--ghost'} wz-btn--with-arrow`}
                 >
                   <span>{plan.cta}</span>
                   <ArrowRight size={16} className="wz-btn__arrow" />
