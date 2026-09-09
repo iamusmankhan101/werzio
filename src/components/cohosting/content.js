@@ -25,6 +25,24 @@ export const HERO_PILLARS = [
   { tag: '04 · OPERATIONS', body: 'Cleaning, linen, restocking, maintenance and inspection after every stay.' }
 ];
 
+// The About statement, split into tones so it can animate word by word.
+// `muted` renders the segment in the lighter grey.
+export const STATEMENT = [
+  { text: 'We manage short-let listings end to end — pricing, content, guests and turnovers.' },
+  { text: 'Your listing is leaving money on the table, and we can show you exactly where.', muted: true }
+];
+
+export const STATEMENT_TEXT = STATEMENT.map((s) => s.text).join(' ');
+
+// Services heading. Kept short so it sits level with the note beside it —
+// the long version ran to four lines and left the note stranded.
+export const SERVICES_HEADING = [
+  { text: 'Everything a listing needs,' },
+  { text: 'under one fee.', muted: true }
+];
+
+export const SERVICES_HEADING_TEXT = SERVICES_HEADING.map((s) => s.text).join(' ');
+
 // `count` drives the stat-card roll-up; `value` is the plain string used
 // wherever the number is shown without animation.
 export const STATS = [

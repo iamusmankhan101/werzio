@@ -55,6 +55,25 @@
 }
 .wz-reveal.is-in { opacity: 1; transform: none; }
 
+/* Word-by-word statement reveal. Each word sits in its own clipping box and
+   rises out of it; the padding/negative-margin pair keeps descenders (g, y, p)
+   from being sheared off by that clip. */
+.wz-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+.wz-word__in {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform .82s cubic-bezier(.22, 1, .36, 1);
+  will-change: transform;
+}
+.wz-words.is-in .wz-word__in { transform: translateY(0); }
+.wz-word--muted { color: var(--muted-soft); }
+
 @keyframes wz-rise {
   from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: none; }
@@ -543,21 +562,54 @@
 
 /* --- services (dark, numbered) -------------------------------------------- */
 
-/* 300px puts the nine services on a 3x3 grid at desktop width. Each item is
-   ruled from above, as in the reference — boxed cells leave stray edges when
-   the last row is short. */
-.wz-services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  column-gap: 30px;
-  row-gap: 34px;
+/* The services rail. The heading stays in the content column while the cards
+   run full bleed, so the loop reads as continuous past the page edges. */
+.wz-manage > .wz-shell { padding-bottom: 46px; }
+.wz-manage { padding-bottom: 92px; }
+
+.wz-marquee {
+  position: relative;
+  overflow: hidden;
+  /* Fades the cards out at both edges instead of cutting them dead. */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
 }
+
+.wz-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: wz-marquee 58s linear infinite;
+}
+.wz-marquee:hover .wz-marquee__track,
+.wz-marquee:focus-within .wz-marquee__track { animation-play-state: paused; }
+
+.wz-marquee__group {
+  display: flex;
+  gap: 18px;
+  padding-right: 18px;
+}
+
+@keyframes wz-marquee {
+  to { transform: translateX(-50%); }
+}
+
 .wz-service {
-  padding-top: 22px;
-  border-top: 1px solid var(--line-dark);
+  flex: none;
+  width: 330px;
+  min-height: 218px;
+  padding: 26px 24px 28px;
+  border: 1px solid var(--line-dark);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .022);
   display: flex;
   flex-direction: column;
   gap: 10px;
+  transition: border-color .25s ease, background-color .25s ease, transform .25s ease;
+}
+.wz-service:hover {
+  border-color: rgba(255, 255, 255, .34);
+  background: rgba(255, 255, 255, .055);
+  transform: translateY(-3px);
 }
 .wz-service__n {
   font: 500 11.5px "IBM Plex Mono", ui-monospace, monospace;
@@ -776,7 +828,6 @@
   .wz-contact { grid-template-columns: minmax(0, 1fr); gap: 40px; }
   .wz-audit { grid-template-columns: minmax(0, 1fr); }
   .wz-audit__side { border-right: none; border-bottom: 1px solid var(--line-soft); }
-  .wz-service { border-right: none; padding-right: 0; }
 }
 
 @media (max-width: 860px) {
@@ -797,6 +848,7 @@
   .wz-audit__side { padding: 22px 18px; }
   .wz-finding { padding: 14px 18px; }
   .wz-audit__cta { padding: 18px; }
+  .wz-service { width: 268px; min-height: 200px; padding: 22px 20px 24px; }
   .wz-plan { padding: 26px 22px; }
   .wz-form { padding: 22px; }
 }
@@ -818,4 +870,7 @@
   }
   .wz-reveal { opacity: 1; transform: none; }
   .wz-figure img { transform: none; }
+  .wz-word__in { transform: none; }
+  .wz-marquee__track { animation: none; }
+  .wz-marquee { overflow-x: auto; }
 }

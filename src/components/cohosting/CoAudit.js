@@ -1,7 +1,8 @@
 import React from 'react';
-import { FINDINGS, STATS } from './content';
+import { FINDINGS, STATS, STATEMENT, STATEMENT_TEXT } from './content';
 import useInView from './useInView';
 import useCountUp, { formatStat } from './useCountUp';
+import SplitText from './SplitText';
 import aboutImage from '../../images/wz-skyline.jpg';
 
 const StatCard = ({ stat, index, active }) => {
@@ -38,13 +39,8 @@ const CoAudit = () => {
           </div>
 
           <div className="wz-statement__main">
-            <h2
-              ref={headRef}
-              className={`wz-statement__title wz-reveal${headIn ? ' is-in' : ''}`}
-            >
-              We manage short-let listings end to end — pricing, content, guests and
-              turnovers. <em>Your listing is leaving money on the table, and we can show you
-              exactly where.</em>
+            <h2 ref={headRef} className="wz-statement__title" aria-label={STATEMENT_TEXT}>
+              <SplitText segments={STATEMENT} active={headIn} />
             </h2>
 
             <div className="wz-statcards" ref={statsRef}>
