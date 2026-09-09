@@ -32,7 +32,6 @@
       <nav style="display:flex;gap:22px;flex-wrap:wrap;font-size:13.5px;color:rgba(11,14,20,.66)">
         <a href="#optimization" style="color:inherit" style-hover="color:#0B0E14">Optimization</a>
         <a href="#manage" style="color:inherit" style-hover="color:#0B0E14">What we manage</a>
-        <a href="#process" style="color:inherit" style-hover="color:#0B0E14">How it works</a>
         <a href="#pricing" style="color:inherit" style-hover="color:#0B0E14">Pricing</a>
         <a href="#faq" style="color:inherit" style-hover="color:#0B0E14">FAQ</a>
       </nav>
@@ -166,23 +165,7 @@
     </div>
   </section>
 
-  <section id="process" style="scroll-margin-top:80px">
-    <div style="max-width:1240px;margin:0 auto;padding:86px 28px">
-      <div style="display:flex;justify-content:space-between;align-items:end;gap:28px;flex-wrap:wrap;padding-bottom:40px">
-        <h2 style="margin:0;max-width:22ch;font-size:clamp(28px,3.4vw,44px);line-height:1.06;letter-spacing:-0.03em;font-weight:600">Live in about ten days.</h2>
-        <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:rgba(11,14,20,.45)">HOW IT WORKS</span>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px">
-        <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
-          <div style="{{ st.wrapStyle }}">
-            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.16em;color:oklch(0.52 0.2 258)">{{ st.n }}</span>
-            <h3 style="margin:0;font-size:18px;font-weight:600;letter-spacing:-0.015em">{{ st.title }}</h3>
-            <p style="margin:0;font-size:14px;line-height:1.6;color:rgba(11,14,20,.62)">{{ st.body }}</p>
-          </div>
-        </sc-for>
-      </div>
-    </div>
-  </section>
+
 
 
   <section id="pricing" style="scroll-margin-top:80px">

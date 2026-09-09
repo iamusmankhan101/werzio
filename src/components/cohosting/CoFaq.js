@@ -6,11 +6,13 @@ const FAQ_CATEGORIES = ['All', 'Pricing & Fees', 'Operations', 'Control', 'Contr
 
 const CATEGORY_MAP = {
   0: 'Control',
-  1: 'Setup & Ranking',
-  2: 'Pricing & Fees',
-  3: 'Operations',
-  4: 'Contracts',
-  5: 'Pricing & Fees'
+  1: 'Operations',
+  2: 'Contracts',
+  3: 'Control',
+  4: 'Pricing & Fees',
+  5: 'Operations',
+  6: 'Contracts',
+  7: 'Pricing & Fees'
 };
 
 const CoFaq = () => {

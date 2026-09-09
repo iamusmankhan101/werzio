@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 import { ArrowRight, Check, ShieldCheck, Zap, BarChart3, Calculator } from 'lucide-react';
-import { PLANS, FEE } from './content';
+import { PLANS } from './content';
 
 const CoPricing = () => {
-  const [revenue, setRevenue] = useState(10000);
+  const [revenue, setRevenue] = useState(8000);
   const [showCalculator, setShowCalculator] = useState(false);
 
-  const fullFeeAmt = Math.round(revenue * (FEE / 100));
-  const optFeeAmt = Math.round(revenue * 0.08);
-  const fullNet = revenue - fullFeeAmt;
-  const optNet = revenue - optFeeAmt;
+  // Revenue lift estimate (approx 31% lift)
+  const estimatedBoost = Math.round(revenue * 0.31);
+  const netEarningsWithGrowth = revenue + estimatedBoost - 129;
+  const netEarningsWithSEO = revenue + Math.round(revenue * 0.20) - 89;
 
   return (
     <section id="pricing" className="wz-section">
       <div className="wz-shell">
         <div className="wz-pricing__head">
-          <span className="wz-eyebrow">Pricing</span>
-          <h2 className="wz-h2" style={{ maxWidth: '24ch' }}>We earn when your listing earns.</h2>
+          <span className="wz-eyebrow">Transparent Pricing</span>
+          <h2 className="wz-h2" style={{ maxWidth: '24ch' }}>Simple flat monthly plans for every host.</h2>
           <p>
-            No setup fee, no markup on maintenance, 60-day notice. Empty calendar, no invoice.
+            No percentage cuts of your revenue, no hidden setup fees, and cancel anytime with zero lock-in.
           </p>
 
           <button
@@ -27,7 +27,7 @@ const CoPricing = () => {
             onClick={() => setShowCalculator(!showCalculator)}
           >
             <Calculator size={16} />
-            {showCalculator ? 'Hide Payout Calculator' : 'Interactive Payout Calculator'}
+            {showCalculator ? 'Hide Revenue Estimator' : 'Interactive ROI Estimator'}
           </button>
         </div>
 
@@ -37,8 +37,8 @@ const CoPricing = () => {
               <div className="wz-calc-title">
                 <BarChart3 size={20} className="wz-calc-icon" />
                 <div>
-                  <h4>Estimate Your Monthly Earnings</h4>
-                  <p>Slide to match your estimated gross monthly booking revenue</p>
+                  <h4>Estimate Your Monthly Revenue Growth</h4>
+                  <p>Select your current monthly revenue to see estimated lift after optimization</p>
                 </div>
               </div>
               <div className="wz-calc-badge">+31% Median Revenue Lift</div>
@@ -46,7 +46,7 @@ const CoPricing = () => {
 
             <div className="wz-calc-slider-wrap">
               <div className="wz-calc-val">
-                <span>Monthly Booking Revenue</span>
+                <span>Current Monthly Revenue</span>
                 <b>${revenue.toLocaleString()}</b>
               </div>
               <input
@@ -68,20 +68,20 @@ const CoPricing = () => {
 
             <div className="wz-calc-grid">
               <div className="wz-calc-card">
-                <span className="wz-calc-card__tier">OPTIMIZATION ONLY (8%)</span>
+                <span className="wz-calc-card__tier">LISTING &amp; SEO ($89/MO)</span>
                 <div className="wz-calc-card__net">
-                  <span>Your Net Payout</span>
-                  <b>${optNet.toLocaleString()}</b>
-                  <small>Fee: ${optFeeAmt.toLocaleString()}/mo</small>
+                  <span>Est. Monthly Net (+20% Lift)</span>
+                  <b>${netEarningsWithSEO.toLocaleString()}</b>
+                  <small>Flat Fee: $89/mo · You keep 99%+ of earnings</small>
                 </div>
               </div>
 
               <div className="wz-calc-card wz-calc-card--featured">
-                <span className="wz-calc-card__tier">FULL CO-HOSTING ({FEE}%)</span>
+                <span className="wz-calc-card__tier">GROWTH &amp; DIRECT BOOKING ($129/MO)</span>
                 <div className="wz-calc-card__net">
-                  <span>Your Net Payout (0 Effort)</span>
-                  <b>${fullNet.toLocaleString()}</b>
-                  <small>Fee: ${fullFeeAmt.toLocaleString()}/mo · Full Hands-Free Service</small>
+                  <span>Est. Monthly Net (+31% Lift)</span>
+                  <b>${netEarningsWithGrowth.toLocaleString()}</b>
+                  <small>Flat Fee: $129/mo · Direct site + SMS/Email retargeting</small>
                 </div>
               </div>
             </div>
@@ -130,23 +130,23 @@ const CoPricing = () => {
             <ShieldCheck size={20} className="wz-trust-icon" />
             <div>
               <strong>No Long-term Lock-in</strong>
-              <p>60-day notice on co-hosting, 30 on optimization.</p>
+              <p>Flexible month-to-month plans with 30-day notice.</p>
             </div>
           </div>
 
           <div className="wz-trust-item">
             <Zap size={20} className="wz-trust-icon" />
             <div>
-              <strong>Free Listing Rebuild</strong>
-              <p>Pro photography & styling setup with zero upfront fee.</p>
+              <strong>Zero Hidden Commission</strong>
+              <p>Keep 100% of your guest booking payouts.</p>
             </div>
           </div>
 
           <div className="wz-trust-item">
             <BarChart3 size={20} className="wz-trust-icon" />
             <div>
-              <strong>100% Aligned Incentives</strong>
-              <p>We only earn more when your listing revenue increases.</p>
+              <strong>Proven Software Tools</strong>
+              <p>Integrated with PriceLabs, Wheelhouse & Google Local SEO.</p>
             </div>
           </div>
         </div>

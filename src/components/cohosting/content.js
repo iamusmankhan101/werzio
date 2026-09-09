@@ -11,17 +11,16 @@ export const FEE = 18;
 export const NAV = [
   { label: 'Optimization', href: '#optimization' },
   { label: 'What we manage', href: '#manage' },
-  { label: 'How it works', href: '#process' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'FAQ', href: '#faq' }
 ];
 
 // The four-column strip under the hero chart (artboard 1c).
 export const HERO_PILLARS = [
-  { tag: '01 · CONTENT', body: 'Rewritten titles and descriptions, reshoot, photo order tested monthly.' },
-  { tag: '02 · PRICING', body: 'Daily rates against demand, events, lead time and your competitive set.' },
-  { tag: '03 · GUESTS', body: '24/7 replies, screening, check-in, issues handled without calling you.' },
-  { tag: '04 · OPERATIONS', body: 'Cleaning, linen, restocking, maintenance and inspection after every stay.' }
+  { tag: '01 · LISTING OPTIMIZATION', body: 'SEO-driven title rebuilds, professional photo staging, and monthly keyword testing.' },
+  { tag: '02 · DYNAMIC PRICING', body: 'Daily rate adjustments tailored to local events, seasonal demand, and rate floors.' },
+  { tag: '03 · 24/7 GUEST SUPPORT', body: 'Instant 1-minute response time, guest screening, check-in assistance, and Superhost management.' },
+  { tag: '04 · CLEANING & UPKEEP', body: 'Turnover scheduling with trusted local cleaners, photo inspections, and no-markup maintenance.' }
 ];
 
 // The About statement, split into tones so it can animate word by word.
@@ -62,7 +61,7 @@ export const STATS = [
   { value: '1,400+', label: 'listings managed', count: { to: 1400, suffix: '+' } },
   { value: '+31%', label: 'median revenue lift in 90 days', count: { to: 31, prefix: '+', suffix: '%' } },
   { value: '4.91', label: 'average guest rating', count: { to: 4.91, decimals: 2 } },
-  { value: '14 min', label: 'median guest reply time', count: { to: 14, suffix: ' min' } },
+  { value: '1 min', label: 'average guest reply time', count: { to: 1, suffix: ' min' } },
   { value: '31', label: 'cities, 9 countries', count: { to: 31 } }
 ];
 
@@ -84,7 +83,7 @@ export const FINDINGS = [
   },
   {
     title: 'Reply time 6h 20m',
-    body: 'Above the threshold that suppresses ranking. We reply in minutes, 24/7.',
+    body: 'Above the threshold that suppresses ranking. We reply in under 1 minute, 24/7.',
     high: false
   },
   {
@@ -96,49 +95,44 @@ export const FINDINGS = [
 
 export const SERVICES = [
   {
-    tag: '01 · CONTENT',
-    title: 'Listing rebuild',
-    body: 'Rewritten title and description, professional shoot, photo order tested every month.'
+    tag: '01 · SETUP & OPTIMIZATION',
+    title: 'Listing Setup & Keyword SEO',
+    body: 'Optimized titles and descriptions using high-ranking search keywords, USP highlighting, photo staging, and amenity categorization for maximum search visibility.'
   },
   {
-    tag: '02 · PRICING',
-    title: 'Dynamic rates',
-    body: 'Daily repricing against demand, events, lead time and your competitive set — with a floor you set.'
+    tag: '02 · 24/7 GUEST SUPPORT',
+    title: '24/7 Rapid Guest Communication',
+    body: 'Instant replies with a 1-minute maximum response time. Inquiry handling, guest screening, in-stay assistance, and dispute resolution to maintain Superhost status.'
   },
   {
-    tag: '03 · DISTRIBUTION',
-    title: 'One calendar, every channel',
-    body: 'Synced across the major booking platforms plus direct enquiries. No double bookings.'
+    tag: '03 · CHECK-IN & DEPARTURE',
+    title: 'Check-in & Checkout Guidance',
+    body: 'Keyless smart lock guidance, exact map location pins, arrival reminders, welcome onboarding messages, and structured checkout departure instructions.'
   },
   {
-    tag: '04 · GUESTS',
-    title: '24/7 communication',
-    body: 'Screening, check-in, in-stay issues and disputes handled without calling you.'
+    tag: '04 · CLEANING & TURNOVER',
+    title: 'Cleaning & Turnover Coordination',
+    body: 'Local trusted cleaner dispatching, turnover scheduling, photo inspection reports after every stay, restocking checklists, and deep-cleaning protocols.'
   },
   {
-    tag: '05 · TURNOVERS',
-    title: 'Cleaning & linen',
-    body: 'Hotel-standard turnover, restocking and a photo inspection report after every stay.'
+    tag: '05 · PRICING & REVENUE',
+    title: 'Dynamic Rates & Demand Repricing',
+    body: 'Daily rate adjustments against market demand, seasonal trends, local events, lead time, and competitor comp sets — protected by your minimum rate floor.'
   },
   {
-    tag: '06 · UPKEEP',
-    title: 'Maintenance',
-    body: 'Vetted trades, no markup, and approval requests above whatever threshold you choose.'
+    tag: '06 · DISTRIBUTION',
+    title: 'Multi-Channel Calendar Sync',
+    body: 'Real-time calendar synchronization across Airbnb, VRBO, Booking.com, and direct booking channels to eliminate double bookings.'
   },
   {
-    tag: '07 · REVIEWS',
-    title: 'Rating management',
-    body: 'Review chasing, response writing and root-cause fixes on anything under five stars.'
+    tag: '07 · REVIEWS & RATINGS',
+    title: 'Review Chasing & Rating Defense',
+    body: 'Proactive review requests, guest review management, rating velocity optimization, and root-cause resolution for any feedback below 5 stars.'
   },
   {
-    tag: '08 · COMPLIANCE',
-    title: 'Permits & tax',
-    body: 'Local short-let registration, tourism levies and guest registration filed on time.'
-  },
-  {
-    tag: '09 · REPORTING',
-    title: 'Statements & payouts',
-    body: 'Every booking, cost and levy itemised in the owner app, with payout on the 5th.'
+    tag: '08 · COMPLIANCE & TAX',
+    title: 'Permits, Tax & Local Registration',
+    body: 'Local short-term rental registration, tourism levy filings, guest identity verification, and tax compliance handled accurately and on time.'
   }
 ];
 
@@ -196,47 +190,44 @@ export const LEDGER = [
 
 export const PLANS = [
   {
-    tier: 'OPTIMIZATION ONLY',
-    price: '8%',
-    unit: 'of booking revenue',
-    copy: 'You keep hosting. We own content, pricing and ranking, and report monthly.',
+    tier: 'REVENUE OPTIMIZATION',
+    price: '$49',
+    unit: '/ month',
+    copy: 'Maximize booking income with dynamic repricing and seasonal minimum-stay management.',
     feats: [
-      'Content, pricing and ranking owned by us',
-      'Monthly performance report',
-      'You keep guest communication',
-      "Cancel with 30 days' notice"
+      'Dynamic pricing strategy (setting daily rates via PriceLabs/Wheelhouse)',
+      'Min-stay & seasonal gap night management',
+      'Monthly revenue & performance reporting'
     ],
-    cta: 'Compare plans',
-    href: '#faq'
-  },
-  {
-    tier: 'FULL CO-HOSTING',
-    flag: 'MOST OWNERS',
-    feature: true,
-    price: `${FEE}%`,
-    unit: 'of booking revenue',
-    copy: 'The whole thing. Optimization plus guests, cleaning, maintenance and compliance.',
-    feats: [
-      'Everything in Optimization',
-      '24/7 guest communication',
-      'Cleaning, linen and maintenance',
-      'Permits, levies and insurance liaison',
-      'Free setup, shoot and listing rebuild'
-    ],
-    cta: 'Book a walkthrough',
+    cta: 'Get started',
     href: '#contact'
   },
   {
-    tier: 'PORTFOLIO · 5+ UNITS',
-    price: 'Custom',
-    copy: 'Blended rate, a named portfolio manager and quarterly asset reviews.',
+    tier: 'LISTING & SEO MANAGEMENT',
+    flag: 'MOST POPULAR',
+    feature: true,
+    price: '$89',
+    unit: '/ month',
+    copy: 'Boost search rankings, click-through rates, and market visibility across all channels.',
     feats: [
-      'Blended rate across the portfolio',
-      'Named portfolio manager',
-      'Quarterly asset review',
-      'Consolidated statements'
+      'Listing copy, title updates, & photo sequence testing',
+      'Platform SEO optimization across Airbnb, VRBO, etc.',
+      'Competitor market benchmarking'
     ],
-    cta: 'Talk to portfolio team',
+    cta: 'Select plan',
+    href: '#contact'
+  },
+  {
+    tier: 'GROWTH & DIRECT BOOKING',
+    price: '$129',
+    unit: '/ month',
+    copy: 'Scale guest acquisition with a custom direct booking site and automated marketing campaigns.',
+    feats: [
+      'Setting up & managing a direct booking website',
+      'Retargeting past guests via email/SMS campaigns',
+      'Local SEO & Google Business profile setup'
+    ],
+    cta: 'Scale your listing',
     href: '#contact'
   }
 ];
@@ -268,26 +259,34 @@ export const QUOTES = [
 export const FAQS = [
   {
     q: 'Do I lose control of my property?',
-    a: 'No. You set the nightly floor, the house rules and the maintenance approval threshold, and you can block owner nights in the app whenever you like.'
+    a: 'No. You set the nightly floor, house rules, and maintenance approval limits. You can block owner nights anytime.'
+  },
+  {
+    q: 'How do Airbnb Co-Host Services work?',
+    a: 'A co-host manages property and guest operations based on your preferences. You choose what to delegate—from 24/7 guest messaging with 1-minute response times to turnover scheduling and dynamic pricing—while maintaining listing ownership.'
+  },
+  {
+    q: 'Can I hire a Co-Host if I live in another country?',
+    a: 'Yes. Many hosts manage properties remotely. We handle 24/7 guest communications, listing optimization, pricing, and cleaner scheduling remotely, needing only local turnover staff on the ground.'
   },
   {
     q: 'What happens to my existing reviews and ranking?',
-    a: 'They stay. We optimize the listing you already have rather than creating a new one, so your review history and search history carry over.'
+    a: 'They stay intact. We optimize your existing listing rather than creating a new one, preserving your hard-earned search history and review score.'
   },
   {
     q: `Why ${FEE}% and not a flat fee?`,
-    a: 'A flat fee pays us the same whether your calendar is full or empty. A share of revenue means the only way we earn more is by making your listing earn more.'
+    a: 'A flat fee pays us the same whether your calendar is full or empty. A share of revenue means our incentive is 100% aligned with making your property earn more.'
   },
   {
     q: 'Who pays for cleaning, linen and repairs?',
-    a: 'Cleaning and linen are billed per turnover at cost and shown on your statement. Repairs are at cost with no markup, and anything above your threshold needs your approval.'
+    a: 'Cleaning and linen are billed per turnover at cost and shown on your statement. Maintenance repairs are at cost with zero markup, requiring your approval above your set limit.'
   },
   {
     q: 'How long is the contract?',
-    a: "60 days' notice on full co-hosting, 30 on optimization only. There is no lock-in period and no exit fee."
+    a: "60 days' notice on full co-hosting, 30 days on optimization only. There is no long-term lock-in period and zero exit fees."
   },
   {
     q: 'What if short-let makes less than my long-term lease?',
-    a: 'We’ll tell you that on the forecast call before you sign anything. It happens in some buildings and some seasons, and we would rather say so.'
+    a: 'We will disclose that on your revenue forecast call before you sign anything. If long-term lease is better suited for your building or market, we will tell you upfront.'
   }
 ];
