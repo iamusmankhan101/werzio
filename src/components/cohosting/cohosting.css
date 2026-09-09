@@ -1180,21 +1180,242 @@
 
 /* --- faq ---------------------------------------------------------------------- */
 
-.wz-faq { display: grid; grid-template-columns: minmax(0, 0.6fr) minmax(0, 1fr); gap: 56px; align-items: start; }
-.wz-faq__intro { min-width: 0; display: flex; flex-direction: column; gap: 14px; }
-.wz-faq__intro h2 { margin: 0; font-size: clamp(25px, 2.8vw, 36px); line-height: 1.14; letter-spacing: -0.03em; font-weight: 500; }
-.wz-faq__intro p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted); max-width: 34ch; }
-.wz-faq__list { min-width: 0; border-top: 1px solid var(--line); }
-.wz-faq__item { border-bottom: 1px solid var(--line); }
-.wz-faq__q {
-  width: 100%; display: flex; align-items: center; justify-content: space-between;
-  gap: 16px; background: none; border: none; cursor: pointer;
-  padding: 20px 2px; text-align: left; font-size: 16px; font-weight: 500;
-  color: var(--ink); letter-spacing: -0.015em;
+.wz-faq { display: grid; grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr); gap: 48px; align-items: start; }
+.wz-faq__intro { min-width: 0; display: flex; flex-direction: column; gap: 16px; position: sticky; top: 110px; }
+.wz-faq__intro h2 { margin: 0; font-size: clamp(26px, 2.8vw, 38px); line-height: 1.14; letter-spacing: -0.03em; font-weight: 600; color: var(--ink); }
+.wz-faq__intro p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted); }
+
+.wz-faq__support-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 10px 25px -5px rgba(11, 14, 20, 0.05);
 }
-.wz-faq__icon { flex: none; font-size: 20px; font-weight: 400; color: var(--muted-soft); transition: transform .18s ease; }
-.wz-faq__q[aria-expanded="true"] .wz-faq__icon { transform: rotate(45deg); }
-.wz-faq__a { padding: 0 40px 22px 2px; font-size: 14.5px; line-height: 1.65; color: var(--muted); max-width: 60ch; animation: wz-rise .22s ease both; }
+.wz-faq__support-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.wz-faq__support-icon {
+  color: var(--accent);
+  flex: none;
+}
+.wz-faq__support-header strong {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.wz-faq__support-header span {
+  font-size: 12px;
+  color: var(--muted-soft);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+}
+.wz-faq__support-card p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.wz-faq__support-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 4px;
+}
+.wz-faq__email-link {
+  font: 500 13px "IBM Plex Mono", ui-monospace, monospace;
+  color: var(--accent);
+  text-decoration: none;
+}
+.wz-faq__email-link:hover {
+  text-decoration: underline;
+}
+
+.wz-faq__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wz-faq__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.wz-faq__search {
+  flex: 1;
+  min-width: 220px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.wz-faq__search-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--muted-soft);
+  pointer-events: none;
+}
+.wz-faq__search input {
+  width: 100%;
+  height: 44px;
+  padding: 0 36px 0 42px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-size: 13.5px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.wz-faq__search input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+.wz-faq__search-clear {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--muted-soft);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px;
+}
+
+.wz-faq__expand-btn {
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font: 500 12px "IBM Plex Mono", ui-monospace, monospace;
+  padding: 10px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+.wz-faq__expand-btn:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.wz-faq__categories {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.wz-faq__cat-pill {
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font: 500 12px "IBM Plex Mono", ui-monospace, monospace;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.wz-faq__cat-pill:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.wz-faq__cat-pill.is-active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+.wz-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.wz-faq__item {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.wz-faq__item:hover {
+  border-color: rgba(11, 14, 20, 0.2);
+}
+.wz-faq__item.is-open {
+  border-color: var(--ink);
+  box-shadow: 0 10px 24px -8px rgba(11, 14, 20, 0.08);
+}
+.wz-faq__q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 20px 22px;
+  text-align: left;
+  color: var(--ink);
+}
+.wz-faq__q-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.wz-faq__cat-tag {
+  font: 600 10px "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+.wz-faq__title {
+  font-size: 15.5px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
+}
+.wz-faq__chevron {
+  flex: none;
+  color: var(--muted-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+}
+.wz-faq__item.is-open .wz-faq__chevron {
+  transform: rotate(180deg);
+  color: var(--ink);
+}
+.wz-faq__a {
+  padding: 0 22px 20px;
+  border-top: 1px solid rgba(11, 14, 20, 0.05);
+  animation: wz-rise 0.22s ease both;
+}
+.wz-faq__a p {
+  margin: 14px 0 0;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.wz-faq__empty {
+  background: #fff;
+  border: 1px dashed var(--line);
+  border-radius: 16px;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+}
 
 /* --- contact ------------------------------------------------------------------- */
 
