@@ -261,7 +261,7 @@ export const QUOTES = [
 
 export const FAQS = [
   {
-    q: 'What's the difference between the three plans?',
+    q: `What's the difference between the three plans?`,
     a: 'Revenue Optimization ($49/mo) covers dynamic pricing and seasonal min-stay management. Listing & SEO ($89/mo) adds title rewrites, photo sequence testing, and platform SEO across Airbnb, VRBO, and Booking.com. Growth & Direct Booking ($129/mo) adds a custom direct booking website plus email/SMS retargeting campaigns and Google Local SEO — designed to reduce your platform commission costs over time.'
   },
   {
@@ -294,7 +294,7 @@ export const FAQS = [
   },
   {
     q: 'How long is the contract and can I cancel anytime?',
-    a: 'All plans are month-to-month with 30-day notice. There is no long-term lock-in and zero exit fees. If it's not working, you walk away — no questions asked.'
+    a: `All plans are month-to-month with 30-day notice. There is no long-term lock-in and zero exit fees. If it's not working, you walk away — no questions asked.`
   },
   {
     q: 'Can I upgrade or downgrade my plan later?',
@@ -302,7 +302,7 @@ export const FAQS = [
   },
   {
     q: 'What if short-let makes less than my long-term lease?',
-    a: 'We'll tell you upfront. During the free audit and revenue forecast call, if long-term leasing is better suited for your building or market, we'll disclose that before you sign anything.'
+    a: `We'll tell you upfront. During the free audit and revenue forecast call, if long-term leasing is better suited for your building or market, we'll disclose that before you sign anything.`
   },
   {
     q: 'What tools and platforms do you use?',
