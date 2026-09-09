@@ -17,6 +17,14 @@ export const NAV = [
   { label: 'FAQ', href: '#faq' }
 ];
 
+// The four-column strip under the hero chart (artboard 1c).
+export const HERO_PILLARS = [
+  { tag: '01 · CONTENT', body: 'Rewritten titles and descriptions, reshoot, photo order tested monthly.' },
+  { tag: '02 · PRICING', body: 'Daily rates against demand, events, lead time and your competitive set.' },
+  { tag: '03 · GUESTS', body: '24/7 replies, screening, check-in, issues handled without calling you.' },
+  { tag: '04 · OPERATIONS', body: 'Cleaning, linen, restocking, maintenance and inspection after every stay.' }
+];
+
 export const STATS = [
   { value: '1,400+', label: 'listings managed' },
   { value: '+31%', label: 'median revenue lift in 90 days' },
