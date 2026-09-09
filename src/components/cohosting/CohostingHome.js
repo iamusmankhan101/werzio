@@ -7,7 +7,6 @@ import CoAudit from './CoAudit';
 import CoManage from './CoManage';
 import CoOptimization from './CoOptimization';
 import CoProcess from './CoProcess';
-import CoOwnerApp from './CoOwnerApp';
 import CoPricing from './CoPricing';
 import CoQuotes from './CoQuotes';
 import CoFaq from './CoFaq';
@@ -44,7 +43,6 @@ const CohostingHome = () => {
         <CoManage />
         <CoOptimization />
         <CoProcess />
-        <CoOwnerApp />
         <CoPricing />
         <CoQuotes />
         <CoFaq />

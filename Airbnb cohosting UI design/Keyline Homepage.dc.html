@@ -33,7 +33,6 @@
         <a href="#optimization" style="color:inherit" style-hover="color:#0B0E14">Optimization</a>
         <a href="#manage" style="color:inherit" style-hover="color:#0B0E14">What we manage</a>
         <a href="#process" style="color:inherit" style-hover="color:#0B0E14">How it works</a>
-        <a href="#dashboard" style="color:inherit" style-hover="color:#0B0E14">Owner app</a>
         <a href="#pricing" style="color:inherit" style-hover="color:#0B0E14">Pricing</a>
         <a href="#faq" style="color:inherit" style-hover="color:#0B0E14">FAQ</a>
       </nav>
@@ -185,43 +184,6 @@
     </div>
   </section>
 
-  <section id="dashboard" style="background:#F7F8FA;border-top:1px solid rgba(11,14,20,.07);border-bottom:1px solid rgba(11,14,20,.07);scroll-margin-top:80px">
-    <div style="max-width:1240px;margin:0 auto;padding:86px 28px;display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);gap:56px;align-items:center">
-      <div style="min-width:0;display:flex;flex-direction:column;gap:18px">
-        <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:rgba(11,14,20,.45)">OWNER APP</span>
-        <h2 style="margin:0;font-size:clamp(28px,3.2vw,42px);line-height:1.06;letter-spacing:-0.03em;font-weight:600">Every booking, cost and payout — visible, always.</h2>
-        <p style="margin:0;font-size:16px;line-height:1.62;color:rgba(11,14,20,.62);max-width:42ch">No monthly PDF you have to chase. Live calendar, itemised statement, one tap to block owner nights.</p>
-        <ul style="margin:6px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px">
-          <li style="display:flex;gap:11px;font-size:15px;color:rgba(11,14,20,.78)"><span style="color:oklch(0.52 0.2 258)">—</span>Payout on the 5th, with every line explained</li>
-          <li style="display:flex;gap:11px;font-size:15px;color:rgba(11,14,20,.78)"><span style="color:oklch(0.52 0.2 258)">—</span>Maintenance approvals above your set threshold</li>
-          <li style="display:flex;gap:11px;font-size:15px;color:rgba(11,14,20,.78)"><span style="color:oklch(0.52 0.2 258)">—</span>Benchmarks against comparable listings nearby</li>
-        </ul>
-      </div>
-      <div style="min-width:0;background:#fff;border:1px solid rgba(11,14,20,.1);border-radius:12px;overflow:hidden;box-shadow:0 12px 32px rgba(11,14,20,.07)">
-        <div style="display:flex;align-items:center;gap:10px;padding:13px 18px;border-bottom:1px solid rgba(11,14,20,.08)">
-          <span style="width:9px;height:9px;border-radius:50%;background:rgba(11,14,20,.14)"></span>
-          <span style="width:9px;height:9px;border-radius:50%;background:rgba(11,14,20,.14)"></span>
-          <span style="width:9px;height:9px;border-radius:50%;background:rgba(11,14,20,.14)"></span>
-          <span style="font:500 11px 'IBM Plex Mono',monospace;color:rgba(11,14,20,.4);margin-left:8px">app.keyline.co / marina-2br</span>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border-bottom:1px solid rgba(11,14,20,.08)">
-          <div style="padding:20px;display:flex;flex-direction:column;gap:4px"><span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.12em;color:rgba(11,14,20,.45)">NET THIS MONTH</span><span style="font-size:23px;font-weight:600;letter-spacing:-0.02em">$6,240</span></div>
-          <div style="padding:20px;border-left:1px solid rgba(11,14,20,.08);display:flex;flex-direction:column;gap:4px"><span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.12em;color:rgba(11,14,20,.45)">OCCUPANCY</span><span style="font-size:23px;font-weight:600;letter-spacing:-0.02em">91%</span></div>
-          <div style="padding:20px;border-left:1px solid rgba(11,14,20,.08);display:flex;flex-direction:column;gap:4px"><span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.12em;color:rgba(11,14,20,.45)">VS AREA</span><span style="font-size:23px;font-weight:600;letter-spacing:-0.02em;color:oklch(0.55 0.14 152)">+22%</span></div>
-          <div style="padding:20px;border-left:1px solid rgba(11,14,20,.08);display:flex;flex-direction:column;gap:4px"><span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.12em;color:rgba(11,14,20,.45)">NEXT PAYOUT</span><span style="font-size:23px;font-weight:600;letter-spacing:-0.02em">Oct 5</span></div>
-        </div>
-        <div style="padding:8px 0">
-          <sc-for list="{{ ledger }}" as="r" hint-placeholder-count="5">
-            <div style="display:flex;align-items:center;gap:14px;padding:13px 20px;border-bottom:1px solid rgba(11,14,20,.06)">
-              <span style="width:34px;height:34px;border-radius:7px;background:#F7F8FA;font:500 11px 'IBM Plex Mono',monospace;color:rgba(11,14,20,.5);display:flex;align-items:center;justify-content:center;flex:none">{{ r.day }}</span>
-              <div style="flex:1;min-width:0"><div style="font-size:14px;font-weight:500">{{ r.label }}</div><div style="font-size:12.5px;color:rgba(11,14,20,.52)">{{ r.meta }}</div></div>
-              <span style="{{ r.amtStyle }}">{{ r.amt }}</span>
-            </div>
-          </sc-for>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section id="pricing" style="scroll-margin-top:80px">
     <div style="max-width:1240px;margin:0 auto;padding:86px 28px">

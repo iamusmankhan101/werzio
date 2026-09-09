@@ -12,7 +12,6 @@ export const NAV = [
   { label: 'Optimization', href: '#optimization' },
   { label: 'What we manage', href: '#manage' },
   { label: 'How it works', href: '#process' },
-  { label: 'Owner app', href: '#dashboard' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'FAQ', href: '#faq' }
 ];
