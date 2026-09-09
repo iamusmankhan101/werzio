@@ -620,24 +620,139 @@
 
 /* --- optimization loop ----------------------------------------------------- */
 
-.wz-loop {
+.wz-opt {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 28px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 56px;
+  align-items: start;
 }
-.wz-loop__item {
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
+
+/* The cadence list. One entry is lit at a time and the highlight walks the
+   loop on a timer, so the section demonstrates what it describes. */
+.wz-opt__cadence { display: flex; flex-direction: column; }
+
+.wz-cadence {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
+  padding: 20px 0 22px;
+  border: none;
+  border-top: 1px solid var(--line);
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
 }
-.wz-loop__tag {
+.wz-cadence:last-child { border-bottom: 1px solid var(--line); }
+
+.wz-cadence__head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.wz-cadence__tag {
+  font: 500 11px "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: 0.16em;
+  color: var(--muted-soft);
+  transition: color .3s ease;
+}
+.wz-cadence__n {
+  font: 500 11px "IBM Plex Mono", ui-monospace, monospace;
+  color: var(--muted-soft);
+  opacity: .55;
+}
+.wz-cadence__body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 46ch;
+  transition: color .3s ease;
+}
+
+.wz-cadence.is-active .wz-cadence__tag { color: var(--accent); }
+.wz-cadence.is-active .wz-cadence__body { color: var(--ink); }
+.wz-cadence:hover .wz-cadence__body { color: var(--ink); }
+
+/* Doubles as a dwell indicator for the active entry. */
+.wz-cadence__bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 2px;
+  overflow: hidden;
+}
+.wz-cadence__fill {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform-origin: left center;
+  animation: wz-cadence-fill 4200ms linear forwards;
+}
+.wz-opt__cadence:hover .wz-cadence__fill { animation-play-state: paused; }
+
+@keyframes wz-cadence-fill {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* Before/after revenue chart, dark so it lifts off the warm ground. */
+.wz-chart {
+  background: var(--ink-deep);
+  color: #fff;
+  border-radius: 18px;
+  overflow: clip;
+}
+.wz-chart__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
   font: 500 10.5px "IBM Plex Mono", ui-monospace, monospace;
-  letter-spacing: 0.14em;
-  color: var(--accent);
+  letter-spacing: 0.13em;
+  color: rgba(255, 255, 255, .48);
 }
-.wz-loop__item p { margin: 0; font-size: 14px; line-height: 1.6; color: var(--muted); }
+.wz-chart__delta { color: var(--accent); letter-spacing: 0; font-size: 12px; }
+
+.wz-chart__bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 214px;
+  padding: 26px 22px 0;
+}
+.wz-chart__col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 3px;
+  height: 100%;
+}
+.wz-chart__seg {
+  border-radius: 3px;
+  transition: height .85s cubic-bezier(.22, 1, .36, 1);
+}
+.wz-chart__seg--up { background: var(--accent); }
+.wz-chart__seg--base { background: rgba(255, 255, 255, .2); }
+
+.wz-chart__legend { display: flex; gap: 20px; flex-wrap: wrap; padding: 16px 22px 18px; }
+.wz-chart__legend span { display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(255, 255, 255, .55); }
+.wz-chart__legend i { width: 9px; height: 9px; border-radius: 3px; display: block; }
+.wz-chart__legend i.is-up { background: var(--accent); }
+.wz-chart__legend i.is-base { background: rgba(255, 255, 255, .2); }
+
+.wz-chart__stats { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255, 255, 255, .1); }
+.wz-chart__stats > div {
+  padding: 18px 20px;
+  border-left: 1px solid rgba(255, 255, 255, .1);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.wz-chart__stats > div:first-child { border-left: none; }
+.wz-chart__stats b { font-size: 21px; font-weight: 500; letter-spacing: -0.03em; }
+.wz-chart__stats span { font-size: 11.5px; color: rgba(255, 255, 255, .45); }
 
 /* --- process --------------------------------------------------------------- */
 
@@ -822,6 +937,7 @@
 /* --- responsive ------------------------------------------------------------------ */
 
 @media (max-width: 1000px) {
+  .wz-opt,
   .wz-statement,
   .wz-owner,
   .wz-faq,
@@ -872,5 +988,6 @@
   .wz-figure img { transform: none; }
   .wz-word__in { transform: none; }
   .wz-marquee__track { animation: none; }
+  .wz-cadence__fill { animation: none; transform: scaleX(1); }
   .wz-marquee { overflow-x: auto; }
 }

@@ -43,6 +43,13 @@ export const SERVICES_HEADING = [
 
 export const SERVICES_HEADING_TEXT = SERVICES_HEADING.map((s) => s.text).join(' ');
 
+export const LOOP_HEADING = [
+  { text: 'Ranking decays the moment you stop.' },
+  { text: 'So we never do.', muted: true }
+];
+
+export const LOOP_HEADING_TEXT = LOOP_HEADING.map((s) => s.text).join(' ');
+
 // `count` drives the stat-card roll-up; `value` is the plain string used
 // wherever the number is shown without animation.
 export const STATS = [
