@@ -754,15 +754,66 @@
 .wz-chart__stats b { font-size: 21px; font-weight: 500; letter-spacing: -0.03em; }
 .wz-chart__stats span { font-size: 11.5px; color: rgba(255, 255, 255, .45); }
 
-/* --- process --------------------------------------------------------------- */
+/* --- process (timeline) ------------------------------------------------------ */
 
 .wz-steps {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 30px;
+  padding-top: 34px;
+  margin: 0;
+  list-style: none;
 }
-.wz-step { padding-top: 22px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 11px; }
-.wz-step__n { font: 500 11.5px "IBM Plex Mono", ui-monospace, monospace; color: var(--accent); }
+/* The connector, drawn on reveal. */
+.wz-steps::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--line);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 1.15s cubic-bezier(.22, 1, .36, 1);
+}
+.wz-steps.is-in::before { transform: scaleX(1); }
+
+.wz-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Node sits on the connector above its column. */
+.wz-step__node {
+  position: absolute;
+  top: -34px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateY(-50%) scale(0);
+  transition: transform .5s cubic-bezier(.34, 1.56, .64, 1);
+}
+.wz-step.is-in .wz-step__node { transform: translateY(-50%) scale(1); }
+
+.wz-step__meta { display: flex; align-items: center; gap: 10px; }
+.wz-step__n {
+  font: 500 11.5px "IBM Plex Mono", ui-monospace, monospace;
+  color: var(--accent);
+}
+.wz-step__day {
+  font: 500 10.5px "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: 0.08em;
+  color: var(--muted-soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 9px;
+}
 .wz-step h3 { margin: 0; font-size: 18px; font-weight: 500; letter-spacing: -0.018em; }
 .wz-step p { margin: 0; font-size: 14px; line-height: 1.6; color: var(--muted); }
 
@@ -937,6 +988,10 @@
 /* --- responsive ------------------------------------------------------------------ */
 
 @media (max-width: 1000px) {
+  .wz-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-top: 0; row-gap: 38px; }
+  .wz-steps::before { display: none; }
+  .wz-step { border-top: 1px solid var(--line); padding-top: 26px; }
+  .wz-step__node { top: 0; }
   .wz-opt,
   .wz-statement,
   .wz-owner,
@@ -958,6 +1013,7 @@
 
 @media (max-width: 620px) {
   .wz { --gutter: 18px; }
+  .wz-steps { grid-template-columns: minmax(0, 1fr); }
   .wz-hero__display { padding-top: 26px; }
   .wz-hero__foot { padding: 22px 0; gap: 20px; }
   .wz-recent { min-width: 0; width: 100%; }

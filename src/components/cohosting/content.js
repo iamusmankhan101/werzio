@@ -50,6 +50,13 @@ export const LOOP_HEADING = [
 
 export const LOOP_HEADING_TEXT = LOOP_HEADING.map((s) => s.text).join(' ');
 
+export const PROCESS_HEADING = [
+  { text: 'Live in about' },
+  { text: 'ten days.', muted: true }
+];
+
+export const PROCESS_HEADING_TEXT = PROCESS_HEADING.map((s) => s.text).join(' ');
+
 // `count` drives the stat-card roll-up; `value` is the plain string used
 // wherever the number is shown without animation.
 export const STATS = [
@@ -150,21 +157,25 @@ export const MANAGED = [52, 57, 63, 74, 82, 78, 69, 64, 72, 80, 88, 86];
 export const STEPS = [
   {
     n: '01',
+    day: 'Day 1',
     title: 'Free audit',
     body: 'We score the live listing and show you the recoverable revenue before you commit to anything.'
   },
   {
     n: '02',
+    day: 'Days 2–3',
     title: 'Walkthrough & forecast',
     body: 'We visit, measure, pull comparables in your building and agree a rate floor and house rules.'
   },
   {
     n: '03',
+    day: 'Days 4–9',
     title: 'Rebuild & permits',
     body: 'Shoot, restyle, relist, register. Your existing reviews and history carry over.'
   },
   {
     n: '04',
+    day: 'Day 10',
     title: 'We run it, you get paid',
     body: 'Guests, cleaning and upkeep are ours. Statement and payout on the 5th, owner nights any time.'
   }
