@@ -622,22 +622,95 @@
 
 .wz-loop {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 36px;
+  padding-bottom: 40px;
 }
 .wz-loop__item {
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
+  padding: 28px 24px;
+  border-radius: 16px;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.wz-loop__item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(15, 16, 18, 0.08);
+  border-color: var(--line);
+}
+.wz-loop__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
 }
 .wz-loop__tag {
-  font: 500 10.5px "IBM Plex Mono", ui-monospace, monospace;
-  letter-spacing: 0.14em;
+  font: 600 11px "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
   color: var(--accent);
 }
-.wz-loop__item p { margin: 0; font-size: 14px; line-height: 1.6; color: var(--muted); }
+.wz-loop__item p { 
+  margin: 0; 
+  font-size: 14.5px; 
+  line-height: 1.65; 
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* CTA banner at bottom of loop section */
+.wz-loop-cta {
+  margin-top: 20px;
+  padding: 32px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--ink-deep) 0%, #1a1b1e 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wz-loop-cta__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  width: 100%;
+}
+.wz-loop-cta__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 480px;
+}
+.wz-loop-cta__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+.wz-loop-cta__value {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--accent);
+  letter-spacing: -0.03em;
+}
+.wz-loop-cta__label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.4;
+}
 
 /* --- process --------------------------------------------------------------- */
 
