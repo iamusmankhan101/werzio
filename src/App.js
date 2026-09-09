@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './animations.css';
-import BottomNav from './components/BottomNav';
-import HeroSection from './components/HeroSection';
-import PartnersSection from './components/PartnersSection';
-import WorkSection from './components/WorkSection';
-import AboutUsSection from './components/AboutUsSection';
-import ServicesStackSection from './components/ServicesStackSection';
-import ApproachSection from './components/ApproachSection';
-import CTASection from './components/CTASection';
+import CohostingHome from './components/cohosting/CohostingHome';
 import FooterNew from './components/FooterNew';
 import OptimusCaseStudy from './components/OptimusCaseStudy';
 import GreenfutureCaseStudy from './components/GreenfutureCaseStudy';
@@ -17,7 +10,6 @@ import OptimusRAKCaseStudy from './components/OptimusRAKCaseStudy';
 import VisionCareCaseStudy from './components/VisionCareCaseStudy';
 import BlackNWhiteCaseStudy from './components/BlackNWhiteCaseStudy';
 import DynamicProjectPage from './components/DynamicProjectPage';
-import ReviewsSection from './components/ReviewsSection';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -223,30 +215,7 @@ function App() {
     );
   }
 
-  return (
-    <div className="App min-h-screen">
-      <BottomNav />
-      <div id="home">
-        <HeroSection />
-      </div>
-      <PartnersSection />
-      <div id="work">
-        <WorkSection />
-      </div>
-      <div id="about">
-        <AboutUsSection />
-      </div>
-      <div id="services">
-        <ServicesStackSection />
-      </div>
-      <ApproachSection />
-      <ReviewsSection />
-      <div id="contact">
-        <CTASection />
-      </div>
-      <FooterNew />
-    </div>
-  );
+  return <CohostingHome />;
 }
 
 export default App;

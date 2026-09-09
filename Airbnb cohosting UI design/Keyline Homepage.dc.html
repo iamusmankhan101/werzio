@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#fff;color:#0B0E14;font-family:"Instrument Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  *{box-sizing:border-box}
+  a{color:oklch(0.52 0.2 258);text-decoration:none}
+  a:hover{color:oklch(0.42 0.2 258)}
+  input,button{font-family:inherit}
+  @keyframes kl-rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+</style>
+</helmet>
+
+<div style="max-width:100%;overflow-x:hidden">
+
+  <header style="position:sticky;top:0;z-index:60;background:rgba(255,255,255,0.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(11,14,20,.08)">
+    <div style="max-width:1240px;margin:0 auto;padding:15px 28px;display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+      <a href="#top" style="display:flex;align-items:center;gap:9px;margin-right:auto;color:inherit">
+        <span style="width:22px;height:22px;border-radius:50%;border:5px solid #0B0E14;display:block"></span>
+        <span style="font-size:16.5px;font-weight:600;letter-spacing:-0.02em">Keyline</span>
+      </a>
+      <nav style="display:flex;gap:22px;flex-wrap:wrap;font-size:13.5px;color:rgba(11,14,20,.66)">
+        <a href="#optimization" style="color:inherit" style-hover="color:#0B0E14">Optimization</a>
+        <a href="#manage" style="color:inherit" style-hover="color:#0B0E14">What we manage</a>
+        <a href="#process" style="color:inherit" style-hover="color:#0B0E14">How it works</a>
+        <a href="#dashboard" style="color:inherit" style-hover="color:#0B0E14">Owner app</a>
+        <a href="#pricing" style="color:inherit" style-hover="color:#0B0E14">Pricing</a>
+        <a href="#faq" style="color:inherit" style-hover="color:#0B0E14">FAQ</a>
+      </nav>
+      <a href="#contact" style="background:#0B0E14;color:#fff;font-size:13.5px;font-weight:500;padding:10px 17px;border-radius:6px" style-hover="background:oklch(0.52 0.2 258);color:#fff">Free listing audit</a>
+    </div>
+  </header>
+
+  <section id="top" style="scroll-margin-top:80px">
+    <div style="max-width:1240px;margin:0 auto;padding:70px 28px 46px;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
+      <span style="display:inline-flex;align-items:center;gap:8px;font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.14em;color:oklch(0.52 0.2 258);background:oklch(0.96 0.03 258);padding:6px 12px;border-radius:99px">CO-HOSTING &amp; LISTING OPTIMIZATION</span>
+      <h1 style="margin:0;max-width:21ch;font-size:clamp(38px,6vw,66px);line-height:1.02;letter-spacing:-0.04em;font-weight:600;text-wrap:balance">Your listing is leaving money on the table.</h1>
+      <p style="margin:0;max-width:60ch;font-size:17px;line-height:1.6;color:rgba(11,14,20,.62);text-wrap:pretty">We take over the whole listing — content, pricing, guests, turnovers, reviews — and keep optimizing it against real demand data. You keep the keys, the rate floor and your owner nights.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;padding-top:10px">
+        <a href="#contact" style="background:oklch(0.52 0.2 258);color:#fff;font-size:15px;font-weight:600;padding:15px 26px;border-radius:8px" style-hover="background:oklch(0.42 0.2 258);color:#fff">Get my free listing audit</a>
+        <a href="#optimization" style="border:1px solid rgba(11,14,20,.18);color:#0B0E14;font-size:15px;font-weight:500;padding:15px 26px;border-radius:8px" style-hover="border-color:#0B0E14;background:#F7F8FA;color:#0B0E14">See what we optimize</a>
+      </div>
+      <span style="font-size:12.5px;color:rgba(11,14,20,.45)">Free, no commitment. Works with the major booking platforms.</span>
+    </div>
+
+    <div style="max-width:1240px;margin:0 auto;padding:0 28px 20px">
+      <div style="border:1px solid rgba(11,14,20,.1);border-radius:12px;overflow:hidden;display:grid;grid-template-columns:minmax(0,330px) minmax(0,1fr)">
+        <div style="padding:28px 28px 30px;border-right:1px solid rgba(11,14,20,.08);display:flex;flex-direction:column;gap:16px;background:#FBFBFC">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+            <span style="font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:0.14em;color:rgba(11,14,20,.45)">SAMPLE AUDIT</span>
+            <span style="font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:0.1em;color:oklch(0.55 0.16 40)">UNDERPERFORMING</span>
+          </div>
+          <div style="display:flex;align-items:baseline;gap:10px">
+            <span style="font-size:60px;font-weight:600;letter-spacing:-0.04em;line-height:1;color:oklch(0.55 0.16 40)">51</span>
+            <span style="font-size:15px;color:rgba(11,14,20,.5)">/ 100</span>
+          </div>
+          <div style="height:6px;border-radius:99px;background:rgba(11,14,20,.09)"><div style="width:51%;height:6px;border-radius:99px;background:oklch(0.55 0.16 40)"></div></div>
+          <p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(11,14,20,.62)">Pricing and conversion are the two biggest gaps. Both are fixable inside the first two weeks.</p>
+          <div style="margin-top:auto;padding-top:16px;display:flex;flex-direction:column;gap:9px">
+            <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:rgba(11,14,20,.55)">Recoverable revenue</span><span style="font-weight:600">$1,850 / mo</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:rgba(11,14,20,.55)">Findings</span><span style="font-weight:600">{{ findingCount }}</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:rgba(11,14,20,.55)">Fixed during onboarding</span><span style="font-weight:600">All of them</span></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column">
+          <sc-for list="{{ findings }}" as="f" hint-placeholder-count="5">
+            <div style="display:flex;align-items:center;gap:14px;padding:16px 28px 16px 24px;border-bottom:1px solid rgba(11,14,20,.07)">
+              <span style="{{ f.badgeStyle }}">{{ f.n }}</span>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:14.5px;font-weight:600">{{ f.title }}</div>
+                <div style="font-size:13px;line-height:1.5;color:rgba(11,14,20,.58)">{{ f.body }}</div>
+              </div>
+              <span style="{{ f.sevStyle }}">{{ f.sev }}</span>
+            </div>
+          </sc-for>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 28px;background:#0B0E14;color:#fff;margin-top:auto">
+            <span style="font-size:14.5px;color:rgba(255,255,255,.75)">Rather not do the fixing yourself? We manage the whole listing from here.</span>
+            <a href="#pricing" style="background:#fff;color:#0B0E14;font-size:14px;font-weight:600;padding:11px 18px;border-radius:6px" style-hover="background:oklch(0.72 0.18 145);color:#08090C">Hand it over</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width:1240px;margin:0 auto;padding:26px 28px 66px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));border-top:1px solid rgba(11,14,20,.1)">
+        <div style="padding:22px 26px 0 0;display:flex;flex-direction:column;gap:4px"><span style="font-size:26px;font-weight:600;letter-spacing:-0.025em">1,400+</span><span style="font-size:12.5px;color:rgba(11,14,20,.55)">listings managed</span></div>
+        <div style="padding:22px 26px 0;border-left:1px solid rgba(11,14,20,.1);display:flex;flex-direction:column;gap:4px"><span style="font-size:26px;font-weight:600;letter-spacing:-0.025em">+31%</span><span style="font-size:12.5px;color:rgba(11,14,20,.55)">median revenue lift in 90 days</span></div>
+        <div style="padding:22px 26px 0;border-left:1px solid rgba(11,14,20,.1);display:flex;flex-direction:column;gap:4px"><span style="font-size:26px;font-weight:600;letter-spacing:-0.025em">4.91</span><span style="font-size:12.5px;color:rgba(11,14,20,.55)">average guest rating</span></div>
+        <div style="padding:22px 26px 0;border-left:1px solid rgba(11,14,20,.1);display:flex;flex-direction:column;gap:4px"><span style="font-size:26px;font-weight:600;letter-spacing:-0.025em">14 min</span><span style="font-size:12.5px;color:rgba(11,14,20,.55)">median guest reply time</span></div>
+        <div style="padding:22px 0 0 26px;border-left:1px solid rgba(11,14,20,.1);display:flex;flex-direction:column;gap:4px"><span style="font-size:26px;font-weight:600;letter-spacing:-0.025em">31</span><span style="font-size:12.5px;color:rgba(11,14,20,.55)">cities, 9 countries</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="manage" style="background:#F7F8FA;border-top:1px solid rgba(11,14,20,.07);border-bottom:1px solid rgba(11,14,20,.07);scroll-margin-top:80px">
+    <div style="max-width:1240px;margin:0 auto;padding:82px 28px">
+      <div style="display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;padding-bottom:40px">
+        <div style="display:flex;flex-direction:column;gap:14px;max-width:46ch">
+          <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:rgba(11,14,20,.45)">WHAT WE MANAGE</span>
+          <h2 style="margin:0;font-size:clamp(28px,3.4vw,44px);line-height:1.06;letter-spacing:-0.03em;font-weight:600">Everything a listing needs, under one fee.</h2>
+        </div>
+        <p style="margin:0;max-width:38ch;font-size:15.5px;line-height:1.6;color:rgba(11,14,20,.6)">You keep ownership, pricing veto and owner nights. We keep the pager.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px">
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="9">
+          <div style="background:#fff;border:1px solid rgba(11,14,20,.1);border-radius:10px;padding:26px 24px 28px;display:flex;flex-direction:column;gap:10px;min-height:172px">
+            <span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.16em;color:oklch(0.52 0.2 258)">{{ s.tag }}</span>
+            <h3 style="margin:0;font-size:16.5px;font-weight:600;letter-spacing:-0.01em">{{ s.title }}</h3>
+            <p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(11,14,20,.6)">{{ s.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="optimization" style="background:#08090C;color:#fff;scroll-margin-top:80px">
+    <div style="max-width:1240px;margin:0 auto;padding:88px 28px">
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,0.9fr);gap:60px;align-items:start">
+        <div style="min-width:0;display:flex;flex-direction:column;gap:22px">
+          <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.2em;color:oklch(0.72 0.18 145)">THE OPTIMIZATION LOOP</span>
+          <h2 style="margin:0;font-size:clamp(30px,3.8vw,52px);line-height:1.02;letter-spacing:-0.035em;font-weight:600;text-wrap:balance">Same apartment. <span style="color:rgba(255,255,255,.42)">Thirty-one percent more revenue.</span></h2>
+          <p style="margin:0;font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.58);max-width:48ch">Optimization isn't a one-off cleanup. Every week we re-test the photo order, re-cut the rate curve against demand and events, and chase reviews — because ranking decays the moment you stop.</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px;padding-top:8px">
+            <sc-for list="{{ loop }}" as="l" hint-placeholder-count="4">
+              <div style="padding:20px 0 0;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-direction:column;gap:7px">
+                <span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.14em;color:oklch(0.72 0.18 145)">{{ l.tag }}</span>
+                <span style="font-size:13.5px;line-height:1.55;color:rgba(255,255,255,.62)">{{ l.body }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="min-width:0;border:1px solid rgba(255,255,255,.12);border-radius:12px;overflow:hidden">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.1)">
+            <span style="font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:0.14em;color:rgba(255,255,255,.45)">1BR · CITY CENTRE · 12 MONTHS</span>
+            <span style="font:500 11px 'IBM Plex Mono',monospace;color:oklch(0.72 0.18 145)">+31.4%</span>
+          </div>
+          <div style="display:flex;align-items:flex-end;gap:7px;height:200px;padding:24px 20px 0">
+            <sc-for list="{{ bars }}" as="b" hint-placeholder-count="12">
+              <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:3px;height:100%">
+                <div style="{{ b.usStyle }}"></div>
+                <div style="{{ b.selfStyle }}"></div>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex;gap:18px;flex-wrap:wrap;padding:14px 20px 18px">
+            <span style="display:flex;align-items:center;gap:7px;font-size:12px;color:rgba(255,255,255,.55)"><span style="width:9px;height:9px;border-radius:2px;background:oklch(0.72 0.18 145);display:block"></span>With Keyline</span>
+            <span style="display:flex;align-items:center;gap:7px;font-size:12px;color:rgba(255,255,255,.55)"><span style="width:9px;height:9px;border-radius:2px;background:rgba(255,255,255,.22);display:block"></span>Self-managed baseline</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.1)">
+            <div style="padding:16px 18px;display:flex;flex-direction:column;gap:3px"><span style="font-size:20px;font-weight:600">91%</span><span style="font-size:11.5px;color:rgba(255,255,255,.45)">occupancy</span></div>
+            <div style="padding:16px 18px;border-left:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:3px"><span style="font-size:20px;font-weight:600">$214</span><span style="font-size:11.5px;color:rgba(255,255,255,.45)">avg nightly</span></div>
+            <div style="padding:16px 18px;border-left:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:3px"><span style="font-size:20px;font-weight:600">4.93</span><span style="font-size:11.5px;color:rgba(255,255,255,.45)">rating</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" style="scroll-margin-top:80px">
+    <div style="max-width:1240px;margin:0 auto;padding:86px 28px">
+      <div style="display:flex;justify-content:space-between;align-items:end;gap:28px;flex-wrap:wrap;padding-bottom:40px">
+        <h2 style="margin:0;max-width:22ch;font-size:clamp(28px,3.4vw,44px);line-height:1.06;letter-spacing:-0.03em;font-weight:600">Live in about ten days.</h2>
+        <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:rgba(11,14,20,.45)">HOW IT WORKS</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px">
+        <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
+          <div style="{{ st.wrapStyle }}">
+            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.16em;color:oklch(0.52 0.2 258)">{{ st.n }}</span>
+            <h3 style="margin:0;font-size:18px;font-weight:600;letter-spacing:-0.015em">{{ st.title }}</h3>
+            <p style="margin:0;font-size:14px;line-height:1.6;color:rgba(11,14,20,.62)">{{ st.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="dashboard" style="background:#F7F8FA;border-top:1px solid rgba(11,14,20,.07);border-bottom:1px solid rgba(11,14,20,.07);scroll-margin-top:80px">
+    <div style="max-width:1240px;margin:0 auto;padding:86px 28px;display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);gap:56px;align-items:center">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:18px">
+        <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:rgba(11,14,20,.45)">OWNER APP</span>
+        <h2 style="margin:0;font-size:clamp(28px,3.2vw,42px);line-height:1.06;letter-spacing:-0.03em;font-weight:600">Every booking, cost and payout — visible, always.</h2>
+        <p style="margin:0;font-size:16px;line-height:1.62;color:rgba(11,14,20,.62);max-width:42ch">No monthly PDF you have to chase. Live calendar, itemised statement, one tap to block owner nights.</p>
+        <ul style="margin:6px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px">
+          <li style="display:flex;gap:11px;font-size:15px;color:rgba(11,14,20,.78)"><span style="color:oklch(0.52 0.2 258)">—</span>Payout on the 5th, with every line explained</li>
+          <li style="display:flex;gap:11px;font-size:15px;color:rgba(11,14,20,.78)"><span style="color:oklch(0.52 0.2 258)">—</span>Maintenance approvals above your set threshold</li>
+          <li style="display:flex;gap:11px;font-size:15px;color:rgba(11,14,20,.78)"><span style="color:oklch(0.52 0.2 258)">—</span>Benchmarks against comparable listings nearby</li>
+        </ul>
+      </div>
+      <div style="min-width:0;background:#fff;border:1px solid rgba(11,14,20,.1);border-radius:12px;overflow:hidden;box-shadow:0 12px 32px rgba(11,14,20,.07)">
+        <div style="display:flex;align-items:center;gap:10px;padding:13px 18px;border-bottom:1px solid rgba(11,14,20,.08)">
+          <span style="width:9px;height:9px;border-radius:50%;background:rgba(11,14,20,.14)"></span>
+          <span style="width:9px;height:9px;border-radius:50%;background:rgba(11,14,20,.14)"></span>
+          <span style="width:9px;height:9px;border-radius:50%;background:rgba(11,14,20,.14)"></span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:rgba(11,14,20,.4);margin-left:8px">app.keyline.co / marina-2br</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border-bottom:1px solid rgba(11,14,20,.08)">
+          <div style="padding:20px;display:flex;flex-direction:column;gap:4px"><span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.12em;color:rgba(11,14,20,.45)">NET THIS MONTH</span><span style="font-size:23px;font-weight:600;letter-spacing:-0.02em">$6,240</span></div>
+          <div style="padding:20px;border-left:1px solid rgba(11,14,20,.08);display:flex;flex-direction:column;gap:4px"><span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.12em;color:rgba(11,14,20,.45)">OCCUPANCY</span><span style="font-size:23px;font-weight:600;letter-spacing:-0.02em">91%</span></div>
+          <div style="padding:20px;border-left:1px solid rgba(11,14,20,.08);display:flex;flex-direction:column;gap:4px"><span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.12em;color:rgba(11,14,20,.45)">VS AREA</span><span style="font-size:23px;font-weight:600;letter-spacing:-0.02em;color:oklch(0.55 0.14 152)">+22%</span></div>
+          <div style="padding:20px;border-left:1px solid rgba(11,14,20,.08);display:flex;flex-direction:column;gap:4px"><span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.12em;color:rgba(11,14,20,.45)">NEXT PAYOUT</span><span style="font-size:23px;font-weight:600;letter-spacing:-0.02em">Oct 5</span></div>
+        </div>
+        <div style="padding:8px 0">
+          <sc-for list="{{ ledger }}" as="r" hint-placeholder-count="5">
+            <div style="display:flex;align-items:center;gap:14px;padding:13px 20px;border-bottom:1px solid rgba(11,14,20,.06)">
+              <span style="width:34px;height:34px;border-radius:7px;background:#F7F8FA;font:500 11px 'IBM Plex Mono',monospace;color:rgba(11,14,20,.5);display:flex;align-items:center;justify-content:center;flex:none">{{ r.day }}</span>
+              <div style="flex:1;min-width:0"><div style="font-size:14px;font-weight:500">{{ r.label }}</div><div style="font-size:12.5px;color:rgba(11,14,20,.52)">{{ r.meta }}</div></div>
+              <span style="{{ r.amtStyle }}">{{ r.amt }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" style="scroll-margin-top:80px">
+    <div style="max-width:1240px;margin:0 auto;padding:86px 28px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;padding-bottom:38px">
+        <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:rgba(11,14,20,.45)">PRICING</span>
+        <h2 style="margin:0;max-width:24ch;font-size:clamp(28px,3.4vw,44px);line-height:1.06;letter-spacing:-0.03em;font-weight:600">We earn when your listing earns.</h2>
+        <p style="margin:0;max-width:52ch;font-size:16px;line-height:1.6;color:rgba(11,14,20,.62)">No setup fee, no markup on maintenance, 60-day notice. Empty calendar, no invoice.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;align-items:stretch">
+        <div style="border:1px solid rgba(11,14,20,.12);border-radius:12px;padding:30px;display:flex;flex-direction:column;gap:8px">
+          <span style="font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:0.14em;color:rgba(11,14,20,.45)">OPTIMIZATION ONLY</span>
+          <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:46px;font-weight:600;letter-spacing:-0.035em">8%</span><span style="font-size:14.5px;color:rgba(11,14,20,.55)">of booking revenue</span></div>
+          <p style="margin:6px 0 0;font-size:14px;line-height:1.6;color:rgba(11,14,20,.6)">You keep hosting. We own content, pricing and ranking, and report monthly.</p>
+          <div style="height:1px;background:rgba(11,14,20,.1);margin:20px 0 4px"></div>
+          <sc-for list="{{ planA }}" as="p" hint-placeholder-count="4">
+            <div style="display:flex;gap:10px;padding:8px 0;font-size:14px;color:rgba(11,14,20,.75)"><span style="color:oklch(0.52 0.2 258)">—</span>{{ p }}</div>
+          </sc-for>
+          <a href="#faq" style="margin-top:auto;text-align:center;border:1px solid rgba(11,14,20,.18);color:#0B0E14;font-size:14.5px;font-weight:500;padding:13px 20px;border-radius:7px" style-hover="border-color:#0B0E14;background:#F7F8FA;color:#0B0E14">Compare plans</a>
+        </div>
+
+        <div style="border:1px solid #0B0E14;border-radius:12px;padding:30px;display:flex;flex-direction:column;gap:8px;background:#0B0E14;color:#fff;position:relative">
+          <span style="position:absolute;top:-11px;left:30px;background:oklch(0.72 0.18 145);color:#08090C;font:600 10.5px 'IBM Plex Mono',monospace;letter-spacing:0.12em;padding:5px 10px;border-radius:99px">MOST OWNERS</span>
+          <span style="font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:0.14em;color:rgba(255,255,255,.5)">FULL CO-HOSTING</span>
+          <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:46px;font-weight:600;letter-spacing:-0.035em">{{ feePct }}%</span><span style="font-size:14.5px;color:rgba(255,255,255,.6)">of booking revenue</span></div>
+          <p style="margin:6px 0 0;font-size:14px;line-height:1.6;color:rgba(255,255,255,.62)">The whole thing. Optimization plus guests, cleaning, maintenance and compliance.</p>
+          <div style="height:1px;background:rgba(255,255,255,.18);margin:20px 0 4px"></div>
+          <sc-for list="{{ planB }}" as="p" hint-placeholder-count="5">
+            <div style="display:flex;gap:10px;padding:8px 0;font-size:14px;color:rgba(255,255,255,.82)"><span style="color:oklch(0.72 0.18 145)">—</span>{{ p }}</div>
+          </sc-for>
+          <a href="#contact" style="margin-top:auto;text-align:center;background:#fff;color:#0B0E14;font-size:14.5px;font-weight:600;padding:13px 20px;border-radius:7px" style-hover="background:oklch(0.72 0.18 145);color:#08090C">Book a walkthrough</a>
+        </div>
+
+        <div style="border:1px solid rgba(11,14,20,.12);border-radius:12px;padding:30px;display:flex;flex-direction:column;gap:8px">
+          <span style="font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:0.14em;color:rgba(11,14,20,.45)">PORTFOLIO · 5+ UNITS</span>
+          <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:46px;font-weight:600;letter-spacing:-0.035em">Custom</span></div>
+          <p style="margin:6px 0 0;font-size:14px;line-height:1.6;color:rgba(11,14,20,.6)">Blended rate, a named portfolio manager and quarterly asset reviews.</p>
+          <div style="height:1px;background:rgba(11,14,20,.1);margin:20px 0 4px"></div>
+          <sc-for list="{{ planC }}" as="p" hint-placeholder-count="4">
+            <div style="display:flex;gap:10px;padding:8px 0;font-size:14px;color:rgba(11,14,20,.75)"><span style="color:oklch(0.52 0.2 258)">—</span>{{ p }}</div>
+          </sc-for>
+          <a href="#contact" style="margin-top:auto;text-align:center;border:1px solid rgba(11,14,20,.18);color:#0B0E14;font-size:14.5px;font-weight:500;padding:13px 20px;border-radius:7px" style-hover="border-color:#0B0E14;background:#F7F8FA;color:#0B0E14">Talk to portfolio team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#F7F8FA;border-top:1px solid rgba(11,14,20,.07)">
+    <div style="max-width:1240px;margin:0 auto;padding:78px 28px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px">
+        <sc-for list="{{ quotes }}" as="q" hint-placeholder-count="3">
+          <div style="background:#fff;border:1px solid rgba(11,14,20,.1);border-radius:12px;padding:28px;display:flex;flex-direction:column;gap:16px">
+            <span style="font-size:24px;font-weight:600;letter-spacing:-0.025em;color:oklch(0.52 0.2 258)">{{ q.stat }}</span>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:rgba(11,14,20,.75)">{{ q.body }}</p>
+            <div style="margin-top:auto;display:flex;align-items:center;gap:11px;padding-top:6px">
+              <span style="width:34px;height:34px;border-radius:50%;background:#F7F8FA;border:1px solid rgba(11,14,20,.1);font:500 12px 'IBM Plex Mono',monospace;color:rgba(11,14,20,.5);display:flex;align-items:center;justify-content:center">{{ q.initials }}</span>
+              <div style="display:flex;flex-direction:column"><span style="font-size:13.5px;font-weight:600">{{ q.name }}</span><span style="font-size:12.5px;color:rgba(11,14,20,.52)">{{ q.meta }}</span></div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="scroll-margin-top:80px">
+    <div style="max-width:1240px;margin:0 auto;padding:86px 28px;display:grid;grid-template-columns:minmax(0,0.6fr) minmax(0,1fr);gap:56px;align-items:start">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:14px">
+        <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:rgba(11,14,20,.45)">FAQ</span>
+        <h2 style="margin:0;font-size:clamp(26px,3vw,38px);line-height:1.08;letter-spacing:-0.03em;font-weight:600">The questions owners actually ask.</h2>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:rgba(11,14,20,.6);max-width:34ch">Anything else, ask on the walkthrough call — no obligation either way.</p>
+      </div>
+      <div style="min-width:0;border-top:1px solid rgba(11,14,20,.12)">
+        <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="6">
+          <div style="border-bottom:1px solid rgba(11,14,20,.1)">
+            <button type="button" onClick="{{ q.toggle }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:none;cursor:pointer;padding:19px 2px;text-align:left;font-size:16px;font-weight:600;color:#0B0E14;letter-spacing:-0.01em">
+              <span>{{ q.q }}</span>
+              <span style="{{ q.iconStyle }}">+</span>
+            </button>
+            <div style="{{ q.bodyStyle }}">{{ q.a }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="background:#08090C;color:#fff;scroll-margin-top:80px">
+    <div style="max-width:1240px;margin:0 auto;padding:82px 28px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,0.8fr);gap:56px;align-items:center">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:18px">
+        <h2 style="margin:0;font-size:clamp(30px,3.6vw,48px);line-height:1.03;letter-spacing:-0.035em;font-weight:600;text-wrap:balance">Send us a link. We'll send back the numbers.</h2>
+        <p style="margin:0;font-size:16.5px;line-height:1.6;color:rgba(255,255,255,.6);max-width:44ch">A 20-minute call, a real forecast for your address, and an honest answer on whether short-let beats your current lease.</p>
+        <div style="display:flex;gap:24px;flex-wrap:wrap;padding-top:6px;font-size:13.5px;color:rgba(255,255,255,.45)">
+          <span>hello@keyline.co</span><span>Onboarding 6 homes this month</span>
+        </div>
+      </div>
+      <div style="min-width:0;background:#fff;color:#0B0E14;border-radius:12px;padding:28px;display:flex;flex-direction:column;gap:12px">
+        <span style="font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:0.14em;color:rgba(11,14,20,.45)">REQUEST A FORECAST</span>
+        <div style="display:flex;align-items:center;border:1px solid rgba(11,14,20,.16);border-radius:8px;height:48px;padding:0 14px;font-size:14.5px;color:rgba(11,14,20,.4)">Full name</div>
+        <div style="display:flex;align-items:center;border:1px solid rgba(11,14,20,.16);border-radius:8px;height:48px;padding:0 14px;font-size:14.5px;color:rgba(11,14,20,.4)">Email</div>
+        <div style="display:flex;align-items:center;border:1px solid rgba(11,14,20,.16);border-radius:8px;height:48px;padding:0 14px;font-size:14.5px;color:rgba(11,14,20,.4)">City &amp; building</div>
+        <div style="display:flex;align-items:center;border:1px solid rgba(11,14,20,.16);border-radius:8px;height:48px;padding:0 14px;font-size:14.5px;color:rgba(11,14,20,.4)">Listing link (optional)</div>
+        <button type="button" style="border:none;cursor:pointer;margin-top:6px;background:oklch(0.52 0.2 258);color:#fff;font-size:15px;font-weight:600;padding:15px;border-radius:8px" style-hover="background:oklch(0.42 0.2 258)">Send request</button>
+        <span style="font-size:12px;line-height:1.5;color:rgba(11,14,20,.45)">We reply within one business day. No sales sequence.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#08090C;color:rgba(255,255,255,.5);border-top:1px solid rgba(255,255,255,.1)">
+    <div style="max-width:1240px;margin:0 auto;padding:34px 28px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;font-size:13px">
+      <div style="display:flex;align-items:center;gap:9px;margin-right:auto;color:#fff">
+        <span style="width:18px;height:18px;border-radius:50%;border:4px solid #fff;display:block"></span>
+        <span style="font-size:15px;font-weight:600;letter-spacing:-0.02em">Keyline</span>
+      </div>
+      <span>Co-hosting &amp; listing optimization</span>
+      <span>Terms</span>
+      <span>Privacy</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;managementFee&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:18,&quot;min&quot;:8,&quot;max&quot;:30,&quot;unit&quot;:&quot;%&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Commercial&quot;}}">
+class Component extends DCLogic {
+  state = { open: 0 };
+
+  renderVals() {
+    const fee = this.props.managementFee ?? 18;
+    const green = "oklch(0.55 0.14 152)";
+    const amber = "oklch(0.55 0.16 40)";
+    const badge = (hi) => `width:22px;height:22px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font:600 11px 'IBM Plex Mono',monospace;background:${hi ? "oklch(0.96 0.05 40)" : "rgba(11,14,20,.06)"};color:${hi ? amber : "rgba(11,14,20,.55)"}`;
+    const sev = (hi) => `flex:none;font:500 11px 'IBM Plex Mono',monospace;color:${hi ? amber : "rgba(11,14,20,.45)"}`;
+
+    const raw = [
+      ["Cover photo is the third-best in the set", "Reordering to lead with the balcony view lifts click-through about 1.6\u00D7.", true],
+      ["Flat rate across peak season", "No event, weekend or lead-time curve. 41 nights priced below market.", true],
+      ["Title omits the two most-searched terms", "\u201CSea view\u201D and \u201Cwalk to beach\u201D both rank in your area's top queries.", false],
+      ["Reply time 6h 20m", "Above the threshold that suppresses ranking. We reply in minutes, 24/7.", false],
+      ["7 amenities unticked that guests filter on", "Workspace, crib, parking and washer are all present but not listed.", false]
+    ];
+    const findings = raw.map((f, i) => ({
+      n: i + 1, title: f[0], body: f[1], sev: f[2] ? "HIGH" : "MED",
+      badgeStyle: badge(f[2]), sevStyle: sev(f[2])
+    }));
+
+    const self = [38,41,44,52,58,55,49,46,51,57,62,60];
+    const us   = [52,57,63,74,82,78,69,64,72,80,88,86];
+    const peak = Math.max(...us);
+    const bars = self.map((s, i) => ({
+      selfStyle: `height:${(s / peak) * 97}%;background:rgba(255,255,255,0.22);border-radius:2px`,
+      usStyle: `height:${((us[i] - s) / peak) * 97}%;background:oklch(0.72 0.18 145);border-radius:2px`
+    }));
+
+    const services = [
+      { tag: "01 · CONTENT", title: "Listing rebuild", body: "Rewritten title and description, professional shoot, photo order tested every month." },
+      { tag: "02 · PRICING", title: "Dynamic rates", body: "Daily repricing against demand, events, lead time and your competitive set — with a floor you set." },
+      { tag: "03 · DISTRIBUTION", title: "One calendar, every channel", body: "Synced across the major booking platforms plus direct enquiries. No double bookings." },
+      { tag: "04 · GUESTS", title: "24/7 communication", body: "Screening, check-in, in-stay issues and disputes handled without calling you." },
+      { tag: "05 · TURNOVERS", title: "Cleaning & linen", body: "Hotel-standard turnover, restocking and a photo inspection report after every stay." },
+      { tag: "06 · UPKEEP", title: "Maintenance", body: "Vetted trades, no markup, and approval requests above whatever threshold you choose." },
+      { tag: "07 · REVIEWS", title: "Rating management", body: "Review chasing, response writing and root-cause fixes on anything under five stars." },
+      { tag: "08 · COMPLIANCE", title: "Permits & tax", body: "Local short-let registration, tourism levies and guest registration filed on time." },
+      { tag: "09 · REPORTING", title: "Statements & payouts", body: "Every booking, cost and levy itemised in the owner app, with payout on the 5th." }
+    ];
+
+    const loop = [
+      { tag: "WEEKLY", body: "Rate curve re-cut against the next 90 days of demand." },
+      { tag: "MONTHLY", body: "Photo order and title A/B tested on live traffic." },
+      { tag: "QUARTERLY", body: "Amenity and comp-set review against nearby listings." },
+      { tag: "ALWAYS", body: "Reply times and review velocity held above ranking thresholds." }
+    ];
+
+    const steps = [
+      { n: "01", title: "Free audit", body: "We score the live listing and show you the recoverable revenue before you commit to anything." },
+      { n: "02", title: "Walkthrough & forecast", body: "We visit, measure, pull comparables in your building and agree a rate floor and house rules." },
+      { n: "03", title: "Rebuild & permits", body: "Shoot, restyle, relist, register. Your existing reviews and history carry over." },
+      { n: "04", title: "We run it, you get paid", body: "Guests, cleaning and upkeep are ours. Statement and payout on the 5th, owner nights any time." }
+    ].map(st => ({
+      ...st,
+      wrapStyle: "padding:22px 0 0;display:flex;flex-direction:column;gap:11px;border-top:1px solid rgba(11,14,20,.16)"
+    }));
+
+    const ledger = [
+      { day: "28", label: "Booking · 4 nights", meta: "Direct · 2 guests", amt: "+$1,120", style: 1 },
+      { day: "24", label: "Turnover & linen", meta: "Cleaning partner", amt: "−$90", style: 0 },
+      { day: "22", label: "Booking · 7 nights", meta: "Platform · 4 guests", amt: "+$1,806", style: 1 },
+      { day: "19", label: "Management fee", meta: `${fee}% of booking revenue`, amt: "−$641", style: 0 },
+      { day: "16", label: "Owner night blocked", meta: "You · 2 nights", amt: "—", style: 2 }
+    ].map(r => ({
+      ...r,
+      amtStyle: `flex:none;font:500 13.5px 'IBM Plex Mono',monospace;color:${r.style === 1 ? green : r.style === 0 ? "rgba(11,14,20,.62)" : "rgba(11,14,20,.35)"}`
+    }));
+
+    const planA = ["Content, pricing and ranking owned by us", "Monthly performance report", "You keep guest communication", "Cancel with 30 days' notice"];
+    const planB = ["Everything in Optimization", "24/7 guest communication", "Cleaning, linen and maintenance", "Permits, levies and insurance liaison", "Free setup, shoot and listing rebuild"];
+    const planC = ["Blended rate across the portfolio", "Named portfolio manager", "Quarterly asset review", "Consolidated statements"];
+
+    const quotes = [
+      { stat: "+41%", body: "The listing had sat at the same price for two years. Three weeks after they took over, the calendar looked completely different.", initials: "MR", name: "Mariam R.", meta: "2BR, one unit" },
+      { stat: "9 units", body: "I moved my whole portfolio across. One statement, one contact, and I finally stopped answering guest messages at midnight.", initials: "DK", name: "Daniel K.", meta: "Portfolio owner" },
+      { stat: "4.96", body: "What sold me was the audit — they showed me exactly what was wrong before asking for anything.", initials: "AS", name: "Aisha S.", meta: "Studio, first-time host" }
+    ];
+
+    const faqData = [
+      ["Do I lose control of my property?", "No. You set the nightly floor, the house rules and the maintenance approval threshold, and you can block owner nights in the app whenever you like."],
+      ["What happens to my existing reviews and ranking?", "They stay. We optimize the listing you already have rather than creating a new one, so your review history and search history carry over."],
+      [`Why ${fee}% and not a flat fee?`, "A flat fee pays us the same whether your calendar is full or empty. A share of revenue means the only way we earn more is by making your listing earn more."],
+      ["Who pays for cleaning, linen and repairs?", "Cleaning and linen are billed per turnover at cost and shown on your statement. Repairs are at cost with no markup, and anything above your threshold needs your approval."],
+      ["How long is the contract?", "60 days' notice on full co-hosting, 30 on optimization only. There is no lock-in period and no exit fee."],
+      ["What if short-let makes less than my long-term lease?", "We'll tell you that on the forecast call before you sign anything. It happens in some buildings and some seasons, and we would rather say so."]
+    ];
+    const faqs = faqData.map((f, i) => {
+      const open = this.state.open === i;
+      return {
+        q: f[0], a: f[1],
+        toggle: () => this.setState(s => ({ open: s.open === i ? -1 : i })),
+        iconStyle: `flex:none;font:400 20px 'Instrument Sans',sans-serif;color:rgba(11,14,20,.4);transition:transform .18s ease;transform:rotate(${open ? 45 : 0}deg)`,
+        bodyStyle: open
+          ? "padding:0 40px 22px 2px;font-size:14.5px;line-height:1.65;color:rgba(11,14,20,.65);max-width:60ch;animation:kl-rise .22s ease both"
+          : "display:none"
+      };
+    });
+
+    return { findings, findingCount: "5 of 11 shown", bars, services, loop, steps, ledger, planA, planB, planC, quotes, faqs, feePct: fee };
+  }
+}
+</script>
+</body>
+</html>

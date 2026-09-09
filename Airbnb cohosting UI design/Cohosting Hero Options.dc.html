@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#EEEFF2;color:#0B0E14;font-family:"Instrument Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  *{box-sizing:border-box}
+  a{color:oklch(0.52 0.2 258);text-decoration:none}
+  a:hover{color:oklch(0.42 0.2 258)}
+  .dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(11,14,20,.09);scroll-margin-top:16px}
+  .dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+  .dv-tid{font:600 10px "IBM Plex Mono",monospace;padding:3px 7px;background:#0B0E14;color:#fff;border-radius:4px;text-decoration:none}
+  .dv-tname{font:600 13px/1.2 "Instrument Sans",sans-serif;color:#0B0E14}
+  .dv-opts{display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start}
+  .dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+  .dv-oid{font:600 10.5px "IBM Plex Mono",monospace;padding:3px 7px;background:rgba(11,14,20,.08);color:#0B0E14;border-radius:5px;text-decoration:none}
+  .dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11.5px/1.3 "Instrument Sans",sans-serif;color:rgba(11,14,20,.55)}
+  .dv-card{max-width:100%;background:#fff;border:1px solid rgba(11,14,20,.1);border-radius:10px;box-shadow:0 1px 3px rgba(11,14,20,.07);overflow:hidden}
+  .dv-opt:target .dv-oid{background:oklch(0.52 0.2 258);color:#fff}
+  .dv-next{margin:24px 0 0;font:12.5px/1.6 "Instrument Sans",sans-serif;color:rgba(11,14,20,.5)}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t1">
+  <div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Hero directions — full listing management &amp; optimization, global market</span></div>
+
+  <div class="dv-opts">
+
+    <div class="dv-opt" id="1a">
+      <div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Listing health panel — the by-the-book fintech split. Proof lives in a scorecard.</div>
+      <div class="dv-card" style="width:1120px">
+        <div style="display:flex;align-items:center;gap:28px;padding:18px 36px;border-bottom:1px solid rgba(11,14,20,.08)">
+          <div style="display:flex;align-items:center;gap:9px;margin-right:auto">
+            <span style="width:22px;height:22px;border-radius:5px;background:#0B0E14;display:block"></span>
+            <span style="font-size:16.5px;font-weight:600;letter-spacing:-0.02em">Keyline</span>
+          </div>
+          <nav style="display:flex;gap:24px;font-size:13.5px;color:rgba(11,14,20,.66)">
+            <span>How it works</span><span>Optimization</span><span>Pricing</span><span>Owner app</span><span>Results</span>
+          </nav>
+          <span style="font-size:13.5px;font-weight:500;color:rgba(11,14,20,.66)">Sign in</span>
+          <span style="background:#0B0E14;color:#fff;font-size:13.5px;font-weight:500;padding:10px 17px;border-radius:6px">Free listing audit</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,0.98fr);gap:56px;padding:64px 36px 60px;align-items:center">
+          <div style="min-width:0;display:flex;flex-direction:column;gap:22px">
+            <span style="display:inline-flex;align-items:center;gap:8px;align-self:flex-start;font:500 11.5px 'IBM Plex Mono',monospace;letter-spacing:0.1em;color:oklch(0.52 0.2 258);background:oklch(0.96 0.03 258);padding:6px 11px;border-radius:99px">FULL-SERVICE CO-HOSTING</span>
+            <h1 style="margin:0;font-size:58px;line-height:1.04;letter-spacing:-0.035em;font-weight:600;text-wrap:balance">We run your short-let listing — and make it outperform the ones next door.</h1>
+            <p style="margin:0;font-size:17px;line-height:1.6;color:rgba(11,14,20,.62);max-width:50ch;text-wrap:pretty">Keyline takes over the whole listing: copy and photography, dynamic pricing, guest messaging, cleaning and reviews. Then we keep optimizing it — every week, against real demand data in your market.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;padding-top:6px">
+              <span style="background:oklch(0.52 0.2 258);color:#fff;font-size:15px;font-weight:600;padding:14px 24px;border-radius:7px">Audit my listing free</span>
+              <span style="border:1px solid rgba(11,14,20,.18);font-size:15px;font-weight:500;padding:14px 24px;border-radius:7px">See what we optimize</span>
+            </div>
+            <div style="display:flex;gap:26px;flex-wrap:wrap;padding-top:12px;font-size:13px;color:rgba(11,14,20,.5)">
+              <span>No setup fee</span><span>60-day notice</span><span>You keep owner nights</span>
+            </div>
+          </div>
+
+          <div style="min-width:0;border:1px solid rgba(11,14,20,.1);border-radius:12px;padding:26px;display:flex;flex-direction:column;gap:20px;background:#FBFBFC">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start">
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <span style="font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:0.14em;color:rgba(11,14,20,.45)">LISTING HEALTH</span>
+                <span style="font-size:14px;font-weight:500">2BR · Marina-front · sleeps 5</span>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:flex-end">
+                <span style="font-size:40px;font-weight:600;letter-spacing:-0.03em;line-height:1;color:oklch(0.55 0.14 152)">86</span>
+                <span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.12em;color:rgba(11,14,20,.4)">WAS 51</span>
+              </div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:13px">
+              <div style="display:flex;flex-direction:column;gap:7px">
+                <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:rgba(11,14,20,.62)">Search ranking, your area</span><span style="font-weight:600">Top 4%</span></div>
+                <div style="height:5px;border-radius:99px;background:rgba(11,14,20,.09)"><div style="width:93%;height:5px;border-radius:99px;background:oklch(0.52 0.2 258)"></div></div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:7px">
+                <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:rgba(11,14,20,.62)">Occupancy, trailing 90 days</span><span style="font-weight:600">91%</span></div>
+                <div style="height:5px;border-radius:99px;background:rgba(11,14,20,.09)"><div style="width:91%;height:5px;border-radius:99px;background:oklch(0.52 0.2 258)"></div></div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:7px">
+                <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:rgba(11,14,20,.62)">Conversion on views</span><span style="font-weight:600">7.4%</span></div>
+                <div style="height:5px;border-radius:99px;background:rgba(11,14,20,.09)"><div style="width:74%;height:5px;border-radius:99px;background:oklch(0.52 0.2 258)"></div></div>
+              </div>
+            </div>
+
+            <div style="height:1px;background:rgba(11,14,20,.09)"></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+              <div style="display:flex;flex-direction:column;gap:3px">
+                <span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.12em;color:rgba(11,14,20,.45)">NET / MONTH</span>
+                <span style="font-size:24px;font-weight:600;letter-spacing:-0.02em">$6,240</span>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:3px">
+                <span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.12em;color:rgba(11,14,20,.45)">VS LONG-TERM</span>
+                <span style="font-size:24px;font-weight:600;letter-spacing:-0.02em;color:oklch(0.55 0.14 152)">+38%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(11,14,20,.08)">
+          <div style="padding:22px 28px;display:flex;flex-direction:column;gap:4px"><span style="font-size:22px;font-weight:600;letter-spacing:-0.02em">1,400+</span><span style="font-size:12.5px;color:rgba(11,14,20,.55)">listings managed</span></div>
+          <div style="padding:22px 28px;border-left:1px solid rgba(11,14,20,.08);display:flex;flex-direction:column;gap:4px"><span style="font-size:22px;font-weight:600;letter-spacing:-0.02em">4.91</span><span style="font-size:12.5px;color:rgba(11,14,20,.55)">average guest rating</span></div>
+          <div style="padding:22px 28px;border-left:1px solid rgba(11,14,20,.08);display:flex;flex-direction:column;gap:4px"><span style="font-size:22px;font-weight:600;letter-spacing:-0.02em">+31%</span><span style="font-size:12.5px;color:rgba(11,14,20,.55)">median revenue lift in 90 days</span></div>
+          <div style="padding:22px 28px;border-left:1px solid rgba(11,14,20,.08);display:flex;flex-direction:column;gap:4px"><span style="font-size:22px;font-weight:600;letter-spacing:-0.02em">14 min</span><span style="font-size:12.5px;color:rgba(11,14,20,.55)">median guest reply time</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="1b">
+      <div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Audit-first — the hero <em style="font-style:normal;color:rgba(11,14,20,.75)">is</em> the product: paste a listing URL, see the optimization checklist.</div>
+      <div class="dv-card" style="width:1120px">
+        <div style="display:flex;align-items:center;gap:28px;padding:18px 36px">
+          <div style="display:flex;align-items:center;gap:9px;margin-right:auto">
+            <span style="width:22px;height:22px;border-radius:50%;border:5px solid #0B0E14;display:block"></span>
+            <span style="font-size:16.5px;font-weight:600;letter-spacing:-0.02em">Keyline</span>
+          </div>
+          <nav style="display:flex;gap:24px;font-size:13.5px;color:rgba(11,14,20,.66)"><span>Optimization</span><span>Management</span><span>Pricing</span><span>Owners</span></nav>
+          <span style="border:1px solid rgba(11,14,20,.18);font-size:13.5px;font-weight:500;padding:9px 16px;border-radius:6px">Talk to us</span>
+        </div>
+
+        <div style="padding:54px 36px 40px;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;border-bottom:1px solid rgba(11,14,20,.08)">
+          <h1 style="margin:0;max-width:20ch;font-size:64px;line-height:1.02;letter-spacing:-0.04em;font-weight:600">Your listing is leaving money on the table.</h1>
+          <p style="margin:0;max-width:58ch;font-size:17px;line-height:1.6;color:rgba(11,14,20,.62)">Paste your listing and we'll score it in 60 seconds — title, photo order, amenity gaps, rate curve, review velocity. Then we can take the whole thing over and fix it.</p>
+          <div style="display:flex;gap:8px;width:100%;max-width:620px;padding-top:8px">
+            <div style="flex:1;display:flex;align-items:center;gap:10px;border:1px solid rgba(11,14,20,.16);border-radius:8px;padding:0 14px;height:52px;background:#FBFBFC">
+              <span style="font:500 11px 'IBM Plex Mono',monospace;color:rgba(11,14,20,.35)">URL</span>
+              <span style="font-size:15px;color:rgba(11,14,20,.4)">paste your short-let listing link</span>
+            </div>
+            <span style="display:flex;align-items:center;background:oklch(0.52 0.2 258);color:#fff;font-size:15px;font-weight:600;padding:0 26px;border-radius:8px">Score it</span>
+          </div>
+          <span style="font-size:12.5px;color:rgba(11,14,20,.45)">Free, no account. Works with the major booking platforms.</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:0">
+          <div style="padding:30px 30px 34px 36px;border-right:1px solid rgba(11,14,20,.08);display:flex;flex-direction:column;gap:18px">
+            <span style="font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:0.14em;color:rgba(11,14,20,.45)">SAMPLE AUDIT</span>
+            <div style="display:flex;align-items:baseline;gap:10px">
+              <span style="font-size:56px;font-weight:600;letter-spacing:-0.04em;line-height:1">51</span>
+              <span style="font-size:15px;color:rgba(11,14,20,.5)">/ 100</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:14px;font-weight:600">Underperforming</span>
+              <span style="font-size:13.5px;line-height:1.55;color:rgba(11,14,20,.6)">Est. <strong style="font-weight:600;color:#0B0E14">$1,850/mo</strong> of recoverable revenue across pricing and conversion.</span>
+            </div>
+            <div style="margin-top:auto;aspect-ratio:4/3;border-radius:8px;border:1px solid rgba(11,14,20,.12);background-image:repeating-linear-gradient(135deg,rgba(11,14,20,.05) 0 2px,transparent 2px 11px);display:flex;align-items:flex-end;padding:12px">
+              <span style="font:500 9.5px 'IBM Plex Mono',monospace;letter-spacing:0.1em;color:rgba(11,14,20,.45);background:#fff;padding:5px 8px;border-radius:3px">CURRENT COVER PHOTO</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column">
+            <div style="display:flex;align-items:center;gap:14px;padding:16px 36px 16px 26px;border-bottom:1px solid rgba(11,14,20,.07)">
+              <span style="width:22px;height:22px;border-radius:50%;background:oklch(0.96 0.05 40);color:oklch(0.52 0.16 40);font:600 11px 'IBM Plex Mono',monospace;display:flex;align-items:center;justify-content:center;flex:none">1</span>
+              <div style="flex:1;min-width:0"><div style="font-size:14.5px;font-weight:600">Cover photo is the third-best in the set</div><div style="font-size:13px;color:rgba(11,14,20,.58)">Reordering to lead with the balcony view lifts click-through ~1.6×.</div></div>
+              <span style="font:500 11px 'IBM Plex Mono',monospace;color:oklch(0.52 0.16 40);flex:none">HIGH</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;padding:16px 36px 16px 26px;border-bottom:1px solid rgba(11,14,20,.07)">
+              <span style="width:22px;height:22px;border-radius:50%;background:oklch(0.96 0.05 40);color:oklch(0.52 0.16 40);font:600 11px 'IBM Plex Mono',monospace;display:flex;align-items:center;justify-content:center;flex:none">2</span>
+              <div style="flex:1;min-width:0"><div style="font-size:14.5px;font-weight:600">Flat rate across peak season</div><div style="font-size:13px;color:rgba(11,14,20,.58)">No event, weekend or lead-time curve. 41 nights priced below market.</div></div>
+              <span style="font:500 11px 'IBM Plex Mono',monospace;color:oklch(0.52 0.16 40);flex:none">HIGH</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;padding:16px 36px 16px 26px;border-bottom:1px solid rgba(11,14,20,.07)">
+              <span style="width:22px;height:22px;border-radius:50%;background:rgba(11,14,20,.06);color:rgba(11,14,20,.55);font:600 11px 'IBM Plex Mono',monospace;display:flex;align-items:center;justify-content:center;flex:none">3</span>
+              <div style="flex:1;min-width:0"><div style="font-size:14.5px;font-weight:600">Title omits the two searched-for terms</div><div style="font-size:13px;color:rgba(11,14,20,.58)">"Sea view" and "walk to beach" both rank in your area's top queries.</div></div>
+              <span style="font:500 11px 'IBM Plex Mono',monospace;color:rgba(11,14,20,.45);flex:none">MED</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;padding:16px 36px 16px 26px;border-bottom:1px solid rgba(11,14,20,.07)">
+              <span style="width:22px;height:22px;border-radius:50%;background:rgba(11,14,20,.06);color:rgba(11,14,20,.55);font:600 11px 'IBM Plex Mono',monospace;display:flex;align-items:center;justify-content:center;flex:none">4</span>
+              <div style="flex:1;min-width:0"><div style="font-size:14.5px;font-weight:600">Reply time 6h 20m</div><div style="font-size:13px;color:rgba(11,14,20,.58)">Above the threshold that suppresses ranking. We reply in minutes, 24/7.</div></div>
+              <span style="font:500 11px 'IBM Plex Mono',monospace;color:rgba(11,14,20,.45);flex:none">MED</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 36px 20px 26px;background:#0B0E14;color:#fff;margin-top:auto">
+              <span style="font-size:14.5px;color:rgba(255,255,255,.75)">We fix all 11 findings in the first two weeks of onboarding.</span>
+              <span style="background:#fff;color:#0B0E14;font-size:14px;font-weight:600;padding:11px 18px;border-radius:6px;flex:none">Hand it over</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="1c">
+      <div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Dark performance ledger — investor-facing, before/after as the whole argument.</div>
+      <div class="dv-card" style="width:1120px;background:#08090C;border-color:rgba(255,255,255,.1)">
+        <div style="display:flex;align-items:center;gap:28px;padding:18px 36px;border-bottom:1px solid rgba(255,255,255,.09)">
+          <div style="display:flex;align-items:center;gap:9px;margin-right:auto">
+            <span style="width:10px;height:22px;border-radius:2px;background:oklch(0.72 0.18 145);display:block"></span>
+            <span style="font-size:16.5px;font-weight:600;letter-spacing:-0.02em;color:#fff">Keyline</span>
+          </div>
+          <nav style="display:flex;gap:24px;font-size:13.5px;color:rgba(255,255,255,.6)"><span>Performance</span><span>What we manage</span><span>Fees</span><span>Portfolio</span></nav>
+          <span style="background:#fff;color:#08090C;font-size:13.5px;font-weight:600;padding:10px 17px;border-radius:6px">Request a forecast</span>
+        </div>
+
+        <div style="padding:66px 36px 30px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,0.86fr);gap:60px;align-items:start">
+          <div style="min-width:0;display:flex;flex-direction:column;gap:24px">
+            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.2em;color:oklch(0.72 0.18 145)">CO-HOSTING &amp; LISTING OPTIMIZATION</span>
+            <h1 style="margin:0;font-size:66px;line-height:1;letter-spacing:-0.045em;font-weight:600;color:#fff;text-wrap:balance">Same apartment. <span style="color:rgba(255,255,255,.42)">Thirty-one percent more revenue.</span></h1>
+            <p style="margin:0;font-size:17px;line-height:1.6;color:rgba(255,255,255,.58);max-width:48ch">We manage the listing end to end — pricing, content, guests, turnovers, reviews — and treat it as an asset to be optimized, not a calendar to be filled.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;padding-top:6px">
+              <span style="background:oklch(0.72 0.18 145);color:#08090C;font-size:15px;font-weight:600;padding:14px 24px;border-radius:7px">Get my revenue forecast</span>
+              <span style="border:1px solid rgba(255,255,255,.22);color:#fff;font-size:15px;font-weight:500;padding:14px 24px;border-radius:7px">Read a case study</span>
+            </div>
+          </div>
+
+          <div style="min-width:0;border:1px solid rgba(255,255,255,.12);border-radius:12px;overflow:hidden">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.1)">
+              <span style="font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:0.14em;color:rgba(255,255,255,.45)">1BR · CITY CENTRE · 12 MONTHS</span>
+              <span style="font:500 11px 'IBM Plex Mono',monospace;color:oklch(0.72 0.18 145)">+31.4%</span>
+            </div>
+            <div style="display:flex;align-items:flex-end;gap:7px;height:184px;padding:22px 20px 0">
+              <sc-for list="{{ bars }}" as="b" hint-placeholder-count="12">
+                <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:3px;height:100%">
+                  <div style="{{ b.selfStyle }}"></div>
+                  <div style="{{ b.usStyle }}"></div>
+                </div>
+              </sc-for>
+            </div>
+            <div style="display:flex;gap:18px;padding:14px 20px 18px">
+              <span style="display:flex;align-items:center;gap:7px;font-size:12px;color:rgba(255,255,255,.55)"><span style="width:9px;height:9px;border-radius:2px;background:rgba(255,255,255,.22);display:block"></span>Self-managed</span>
+              <span style="display:flex;align-items:center;gap:7px;font-size:12px;color:rgba(255,255,255,.55)"><span style="width:9px;height:9px;border-radius:2px;background:oklch(0.72 0.18 145);display:block"></span>With Keyline</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid rgba(255,255,255,.1)">
+              <div style="padding:16px 18px;display:flex;flex-direction:column;gap:3px"><span style="font-size:19px;font-weight:600;color:#fff">91%</span><span style="font-size:11.5px;color:rgba(255,255,255,.45)">occupancy</span></div>
+              <div style="padding:16px 18px;border-left:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:3px"><span style="font-size:19px;font-weight:600;color:#fff">$214</span><span style="font-size:11.5px;color:rgba(255,255,255,.45)">avg nightly</span></div>
+              <div style="padding:16px 18px;border-left:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:3px"><span style="font-size:19px;font-weight:600;color:#fff">4.93</span><span style="font-size:11.5px;color:rgba(255,255,255,.45)">rating</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:0;padding:0 36px 40px;flex-wrap:wrap">
+          <div style="flex:1;min-width:200px;padding:20px 22px 0 0;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:6px"><span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.14em;color:oklch(0.72 0.18 145)">01 · CONTENT</span><span style="font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.6)">Rewritten titles and descriptions, reshoot, photo order tested monthly.</span></div>
+          <div style="flex:1;min-width:200px;padding:20px 22px 0;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:6px"><span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.14em;color:oklch(0.72 0.18 145)">02 · PRICING</span><span style="font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.6)">Daily rates against demand, events, lead time and your competitive set.</span></div>
+          <div style="flex:1;min-width:200px;padding:20px 22px 0;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:6px"><span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.14em;color:oklch(0.72 0.18 145)">03 · GUESTS</span><span style="font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.6)">24/7 replies, screening, check-in, issues handled without calling you.</span></div>
+          <div style="flex:1;min-width:200px;padding:20px 0 0 22px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:6px"><span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:0.14em;color:oklch(0.72 0.18 145)">04 · OPERATIONS</span><span style="font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.6)">Cleaning, linen, restocking, maintenance and inspection after every stay.</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="dv-next">Try next: "build out the full page from <a class="dv-oid" href="#1b">1b</a>" · "give <a class="dv-oid" href="#1a">1a</a> the dark stats band from <a class="dv-oid" href="#1c">1c</a>" · "add an owner dashboard screen"</p>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  renderVals() {
+    const self = [38,41,44,52,58,55,49,46,51,57,62,60];
+    const us   = [52,57,63,74,82,78,69,64,72,80,88,86];
+    const bars = self.map((s, i) => ({
+      selfStyle: `height:${s * 0.62}%;background:rgba(255,255,255,0.22);border-radius:2px`,
+      usStyle: `height:${us[i] * 0.62}%;background:oklch(0.72 0.18 145);border-radius:2px`
+    }));
+    return { bars };
+  }
+}
+</script>
+</body>
+</html>

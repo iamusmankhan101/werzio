@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.53c09440.css",
-    "main.js": "/static/js/main.0ba8ca82.js",
+    "main.css": "/static/css/main.4d020e80.css",
+    "main.js": "/static/js/main.102e78e9.js",
     "static/media/Screenshot 2025-10-19 202841.png": "/static/media/Screenshot 2025-10-19 202841.2d5f9688f993366fc142.png",
     "static/media/Screenshot 2025-10-19 202856.png": "/static/media/Screenshot 2025-10-19 202856.3d0a56bc49aac458bd18.png",
     "static/media/Screenshot 2025-10-19 202742.png": "/static/media/Screenshot 2025-10-19 202742.83ad66a2ee4c50839734.png",
@@ -9,7 +9,6 @@
     "static/media/Screenshot 2025-10-19 210106.png": "/static/media/Screenshot 2025-10-19 210106.d6b9549f3767997dc30d.png",
     "static/media/Screenshot 2025-10-19 221058.png": "/static/media/Screenshot 2025-10-19 221058.a29b642a5bf53559a39e.png",
     "static/media/Screenshot 2025-10-19 221035.png": "/static/media/Screenshot 2025-10-19 221035.20d2c25e123475378b6c.png",
-    "static/media/hero-background-video.mp4": "/static/media/hero-background-video.eb22ebc6a8682d7496a8.mp4",
     "static/media/Screenshot 2025-10-19 210116.png": "/static/media/Screenshot 2025-10-19 210116.a90687f4883e4fede9cd.png",
     "static/media/Screenshot 2025-10-20 114845.png": "/static/media/Screenshot 2025-10-20 114845.aac67a1dc1dda0a25edc.png",
     "static/media/Screenshot 2025-10-19 221200.png": "/static/media/Screenshot 2025-10-19 221200.be7a40dff0635036f399.png",
@@ -32,7 +31,6 @@
     "static/media/Screenshot 2025-10-19 214724.png": "/static/media/Screenshot 2025-10-19 214724.ae0c5390f3e16d539b4f.png",
     "static/media/Screenshot 2025-10-19 221128.png": "/static/media/Screenshot 2025-10-19 221128.05f0b0b0da5bd0256e87.png",
     "static/media/Screenshot 2025-10-19 213620.png": "/static/media/Screenshot 2025-10-19 213620.dabdf9ab05d1c1e43f4e.png",
-    "static/media/Untitled design (7).png": "/static/media/Untitled design (7).56b27571026cca7304cb.png",
     "static/media/hawk.png": "/static/media/hawk.91c410860602e6709372.png",
     "static/media/Screenshot 2025-10-19 214636.png": "/static/media/Screenshot 2025-10-19 214636.b44d1a68598fc2a17bec.png",
     "static/media/Screenshot 2025-10-19 213600.png": "/static/media/Screenshot 2025-10-19 213600.086f782d5a0b95496b94.png",
@@ -41,7 +39,6 @@
     "static/media/Screenshot 2025-10-19 213608.png": "/static/media/Screenshot 2025-10-19 213608.532be1c0228e56920d08.png",
     "static/media/Screenshot 2025-10-19 214712.png": "/static/media/Screenshot 2025-10-19 214712.86f77ef825c7ff3426ab.png",
     "static/media/Screenshot 2025-10-20 115009.png": "/static/media/Screenshot 2025-10-20 115009.bc44469284fb16f6f5d7.png",
-    "static/media/jpg": "/static/media/9e0e2a8be395cbebe80fe4296dcb4a0e.e165356591e1715282f8.jpg",
     "static/media/Screenshot 2025-10-19 221920.png": "/static/media/Screenshot 2025-10-19 221920.3eb3b067d389938a0051.png",
     "static/media/Screenshot 2025-10-20 115049.png": "/static/media/Screenshot 2025-10-20 115049.0683d0a1edff07c27db3.png",
     "static/media/Screenshot 2025-10-19 214620.png": "/static/media/Screenshot 2025-10-19 214620.abd2c3ea55b01eab9329.png",
@@ -55,7 +52,6 @@
     "static/media/Screenshot 2025-10-19 221042.png": "/static/media/Screenshot 2025-10-19 221042.fa215726052f2873b4d4.png",
     "static/media/Screenshot 2025-10-19 222057.png": "/static/media/Screenshot 2025-10-19 222057.03ffa9fb4166fb7e4ac0.png",
     "static/media/Screenshot 2025-10-20 115025.png": "/static/media/Screenshot 2025-10-20 115025.1062245dfcc716e39941.png",
-    "static/media/werzio icon 4@300x.png": "/static/media/werzio icon 4@300x.2c24c0e986118675be34.png",
     "static/media/Screenshot 2025-10-19 202908.png": "/static/media/Screenshot 2025-10-19 202908.2725480781b44f4f3245.png",
     "static/media/Screenshot 2025-10-19 222026.png": "/static/media/Screenshot 2025-10-19 222026.61e71b3c8de1bcca87cf.png",
     "static/media/Screenshot 2025-10-19 222108.png": "/static/media/Screenshot 2025-10-19 222108.2dc7adfbce683f57a716.png",
@@ -72,23 +68,19 @@
     "static/media/Screenshot 2025-10-19 213933.png": "/static/media/Screenshot 2025-10-19 213933.49468612bfb3c808d64d.png",
     "static/media/Screenshot 2025-10-19 221929.png": "/static/media/Screenshot 2025-10-19 221929.e1fbd55b8b46ca0b03b1.png",
     "static/media/Screenshot 2025-10-19 222137.png": "/static/media/Screenshot 2025-10-19 222137.89e38b10a237bdcfad5d.png",
-    "static/media/werzio png 4@300x.png": "/static/media/werzio png 4@300x.6a4c6bc5f1adeadfd9a0.png",
     "static/media/Screenshot 2025-10-19 214739.png": "/static/media/Screenshot 2025-10-19 214739.499af7ef705bda1c5486.png",
-    "static/media/logo2 (1).png": "/static/media/logo2 (1).f937a19e702a5153cde4.png",
-    "static/media/logo2.png": "/static/media/logo2.654967983b7699587cf4.png",
+    "static/media/logo2.png": "/static/media/logo2.f937a19e702a5153cde4.png",
     "static/media/cropped-OptimusLuxe_Transparent-BG.webp": "/static/media/cropped-OptimusLuxe_Transparent-BG.238e68012299e88b67fb.webp",
     "static/media/GFP-VECTOR-ICON-1024x683.webp": "/static/media/GFP-VECTOR-ICON-1024x683.ef8a0bd74eea59635361.webp",
     "static/media/LOGO-SCHOLARSHIP-SEEKERS-HUB-2.webp": "/static/media/LOGO-SCHOLARSHIP-SEEKERS-HUB-2.a5926dc850b3dfcd7003.webp",
     "static/media/4310-47904o.webp": "/static/media/4310-47904o.e75f271ecac8db58e3cb.webp",
-    "static/media/optimus-logo-white.webp": "/static/media/optimus-logo-white.d45bbcb70257c52ff9a8.webp",
-    "static/media/logo_file_black_pngg_2.avif": "/static/media/logo_file_black_pngg_2.0c376159a83d1dd6f663.avif",
     "static/media/optimus-rak-white-logo-e1757322545339-1024x270.webp": "/static/media/optimus-rak-white-logo-e1757322545339-1024x270.8706440e206d31567d86.webp",
     "index.html": "/index.html",
-    "main.53c09440.css.map": "/static/css/main.53c09440.css.map",
-    "main.0ba8ca82.js.map": "/static/js/main.0ba8ca82.js.map"
+    "main.4d020e80.css.map": "/static/css/main.4d020e80.css.map",
+    "main.102e78e9.js.map": "/static/js/main.102e78e9.js.map"
   },
   "entrypoints": [
-    "static/css/main.53c09440.css",
-    "static/js/main.0ba8ca82.js"
+    "static/css/main.4d020e80.css",
+    "static/js/main.102e78e9.js"
   ]
 }
