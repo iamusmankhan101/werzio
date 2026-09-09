@@ -11,13 +11,13 @@
   --paper-alt: #F6F4F1;
   --paper-card: #FBFAF8;
 
-  --accent: #D2601A;
-  --accent-deep: #A94A12;
-  --accent-soft: #FBEDE3;
+  --accent: #6D0808;
+  --accent-deep: #2D0000;
+  --accent-soft: rgba(109, 8, 8, 0.08);
 
   --green-deep: #2E7D51;
-  --amber: #B4571C;
-  --amber-soft: #FBEADF;
+  --amber: #6D0808;
+  --amber-soft: rgba(109, 8, 8, 0.08);
 
   --line: rgba(15, 16, 18, .12);
   --line-soft: rgba(15, 16, 18, .07);
@@ -970,7 +970,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: var(--accent, #2563eb);
+  background: var(--accent, #6D0808);
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.15s ease;
@@ -1277,7 +1277,7 @@
 }
 .wz-faq__search input:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 3px rgba(109, 8, 8, 0.15);
 }
 .wz-faq__search-clear {
   position: absolute;

@@ -1,6 +1,5 @@
 import React from 'react';
 import heroImage from '../../images/wz-hero-interior.jpg';
-import recentThumb from '../../images/wz-lobby.jpg';
 
 const CoHero = () => (
   <section id="top" className="wz-hero">
@@ -19,15 +18,6 @@ const CoHero = () => (
             <div className="wz-hero__actions">
               <a href="#contact" className="wz-btn wz-btn--primary">Get my revenue forecast</a>
               <a href="#manage" className="wz-btn wz-btn--outline">What we manage</a>
-            </div>
-          </div>
-
-          <div className="wz-recent">
-            <img className="wz-recent__thumb" src={recentThumb} alt="" />
-            <div className="wz-recent__body">
-              <span className="wz-recent__label">Recent result</span>
-              <span className="wz-recent__title">Marina 2BR</span>
-              <span className="wz-recent__meta">+31% revenue in 90 days</span>
             </div>
           </div>
         </div>

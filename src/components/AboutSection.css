@@ -130,7 +130,7 @@
 .about-orange-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #ff9500 0%, #ff6b00 100%);
+  background: linear-gradient(135deg, #6D0808 0%, #2D0000 100%);
   z-index: 3;
   transition: opacity 0.3s ease;
   pointer-events: none;
